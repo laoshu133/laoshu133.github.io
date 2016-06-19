@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 米空格
 subtitle:
 description:
-author: John Doe
+author: 米空格
+email: admin@.laoshu133.com
 language:
-timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://www.laoshu133.com/blog
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -63,9 +63,16 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repo: git@github.com:laoshu133/laoshu133.github.io.git
+  branch: master
+  message: "Site updated :)"
+
+# Plugins
+plugins:
+- hexo-generator-feed
