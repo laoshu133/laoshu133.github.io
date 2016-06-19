@@ -75,4 +75,3 @@ deploy:
 
 # Plugins
 plugins:
-- hexo-generator-feed
