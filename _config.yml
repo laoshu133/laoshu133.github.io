@@ -68,10 +68,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repo: git@github.com:laoshu133/laoshu133.github.io.git
   branch: master
-  message: "Site updated :)"
 
 # Plugins
 plugins:
