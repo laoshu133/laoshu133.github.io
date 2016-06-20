@@ -10,8 +10,8 @@ Chrome Store地址：[https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%
 
 #### 放两张截图：
 
-![](http://www.laoshu133.cn/upload/201403031801394700.jpg)
+![](/upload/201403031801394700.jpg)
 
-![](http://www.laoshu133.cn/upload/201403031802015118.jpg)
+![](/upload/201403031802015118.jpg)
 
 欢迎拍砖，请轻拍；如有BUG或者意见请在评论区留言，我会及时修正。

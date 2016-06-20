@@ -1,0 +1,29 @@
+@charset "utf-8";
+html, body, ul, li{ padding:0; margin:0;}
+ul{ list-style:none;}
+a{ text-decoration:none;}
+
+.nav1{ font:12px/1.4 Verdana, Geneva, sans-serif; height:50px;}
+.nav1 li{ background:#22558a url(../images/nav_bg.png) no-repeat 0 36px; float:left; height:50px; margin-right:2px;}
+.nav1 li.hover{ position:relative;}
+.nav1 li a{ display:block; color:#fff; height:100%; line-height:48px; width:82px; text-align:center;}
+
+.nav1 .nav_list_2,.nav1 .nav_list_3{ display:none; position:absolute; left:0; top:0;}
+.nav1 .nav_list_2{ width:160px; top:50px;}
+.nav1 .nav_list_2 li{ height:30px; margin-bottom:1px; width:100%;}
+.nav1 .nav_list_2 li a{ line-height:28px;}
+.nav1 .nav_list_3{ left:161px;}
+
+.nav2{ font:12px/1.4 Verdana, Geneva, sans-serif; width:100px;}
+.nav2 ul{ width:100%;}
+.nav2 li{ background:#22558a url(../images/nav_bg.png) repeat-x 0 36px; float:left; height:50px; margin-bottom:2px; width:100%;}
+.nav2 li.hover{ position:relative;}
+.nav2 li a{ display:block; color:#fff; height:100%; line-height:46px; width:100%; text-align:center;}
+.nav2 .nav_list_2,.nav2 .nav_list_3{ display:none; position:absolute; left:100px; top:0;}
+
+
+
+/*额外的一些样式*/
+body{ background:url(../images/bg.png) repeat-x;}
+.nav1,.nav2{ margin:30px;}
+

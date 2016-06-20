@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>slidebar test</title>
+<script type="text/javascript" src="/ds/ds.js"></script>
+<script type="text/javascript">
+(function(window, undefined){
+	var
+	$d = ds.$d,
+	getFrag = function(){
+		return document.createDocumentFragment();
+	},
+	//引入动画算法
+	easeInOutQuad = function (pos) {
+        if ((pos /= 0.5) < 1) return 0.5 * Math.pow(pos, 2);
+        return -0.5 * ((pos -= 2) * pos - 2);
+		//return (t *= 2) < 1 ? .5 * t * t : .5 * (1 - (--t) * (t - 2));
+    },
+	slide = function(ops){
+		var _ops = {
+			shell : document.body,
+			imgPath : 'images/',
+			imgHieght : 100,
+			imgWidth : 100,
+			items : [],
+			ease : easeInOutQuad,
+			durTime : 400,	//动画持续时间
+			ftp : 50	//帧频, 即 每秒运行多少帧
+		}
+		for(var k in ops){
+			_ops[k] = ops[k];
+		}
+		this.init(_ops);
+		this.bind();
+	}
+	slide.prototype = {
+		constructor : slide,
+		init : function(ops){
+			//初始化
+			var panel = $d(ops.shell);
+			
+			this.ops = ops;
+			this.panel = panel;
+			this.layout(panel);
+			this.cloneLi();
+		},
+		setImgSrc : function(img ,inx, curr){
+			var ops = this.ops, items = ops.items;
+			ds.attr(img, 'src', ops.imgPath + items[inx].imgs[!!curr ? 1 : 0]);
+		},
+		layout : function(panel){
+			var ops = this.ops,
+			ul = ds.createEl('ul'),
+			frag = getFrag(),
+			elems = [],
+			items = ops.items,
+			li, aLink, img, item,
+			len = items.length,
+			currInx = parseInt(len/2, 10) || 0;
+			for(var i=0, len=items.length; i<len; i++){
+				item = items[i];
+				li = ds.createEl('li');
+				aLink = ds.createEl('a', {href:item.url, title:item.title});
+				img = ds.createEl('img', {height:ops.imgHeight, width:ops.imgWidth, alt:item.title});
+				this.setImgSrc(img, i, i===currInx);
+				aLink.appendChild(img);
+				li.appendChild(aLink);
+				frag.appendChild(li);
+				if(i === currInx){
+					li.className = 'curr';
+					//挂载初始数据
+					this.prevInx = i;
+				}
+				elems.push({
+					index : i,
+					liEl : li,
+					img : img
+				});
+			}
+			ul.appendChild(frag);
+			panel.appendChild(ul);
+			
+			//挂载
+			li = elems[currInx].liEl;
+			this.fxUnitWidth = ds.getOuterWH(li).width + parseFloat(ds.css(li, 'marginLeft')) / 2;
+			this.currInx = currInx;
+			this.elems = elems;
+			this.ul = ul;
+		},
+		setUlMarLeft : function(left){
+			this.ul.style.marginLeft = left + 'px';
+		},
+		cloneLi : function(){
+			var elems = this.elems,
+			ul = this.ul,
+			fragBefore = getFrag(),
+			fragAfter = getFrag(),
+			currInx = this.currInx,
+			liEl, li,
+			width = 0;
+			for(var i=0, len=elems.length; i<len; i++){
+				liEl = elems[i].liEl
+				li = liEl.cloneNode(true);
+				if(i < currInx){
+					fragAfter.appendChild(li);
+				}
+				else if(i > currInx){
+					width += ds.getOuterWH(liEl, true).width;
+					fragBefore.appendChild(li);
+				}
+			}
+			this.outerLeft = -width;
+			this.setUlMarLeft(-width);
+			ul.appendChild(fragAfter);
+			ul.insertBefore(fragBefore, ul.firstChild);
+		},
+		bind : function(){
+			var self = this, ops = this.ops,
+			panel = this.panel;
+			//left - 37, right - 39
+			ds.bind(document, 'keydown', function(e){
+				var code = e.keyCode - 38;
+				if(code*code === 1){
+					//按下键盘不放
+					!self.isAnimate && setTimeout(function(){ self.slideFx(-code);}, 16);
+					self.isAnimate = true;
+					e.preventDefault();
+				}
+			});
+		},
+		slideFx : function(code){
+			var self = this,
+			ops = this.ops,
+			items = ops.items,
+			itemLen = items.length,
+			prevInx = this.prevInx,
+			inx = (prevInx - code) % itemLen,
+			elObj = this.elems[prevInx], nextObj;
+			inx = inx < 0 ? itemLen - 1 : inx;
+			nextObj = this.elems[inx];
+			
+			//还原curr状态
+			//elems[prevInx].liEl.className = '';
+			this.setImgSrc(elObj.img, prevInx, false);
+			this.setImgSrc(nextObj.img, inx, true);
+			
+
+			//归位， 防止溢出
+			if(code < 0 && prevInx >= itemLen-1){
+				this.setUlMarLeft(this.fxUnitWidth);
+			}
+			if(code > 0 && prevInx <= 0){
+				this.setUlMarLeft(this.outerLeft - this.fxUnitWidth * (this.currInx+1));
+			}
+			//动画开始
+			this.transition(inx, code, function(){
+				//ds.debug('transition end , index : ' + inx);
+				elObj.liEl.className = '';
+				
+				nextObj.liEl.className = 'curr';
+				self.setImgSrc(nextObj.img, inx, true);
+				self.prevInx = inx;
+				self.isAnimate = false;
+			});
+			
+			
+		},
+		transition : function(inx, code, callback){
+			var self = this,
+			ul = this.ul,
+			callback = callback || function(){},
+			ops = this.ops,
+			ease = ops.ease, ftp = ops.ftp, durTime = ops.durTime,
+			unitWidth = this.fxUnitWidth,
+			ulLeft = parseFloat(ds.css(ul, 'marginLeft')) || 0,
+			marByLeft = function(left){
+				self.setUlMarLeft(ulLeft + code * left);
+			};
+			var abs = Math.abs,
+			sTime = new Date().getTime(),	//动画开始时间
+			fx = function(){
+				var timeMap = new Date().getTime() - sTime,
+				left = ease(timeMap / durTime) * unitWidth;
+				if(timeMap >= durTime || abs(unitWidth) < abs(left)){
+					marByLeft(unitWidth);	//强制完成动画
+					callback();
+					clearInterval(_t);
+					return;
+				}
+				marByLeft(left);
+			},
+			_t = setInterval(fx, 1000 / ftp);
+		}
+	}
+	
+	//挂载
+	window.Slide = slide;
+})(window);
+
+//实例开始
+ds.ready(function(){
+	var slide = new Slide({
+		shell : 'slide_panel',
+		imgPath : 'images/',
+		imgHeight : 128,
+		imgWidth : 140,
+		items : [
+			{
+				title : '购物广场',
+				url : '#',
+				imgs : ['index0_2.png', 'index1_2.png']
+			},
+			{
+				title : '教育广场',
+				url : '#',
+				imgs : ['index0_1.png', 'index1_1.png']
+			},
+			{
+				title : '有线服务',
+				url : '#',
+				imgs : ['index0_6.png', 'index1_6.png']
+			},
+			{
+				title : '广播电视',
+				url : '#',
+				imgs : ['index0_7.png', 'index1_7.png']
+			},
+			{
+				title : '资讯广场',
+				url : '#',
+				imgs : ['index0_4.png', 'index1_4.png']
+			},
+			{
+				title : '娱乐广场',
+				url : '#',
+				imgs : ['index0_3.png', 'index1_3.png']
+			},
+			{
+				title : '金融广场',
+				url : '#',
+				imgs : ['index0_5.png', 'index1_5.png']
+			}
+		],
+		durTime : 200,
+		ftp : 60
+	});
+})
+</script>
+<style type="text/css">
+*{ padding:0; margin:0;}
+body{ font:12px/1.5 "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei",Arial;}
+ul{ list-style:none;}
+img{ border:0;}
+
+/*fix 滚动条*/
+html{ overflow-y:hidden;}
+
+/*基础样式*/
+body{ background:url(images/index_bg2.jpg) no-repeat;}
+.slide{ /*margin:30px auto 0;*/ margin:30px 0 0 51px; width:1178px; overflow:hidden;}
+.slide ul{ width:200%;}
+.slide li{ float:left; margin:0 10px; *display:inline;}
+.slide li.curr{ margin:0 36px;}
+.slide li a{ display:block; height:128px; width:140px;}
+</style>
+</head>
+
+<body>
+<div id="slide_panel" class="slide"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

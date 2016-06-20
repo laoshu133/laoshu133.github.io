@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百叶窗效果</title>
+<script type="text/javascript" src="js/louver.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var f = new Louver({
+		shell : 'louver'
+	});
+}
+</script>
+<style type="text/css">
+*{ padding:0; margin:0;}
+#louver{ border:1px solid #333; height:319px; width:518px; margin:30px; overflow:hidden;}
+
+.louver{ position:relative; overflow:hidden;}
+.louver .page_bar{ position:absolute; bottom:10px; right:10px;}
+.louver .page_bar a{ background:#333; border:1px solid #666; color:#fff; font:12px/16px Arial; float:left; margin:2px; width:16px; text-align:center; text-decoration:none; display:inline;}
+.louver .page_bar a.hover,.louver .page_bar a:hover{ background:red; border-color:#FF9966 #660000 #660000 #FF9966;}
+.louver .masks{ position:absolute; left:0; top:0; height:110%; width:110%; overflow:hidden;}
+.louver .mask_panel{ float:left; position:relative;}
+.louver .mask,.louver .links{ position:absolute; left:0; top:0; height:100%; width:100%;}
+.louver .links a{ display:none; height:100%; width:100%;}
+.louver .links a.hover{ display:block;}
+</style>
+</head>
+</head>
+
+<body>
+<!--
+//-------------------使用说明-------------------
+//autohor:米
+//update:2011.04.13
+//测试兼容浏览器 IE6+ ,FF3+, CHROME10
+//.louver 样式必须跟着JS走,可以根据图片大小重新调整宽高
+//直接应用脚本&样式，HTML结构不变，可以添加删除<a><img /></a>
+-->
+<div id="louver"><!--<div class="mask_panel"><div class="mask"></div></div>-->
+	<a href="#"><img alt="" src="images/b1.jpg" /></a>
+    <a href="#"><img alt="" src="images/b2.jpg" /></a>
+    <a href="#"><img alt="" src="images/b3.jpg" /></a>
+    <a href="#"><img alt="" src="images/b4.jpg" /></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Arrow test</title>
+	<style type="text/css">
+	.panel{ backgoround:#fff; border:1px solid #ddd; margin-left:-101px; height:260px; width:200px; position:absolute; left:50%; top:10%;}
+	
+	.arrow{ font-size:0; height:0; width:0; overflow:hidden; position:absolute; left:32%; top:20px;}
+	.arrow{ border-color:red transparent transparent green; border-style:solid dashed dashed solid; border-width:20px;}
+	
+	.arrow1{ border-width:20px 44px;} /* 此时IE10+(包括IE10模拟IE9) 与别的浏览器表现不一致 */
+	.arrow2{ border-width:20px 44px 0; top:80px;}
+	.arrow3{ border-width:20px 0 0 44px; top:140px;}
+	.arrow4{ border-width:20px 44px 0 0; top:200px;}
+	</style>
+</head>
+<body>
+	
+	<div class="panel">
+		<i class="arrow arrow1" title="此时IE10+(包括IE10模拟IE9) 与别的浏览器表现不一致"></i>
+		<i class="arrow arrow2"></i>
+		<i class="arrow arrow3"></i>
+		<i class="arrow arrow4"></i>
+	</div>
+	
+</body>
+</html>

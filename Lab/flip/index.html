@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>翻页效果 - Laoshu133.com</title>
+	<style type="text/css">
+	*{ margin:0; padding:0;}
+	.hide{ display:none;}
+	
+	.home_tuan{ font-size:0; margin:0 auto;}
+	.home_tuan .tuan_inner{ background:#fff; border:1px solid #d0c1a5; border-bottom-color:#8f8c8d; border-radius:3px 3px 0 0; font-size:12px; margin-left:-130px; height:310px; width:258px; position:absolute; left:50%; top:26.8%;}
+	.home_tuan .ext .hook{ background:url(images/home_tuan_hook.png) no-repeat; height:35px; width:16px; overflow:hidden; position:absolute; left:12px; top:-13px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/home_tuan_hook.png', sizingMethod='crop');}
+	.home_tuan .ext .r_hook{ left:236px;}
+	.home_tuan .ext .corner{ background:#fff; border:1px solid #d0c1a5; border-top:0; border-bottom-color:#8f8c8d; box-shadow:0 1px 4px rgba(0,0,0,.3); margin:1px 0 0 -128px; height:1px; width:254px; position:absolute; left:50%; top:100%; overflow:hidden;}
+	.home_tuan .ext .b_corner{ margin:3px 0 0 -126px; width:250px;}
+	.home_tuan .title{ background:#F61E3B; border-bottom:1px solid #C0011A; border-radius:3px 3px 0 0; text-align:center; text-shadow:0 -1px 0 #9d1325;}
+	.home_tuan .title h2{ background:url(images/home_box.png) repeat-x; border:1px solid #CD081B; border-radius:3px 3px 0 0; box-shadow:inset 0 1px 0 rgba(255,255,255,.3); color:#fff; font-size:20px; font-weight:normal; line-height:42px; height:42px;}
+	.home_tuan .tuan_main{ margin:0 12px; padding:0 0 10px;}
+	.home_tuan .item{ background:#fff; padding-top:48px; position:absolute;}
+	.home_tuan .timer{ color:#333; font:20px/38px Arial; height:38px; position:absolute; top:8px;}
+	.home_tuan .timer em{ float:left; background:url(images/counter.png) no-repeat 0 -190px; height:38px; width:19px; overflow:hidden; text-indent:99px;}
+	.home_tuan .timer .n1{ background-position:0 -418px;}
+	.home_tuan .timer .n2{ background-position:0 -646px;}
+	.home_tuan .timer .n3{ background-position:0 -874px;}
+	.home_tuan .timer .n4{ background-position:0 -1102px;}
+	.home_tuan .timer .n5{ background-position:0 -1330px;}
+	.home_tuan .timer .n6{ background-position:0 -1558px;}
+	.home_tuan .timer .n7{ background-position:0 -1786px;}
+	.home_tuan .timer .n8{ background-position:0 -2014px;}
+	.home_tuan .timer .n9{ background-position:0 -2242px;}
+	.home_tuan .timer .nn{ background-position:4px -2280px; width:11px;}
+	.home_tuan .pic{ display:block; height:164px; width:234px;}
+	.home_tuan .pic img{ background:#fff url(images/img_place.png) no-repeat 50% 50%; vertical-align:top;}
+	.home_tuan .pic .price{ display:none; color:#434242; cursor:pointer; font-size:14px; line-height:1.2; position:absolute; left:76px; top:216px; text-align:left;}
+	.home_tuan .pic .price em{ display:block; color:#eb010d; font:bold 20px/1.2 Arial;}
+	.home_tuan .pic .view{ background:url(images/home_box.png) no-repeat 0 -42px; color:#fff; cursor:pointer; font-size:14px; line-height:28px; margin:0 0 3px -17px; height:34px; width:80px; position:absolute; left:0; top:220px; text-align:left; text-indent:22px; text-shadow:0 -1px 0 #a60110;}
+	.home_tuan .toggle{ display:none; height:40px; width:40px; position:absolute; right:0; bottom:0; z-index:9;}
+	.home_tuan .toggle img{ display:block; height:100%; width:100%; image-rendering: optimizeQuality; -ms-interpolation-mode:bicubic;}
+	
+	/* loading */
+	.loading{ padding:60px 20px; text-align:center;}
+	.loading i{ display:inline-block; background:url(images/loading.gif) no-repeat; height:28px; width:28px; vertical-align:middle;}
+	.loading span{ color:#999; margin-left:.8em;}
+	</style>
+</head>
+<body>
+	<!-- Home Tuan -->
+	<div id="home_tuan" class="wrap home_tuan">
+		<div class="tuan_inner">
+			<div class="title"><h2>今日团购</h2></div>
+			<div class="tuan_main">
+				<div class="loading"><i></i><span>加载中...</span></div>
+				<div class="item hide">
+					<div class="timer" title="团购倒计时">10:00:02</div>
+					<!-- <div class="timer" title="倒计时"><em class="n2"></em><em class="n3"></em><em class="nn"></em><em class="n5"></em><em class="n8"></em><em class="nn"></em><em class="n4"></em><em class="n9"></em></div> -->
+					<a href="#" class="pic">
+						<img src="images/wea_d_234_162.jpg" alt="今日团购" />
+						<span class="price">团购价<em>&yen;116.00</em></span>
+						<span class="view">去看看</span>
+					</a>
+				</div>
+			</div>
+			<div class="ext">
+				<a href="javascript:;" class="toggle">下一个</a>
+				<i class="hook"></i><i class="hook r_hook"></i><i class="corner"></i><i class="corner b_corner"></i>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="tuan.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		ds.initTuanList([{
+				"title" : "团购标题",
+				"href" : "http://laoshu133.com",
+				"img" : "images/wea_d_234_162.jpg",
+				"timeout" : 11000,
+				"price" : "111.00"
+			}, {
+				"title" : "团购标题",
+				"href" : "http://laoshu133.com",
+				"img" : "images/wea_d_258_166.jpg",
+				"timeout" : 80522000,
+				"price" : "222.00"
+			}, {
+				"title" : "团购标题",
+				"href" : "http://laoshu133.com",
+				"img" : "images/wea_d_234_162.jpg",
+				"timeout" : 120782000,
+				"price" : "333.00"
+			}
+		]);
+	});
+	</script>
+	
+	<script type="text/javascript" src="/51_min.js"></script>
+</body>
+</html>

@@ -62,7 +62,7 @@ html{
 	/*
 	* SVG，不建议单独SVG文件
 	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下
-	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg
+	* SVG文件：http://www.laoshu133.com/test/grayscale.svg
 	*/
 	/* filter: url(grayscale.svg#grayscale); */
 	/*
@@ -92,7 +92,7 @@ html{
 说了这么多，我们来实践下：
 <div id="demo_code_grayscale_css" class="demo_code"><textarea id="demo_code_txt">.grayscale{filter:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);-webkit-filter:grayscale(100%);filter:grayscale(100%);filter:gray}</textarea>
 <div class="demo_btns">	<button class="run">点击灰掉当前页</button>
-</div><script type="text/javascript" src="/themes/Ceedo/js/jquery.min.js"></script>
+</div>
 <script type="text/javascript">jQuery(function($){var style,garyed=false,docElem=$('html'),shell=$('#demo_code_grayscale_css');shell.find('button.run').bind('click',function(){if(!style){var css=shell.find('textarea').val();style=document.createElement('style');style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.innerHTML=css;}$('head').prepend(style);}if(!garyed){docElem.addClass('grayscale');this.innerHTML='恢复当前页面';}else{docElem.removeClass('grayscale');this.innerHTML='灰掉当前页';}garyed=!garyed;});});</script>
 </div>
 

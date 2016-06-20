@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>静止工具条 fix IE6</title>
+<script type="text/javascript" src="/ds/ds.js"></script>
+<script type="text/javascript">
+(function(window, doc){
+	ds.extend({
+		fixedNav : function(el){
+			var ds = this;
+			el = ds.$d(el);
+			if(!ds.data(el, 'setFixedNav')){
+				var 
+				display = ds.css(el, 'display'),
+				WH = ds.getOuterWH(el, true),
+				pos = ds.getPosition(el),
+				mask = ds.createEl('div'),
+				isIE6 = ds.browser.IE === 6,
+				setIE6Fixed = ds.noop;
+				ds.css(mask, {
+					margin : 0,
+					padding : 0,
+					display : 'none',
+					height : WH.height,
+					width : WH.width
+				})
+				.css(el, {
+					left : pos.left,
+					top : 0
+				});
+				ds.data(el, 'setFloated', false);
+				ds.bind(window, 'scroll', function(e){
+					var top = ds.scrollTop(doc),
+					state = top < pos.top,
+					isFloat = ds.data(el, 'setFloated');
+					if(isFloat && top > pos.top || !isFloat && top <= pos.top){
+						return;
+					}
+					if(!isIE6){
+						ds.css(el, 'position', isFloat ? 'static' : 'fixed');
+					}
+					else{
+						setIE6Fixed(isFloat);
+					}
+					ds.css(mask, 'display', isFloat ? 'none' : display);
+					ds.data(el, 'setFloated', !isFloat);
+				});
+				if(isIE6){
+					ds.loadScript('/ds/ie6_fixed.js', function(){
+						setIE6Fixed = function(isFloat){
+							ds[isFloat ? 'setStatic' : 'setFixed'](el);
+						};
+					});
+				}
+				el.parentNode.insertBefore(mask, el);
+				ds.data(el, 'setFixedNav', true);
+			}
+		}
+	});
+})(window, window.document);
+
+ds.ready(function(){
+	//ds.css(ds.$d('tableHead'), 'position', 'fixed');	//IE7 有BUG
+	ds.fixedNav('float');
+});
+</script>
+<style type="text/css">
+*{ margin:0; padding:0;}
+p{ border:1px dashed #ddd; border-width:5px 0; font-size:14px; line-height:30px; margin:10px 0 10px 100px; padding:0 30px; width:14px;}
+
+#tableHead{ background:#eee url(http://static.paipaiimg.com/pay_v2/bg_pay_step_list_title.png) repeat-x; border:1px solid #d4d4d4; font:12px/1.5 Microsoft YaHei, Arial; margin:5px 20px;}
+#tableHead th{ font-weight:normal; padding:5px 20px;}
+
+#float{ display:inline-block;}
+</style>
+</head>
+<body>
+<h1>静止工具条 fix IE6</h1>
+<span>我晕， 如果对 table JS设置 position:fixed 会失效，但写CSS里没有问题</span>
+<p style="">占位符~占位符~占位符~</p>
+<div id="float">
+	<table id="tableHead">
+		<thead>
+		  <tr>
+			<th>商品</th>
+			<th>价格(元)</th>
+			<th>诚保服务</th>
+			<th>实付金额(元)</th>
+			<th>卖家</th>
+			<th>订单状态</th>
+			<th>操作</th>
+		  </tr>
+		</thead>
+		<tbody style="display:none;">
+		  <tr>
+			<td></td>
+		  </tr>
+		</tbody>
+	</table>
+</div>
+<p style="">占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~占位符~</p>
+</body>
+</html>

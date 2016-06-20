@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+/*
+_米
+http://www.laoshu133.com
+2012.04.12
+*/
+*{ margin:0; padding:0;}
+a{ text-decoration:none;}
+a:link{ color:#333;}
+a:visited{ color:#333;}
+ul{ list-style:none;}
+body{ font:12px/1.5 "SimSun","宋体","Arial Narrow"; /*min-width:600px; min-height:400px; overflow:hidden;*/}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft Yahei",SimSun,"Arial Narrow";}
+/*--clearfix--*/
+.clearfix:before, .clearfix:after{ content:'.'; display:block; height:0; visibility:hidden;}
+.clearfix:after{ clear:both;}
+.clearfix{ *zoom:1;}
+
+body{ background:url(../images/bg.jpg) repeat;}
+.wrap{ margin:0 auto; width:980px;}
+.logo{ position:relative; z-index:10;}
+.logo h1{ height:42px; width:121px; position:absolute; left:48px; top:32px;}
+.logo h1 a{ display:block; background:url(../images/logo.png) no-repeat; height:100%; text-indent:-9999em; _background-image:url(../images/logo_ie6.png);}
+
+.txt, .txt input{ display:inline-block; background:url(../images/fields.png) no-repeat; cursor:text; height:38px; outline:0;}
+.txt{ padding-left:6px; box-shadow:0 1px 0 rgba(255,255,255,.6); vertical-align:middle;}
+.txt input{ background-position:100% 0; border:0; line-height:30px\9; padding:4px 6px 4px 0; height:30px; *margin-top:-1px; _margin-bottom:-1px;}
+.btn, .btn span{ display:inline-block; background:url(../images/fields.png) no-repeat 0 -38px; cursor:pointer; line-height:31px; height:31px;}
+a.btn{ color:#fff; font-size:14px; padding-left:10px; vertical-align:middle; text-shadow:0 -1px 0 #14508a;}
+.btn span{ background-position:100% -38px; padding-right:10px; text-align:center;}
+.btn:hover, .btn:focus{ background-position:0 -69px;}
+.btn:hover span, .btn:focus span{ background-position:100% -69px;}
+
+/* index */
+@-webkit-keyframes spin_y{
+	from {-webkit-transform: rotateY(0);}
+	to {-webkit-transform: rotateY(360deg);}
+}
+@-webkit-keyframes spin{
+	from {-webkit-transform: rotate(0);}
+	to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+	from {-moz-transform: rotate(0);}
+	to {-moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin{
+	from {-o-transform: rotate(0);}
+	to {-o-transform: rotate(360deg);}
+}
+.home, .home body{ height:100%; min-height:700px; position:relative; overflow:hidden;}
+.home{ overflow-y:auto;}
+.home_wrap{ height:662px; width:1330px; margin:-330px 0 0 -665px; position:absolute; left:50%; top:50%;}
+.home_wrap h1{ background:url(../images/title.png) no-repeat; height:69px; width:439px; position:absolute; right:180px; top:60px; text-indent:-9999em;}
+.reg_btn{ background:url(../images/btn_bg.png) no-repeat; height:215px; width:211px; position:absolute; left:559px; bottom:20px; z-index:9;}
+.reg_btn a{ height:100%; width:100%; position:absolute; left:0; top:0;}
+.reg_btn span{ background:url(../images/btns.png) no-repeat; cursor:pointer; height:46px; width:147px; position:absolute; left:32px; top:90px; text-indent:-9999em;}
+.flag, .flag h2{ background:url(../images/flag_2.png) no-repeat; position:absolute;}
+.flag{ height:335px; width:101px; left:170px; top:216px; z-index:8;}
+.flag h2{ background-position:0 -335px; height:40px; width:82px; left:10px; top:30px; text-indent:-9999em;}
+.build{ height:298px; width:984px; position:absolute; left:174px; top:0; z-index:2; overflow:hidden;}
+.build i{ background:url(../images/build.png) no-repeat; height:100%; width:100%; position:absolute; top:0;}
+.lawn{ background:url(../images/lawn.png) no-repeat 50% 0; height:300px; width:100%; position:absolute; left:0; bottom:110px; z-index:3;}
+.car{ height:281px; width:656px; position:absolute; left:300px; top:234px; z-index:5;}
+.car .tit, .car .wheel, .car_s{ background:url(../images/car.png) no-repeat; position:absolute;}
+.car .tit i{ background:url(../images/shenzhen.png) no-repeat; height:80px; width:297px; position:absolute; left:114px; top:126px;}
+.car .tit{ height:100%; width:100%; left:0; top:0}
+.car .wheel{ background-position:0 -282px; height:90px; width:90px; top:188px; -webkit-transform-style:preserve-3d;  -webkit-transform-origin:50% 50%; -webkit-animation:spin .4s infinite linear; -moz-transform-style:preserve-3d;  -moz-transform-origin:50% 50%; -moz-animation:spin .4s infinite linear; -o-transform-style:preserve-3d;  -o-transform-origin:50% 50%; -o-animation:spin .4s infinite linear;}
+.car .forward{ left:124px;}
+.car .backward{ left:404px; top:186px;}
+.car_nav{ width:1000px; position:absolute; left:196px; top:580px; z-index:8;}
+.car_s{ background-position:-180px 100%; height:36px; width:85px; left:0; top:0; -webkit-transform-style:preserve-3d; -webkit-transform-origin:50% 50%; -webkit-transition:-webkit-transform .2s ease; -moz-transform-style:preserve-3d; -moz-transform-origin:50% 50%; -moz-transition:-moz-transform .2s ease; -o-transform-style:preserve-3d; -o-transform-origin:50% 50%; -o-transition:-o-transform .2s ease;}
+.car_nav .nav a{ height:30px; width:70px; position:absolute; top:50px;}
+.car_nav .nav strong, .car_nav .nav em{ background:url(../images/tips.png) no-repeat; position:absolute; text-indent:-9999em;}
+.car_nav .nav strong{ height:62px; width:110px; left:-9999em; top:-120px; opacity:0; -webkit-transition:opacity .8s ease; -moz-transition:opacity .8s ease; -o-transition:opacity .8s ease;}
+.car_nav .nav em{ background-position:50% -62px; height:30px; width:100%; left:0; top:10px;}
+.car_nav .nav a:hover{}
+.car_nav .nav a:hover strong{ left:10px; opacity:1;}
+.car_nav .shenzhen{ left:10px;}
+.car_nav .ready{ left:136px;}
+.car_nav .ready em{ background-position:50% -92px;}
+.car_nav .arrow, .car_nav .arrow .s{ background:url(../images/arrow.png) no-repeat; height:19px; width:18px; position:absolute; -webkit-transform-style:preserve-3d;}
+.car_nav .arrow{ left:30px; top:78px; -webkit-animation: spin_y 2s infinite linear;}
+.car_nav .arrow .s{ left:0; top:0; -webkit-transform-origin:50% 50%;}
+.car_nav .arrow .s1{ -webkit-transform:rotateY(90deg);}
+.car_nav .arrow .s2{ -webkit-transform:rotateY(180deg);}
+.car_nav .arrow .s3{ -webkit-transform:rotateY(270deg);}
+.car_nav .arrow .s4{ -webkit-transform:rotateY(360deg);}
+.curr_shenzhen{}
+.road{ background:url(../images/road.png) no-repeat; height:96px; width:1128px; position:absolute; left:100px; bottom:0; z-index:1;}
+.loading{ display:none; margin:0 0 0 -22px; position:absolute; left:50%; top:34%; z-index:9}
