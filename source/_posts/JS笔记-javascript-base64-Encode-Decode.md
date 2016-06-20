@@ -9,7 +9,7 @@ date: 2014-11-20 21:54:34
 
 浏览器内置的方法 `atob, btoa` 仅能处理 utf-8 编码的 ascii 字符，不能直接作用于 Unicode 字符串，所以需要搞定 utf-8 编码，解码：
 
-[CODE=javascript]
+```javascript
 // utf-8 encode, decode
 function encode_utf8(s) {
     return unescape(encodeURIComponent(s));
@@ -18,14 +18,14 @@ function encode_utf8(s) {
 function decode_utf8(s) {
     return decodeURIComponent(escape(s));
 }
-[/CODE]
+```
 
 来源：[http://ecmanaut.blogspot.jp/2006/07/encoding-decoding-utf8-in-javascript.html](http://ecmanaut.blogspot.jp/2006/07/encoding-decoding-utf8-in-javascript.html)
 另：[关于URL编码](http://www.ruanyifeng.com/blog/2010/02/url_encoding.html)
 
 然后 base64 自然就有了：
 
-[CODE=javascript]
+```javascript
 // base64, encode, decode
 function base64Encode(str) {
     return btoa(unescape(encodeURIComponent(str)));
@@ -43,7 +43,7 @@ function encode_utf8(s) {
 function decode_utf8(s) {
     return decodeURIComponent(escape(s));
 }
-[/CODE]
+```
 
 兼容情况如下：
 <dl>    <dt>Win32</dt>    <dd>

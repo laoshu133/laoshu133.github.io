@@ -16,9 +16,9 @@ date: 2013-09-03 00:43:27
 ### opacity + filter:alpha
 
 大部分情况下我们做背景透明都是这么写的，代码简单，写起来也方便；不过大部分情况是需要多增加一个标签，因为这么写会连文字一起透明
-[CODE=css]
+```css
 .opacity .test{ background:#fff; opacity:.4; filter:Alpha(opacity=40);}
-[/CODE]
+```
 
 ### Rgba + filter:progid:DXImageTransform.Microsoft.Gradient
 
@@ -31,9 +31,9 @@ date: 2013-09-03 00:43:27
 IE滤镜采用AARRGGBB（16进制）进行排列，AA位值也为 00-FF，也就是说10进制需要转成16进制
 
 计算规则 `10进制值*256/100`然后再转16进制，就是说如果设置0.4的透明度`0.4*256/100 = 102.4`转16进制为`66`
-[CODE=css]
+```css
 .rgba .test{ background:rgba(255,255,255,.4); background:none\9; filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#66FFFFFF,endColorStr=#66FFFFFF);}
-[/CODE]
+```
 
 ### Rgba with last-child
 
@@ -42,10 +42,10 @@ IE滤镜采用AARRGGBB（16进制）进行排列，AA位值也为 00-FF，也就
 IE9当background:rgba和filter同时使用时，会出现两个效果叠加，
 
 不过我们可以用:last-child巧妙修复；因IE6不支持 :first/last-child伪类，IE7,8-仅支持:first-child伪类，IE9+全部支持
-[CODE=css]
+```css
 .rgba_with_lastchild .test{ background:none; filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#66FFFFFF,endColorStr=#66FFFFFF);}
 .rgba_with_lastchild .test:last-child{ background:rgba(255,255,255,.4); filter:none;}
-[/CODE]
+```
 
 当看到此处的时候，应该本文应该是能结尾了，因为上面的效果在各个浏览器下已经接近完美了，不过还有个不得不说的密码
 

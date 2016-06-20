@@ -42,13 +42,13 @@ date: 2013-04-26 15:45:33
     然后，JS本来效率就偏低，所以处理大量图片，自然页面会卡
 
 然后在自己小得意的时候，朋友发过来一段（说是同事给的）：
-[code=css]
-html{ 
+```css
+html{
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     filter:gray;
     -webkit-filter: grayscale(100%);
 }
-[/code]
+```
 
 乍一看，虽然让我想起了还有SVG这么个东西可以使，不过估计也就IE和Chrome行吧，印象中真没记得FF有支持`filter`，然后打开FF测试了下，还真可以。
 
@@ -57,21 +57,21 @@ html{
 后面又发现在stackoverflow上也有讨论：[http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css](http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css)
 
 然后又找了些资料，总结方案如下：
-[code=css]
+```css
 html{
 	/*
 	* SVG，不建议单独SVG文件
-	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下 
+	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下
 	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg
 	*/
-	/* filter: url(grayscale.svg#grayscale); */ 
-	/* 
+	/* filter: url(grayscale.svg#grayscale); */
+	/*
 	* 有哥们研究说SVG的支持情况如下：
 	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/
 	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below
 	* 不过我测试了下IE10(WIN7&WIN8)都不支持，所以基本兼容情况如下：
 	* Chorme 25/26不支持，手上没有更低版本的Chorme测试
-	* FF3.5+ 
+	* FF3.5+
 	*/
 	filter:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);
 	/* Webkit only, Chrome & Safari 6+ */
@@ -81,7 +81,7 @@ html{
 	/* IE4-8 and 9 (deprecated). */
 	filter:gray;
 }
-[/code]
+```
 
 从上面注释基本可以看出对于IE10和低版本Opera CSS处理基本就是没折了；
 
@@ -115,7 +115,7 @@ OK，上面说的都是CSS解决方案，我前面还说了有JS的解决方案�
 然后DEMO效果在此：[http://james.padolsey.com/demos/grayscale](http://james.padolsey.com/demos/grayscale)
 
 最后来`grayscale.js`的用法：
-[code=javascript]
+```javascript
 var el = document.getElementById( 'myEl' );
 grayscale( el );
 
@@ -136,12 +136,12 @@ grayscale.reset( $('div') );
 grayscale.prepare( document.getElementById('myEl') );
 // Also accepts DOM/jQuery collections
 grayscale.prepare( $('.gall_img') );
-[/code]
+```
 
 来演示一下：
-[code=javascript]
+```javascript
 grayscale(document.body);
-[/code]
+```
 <div id="demo_code_grayscale_js" class="demo_code"><div class="demo_btns">	<button class="run">点击灰掉当前页</button>
 </div><script type="text/javascript" src="/Lab/js/grayscale/grayscale.js"></script>
 <script type="text/javascript">jQuery(function($){var garyed=false,shell=$('#demo_code_grayscale_js');shell.find('button.run').bind('click',function(){if(!garyed){grayscale(document.body);this.innerHTML='恢复当前页面';}else{grayscale.reset(document.body);this.innerHTML='灰掉当前页';}garyed=!garyed;});});</script>
@@ -153,7 +153,7 @@ grayscale(document.body);
 
 &nbsp;
 > _参考：_
-> 
+>
 > *   [http://davidwalsh.name/css-filters](http://davidwalsh.name/css-filters)
 > *   [http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/](http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/)
 > *   [http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css](http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css)
