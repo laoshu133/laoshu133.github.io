@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://www.laoshu133.com/2014/06/22/grunt-css-sprite/index.html">
 <meta property="og:site_name" content="米空格">
 <meta property="og:description" content="这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；其灵感来源 grunt-sprite，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；它的主要功能是：1.  对css文件进行处理，收集切片序列，生成雪碧图2.  在原css代码中为切片添加background-position属性3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码4.">
-<meta property="og:updated_time" content="2016-06-20T14:53:34.000Z">
+<meta property="og:updated_time" content="2016-06-20T15:47:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="grunt-css-sprite">
 <meta name="twitter:description" content="这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；其灵感来源 grunt-sprite，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；它的主要功能是：1.  对css文件进行处理，收集切片序列，生成雪碧图2.  在原css代码中为切片添加background-position属性3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码4.">
@@ -187,6 +187,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -197,12 +207,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            标签
+            关于
           </a>
         </li>
       
@@ -291,7 +301,7 @@
       
 
       
-        <div class="markdown-here-wrapper" data-md-url="http://www.laoshu133.com/admin/admin_default.asp" style=""><br><br>这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；<br>其灵感来源 <code>grunt-sprite</code>，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；<br>它的主要功能是：<br><br>1.  对css文件进行处理，收集切片序列，生成雪碧图<br>2.  在原css代码中为切片添加<code>background-position</code>属性<br>3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码<br>4.  支持 <code>image-set</code> 配置高清雪碧图<br>5.  在引用雪碧图的位置打上时间戳<br>6.  在样式末尾追加时间戳<br>7.  按照时间戳命名文件<br><br>### 使用 &amp; 帮助更新<br><br>NPM: <a href="https://www.npmjs.org/package/grunt-css-sprite" target="_blank" rel="external">https://www.npmjs.org/package/grunt-css-sprite</a><br>Github: <a href="https://github.com/laoshu133/grunt-css-sprite/" target="_blank" rel="external">https://github.com/laoshu133/grunt-css-sprite/</a><br><div title="MDH:PHA+6L+Z5piv5LiA5Liq5biu5Yqp5YmN56uv5byA5Y+R5bel56iL5biI5bCGY3Nz5Luj56CB5Lit55qE5YiH54mH5ZCI5bm25oiQ6Zuq56Kn5Zu+55qE5bel5YW377ybPC9wPjxwPuWFtueBteaEn+adpea6kCBgZ3J1bnQtc3ByaXRlYO+8jOeUseS6juWFtumFjee9ruWPguaVsOmZkOWItuebruW9lee7k+aehOetie+8jOS4jeiDvea7oei2s+mAmueUqOmhueebrumcgOaxgu+8jOeOsOmHjeaWsOmAoOi9ruWtkOWPkeW4g++8mzwvcD48cD7lroPnmoTkuLvopoHlip/og73mmK/vvJo8L3A+PHA+PGJyPjwvcD48cD4xLiDlr7ljc3Pmlofku7bov5vooYzlpITnkIbvvIzmlLbpm4bliIfniYfluo/liJfvvIznlJ/miJDpm6rnoqflm748L3A+PHA+Mi4g5Zyo5Y6fY3Nz5Luj56CB5Lit5Li65YiH54mH5re75YqgYGJhY2tncm91bmQtcG9zaXRpb25g5bGe5oCnPC9wPjxwPjMuIOeUn+aIkOeUqOS6jumrmOa4heiuvuWkh+eahOmrmOa4hembqueip+Wbvu+8jOW5tuWcqGNzc+aWh+S7tuacq+Wwvui/veWKoOWqkuS9k+afpeivouS7o+eggTwvcD48cD40LiDmlK/mjIEgYGltYWdlLXNldGAg6YWN572u6auY5riF6Zuq56Kn5Zu+PC9wPjxwPjQuIOWcqOW8leeUqOmbqueip+WbvueahOS9jee9ruaJk+S4iuaXtumXtOaIszwvcD48cD41LiDlnKjmoLflvI/mnKvlsL7ov73liqDml7bpl7TmiLM8L3A+PHA+Ni4g5oyJ54Wn5pe26Ze05oiz5ZG95ZCN5paH5Lu2PC9wPjxwPjxiciB0eXBlPSJfbW96Ij48L3A+PHA+IyMjIOS9v+eUqCAmYW1wOyDluK7liqnmm7TmlrA8L3A+PHA+TlBNOiZuYnNwO2h0dHBzOi8vd3d3Lm5wbWpzLm9yZy9wYWNrYWdlL2dydW50LWNzcy1zcHJpdGU8L3A+PHA+R2l0aHViOiZuYnNwO2h0dHBzOi8vZ2l0aHViLmNvbS9sYW9zaHUxMzMvZ3J1bnQtY3NzLXNwcml0ZS88L3A+PHA+PC9wPg==" style="height:0;font-size:0em;padding:0;margin:0;">​</div></div>
+        <div class="markdown-here-wrapper" data-md-url="http://www.laoshu133.cn/admin/admin_default.asp" style=""><br><br>这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；<br>其灵感来源 <code>grunt-sprite</code>，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；<br>它的主要功能是：<br><br>1.  对css文件进行处理，收集切片序列，生成雪碧图<br>2.  在原css代码中为切片添加<code>background-position</code>属性<br>3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码<br>4.  支持 <code>image-set</code> 配置高清雪碧图<br>5.  在引用雪碧图的位置打上时间戳<br>6.  在样式末尾追加时间戳<br>7.  按照时间戳命名文件<br><br>### 使用 &amp; 帮助更新<br><br>NPM: <a href="https://www.npmjs.org/package/grunt-css-sprite" target="_blank" rel="external">https://www.npmjs.org/package/grunt-css-sprite</a><br>Github: <a href="https://github.com/laoshu133/grunt-css-sprite/" target="_blank" rel="external">https://github.com/laoshu133/grunt-css-sprite/</a><br><div title="MDH:PHA+6L+Z5piv5LiA5Liq5biu5Yqp5YmN56uv5byA5Y+R5bel56iL5biI5bCGY3Nz5Luj56CB5Lit55qE5YiH54mH5ZCI5bm25oiQ6Zuq56Kn5Zu+55qE5bel5YW377ybPC9wPjxwPuWFtueBteaEn+adpea6kCBgZ3J1bnQtc3ByaXRlYO+8jOeUseS6juWFtumFjee9ruWPguaVsOmZkOWItuebruW9lee7k+aehOetie+8jOS4jeiDvea7oei2s+mAmueUqOmhueebrumcgOaxgu+8jOeOsOmHjeaWsOmAoOi9ruWtkOWPkeW4g++8mzwvcD48cD7lroPnmoTkuLvopoHlip/og73mmK/vvJo8L3A+PHA+PGJyPjwvcD48cD4xLiDlr7ljc3Pmlofku7bov5vooYzlpITnkIbvvIzmlLbpm4bliIfniYfluo/liJfvvIznlJ/miJDpm6rnoqflm748L3A+PHA+Mi4g5Zyo5Y6fY3Nz5Luj56CB5Lit5Li65YiH54mH5re75YqgYGJhY2tncm91bmQtcG9zaXRpb25g5bGe5oCnPC9wPjxwPjMuIOeUn+aIkOeUqOS6jumrmOa4heiuvuWkh+eahOmrmOa4hembqueip+Wbvu+8jOW5tuWcqGNzc+aWh+S7tuacq+Wwvui/veWKoOWqkuS9k+afpeivouS7o+eggTwvcD48cD40LiDmlK/mjIEgYGltYWdlLXNldGAg6YWN572u6auY5riF6Zuq56Kn5Zu+PC9wPjxwPjQuIOWcqOW8leeUqOmbqueip+WbvueahOS9jee9ruaJk+S4iuaXtumXtOaIszwvcD48cD41LiDlnKjmoLflvI/mnKvlsL7ov73liqDml7bpl7TmiLM8L3A+PHA+Ni4g5oyJ54Wn5pe26Ze05oiz5ZG95ZCN5paH5Lu2PC9wPjxwPjxiciB0eXBlPSJfbW96Ij48L3A+PHA+IyMjIOS9v+eUqCAmYW1wOyDluK7liqnmm7TmlrA8L3A+PHA+TlBNOiZuYnNwO2h0dHBzOi8vd3d3Lm5wbWpzLm9yZy9wYWNrYWdlL2dydW50LWNzcy1zcHJpdGU8L3A+PHA+R2l0aHViOiZuYnNwO2h0dHBzOi8vZ2l0aHViLmNvbS9sYW9zaHUxMzMvZ3J1bnQtY3NzLXNwcml0ZS88L3A+PHA+PC9wPg==" style="height:0;font-size:0em;padding:0;margin:0;">​</div></div>
       
     </div>
 
@@ -396,7 +406,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -406,7 +416,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -1,0 +1,650 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML/CSS," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="米空格" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章
+首先重现BUG(此Demo仅CSS3支持，Chrome/Safari最佳)：
+.t_shell{ border:1px solid #ddd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 背景居中次像素无法重合">
+<meta property="og:url" content="http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合/index.html">
+<meta property="og:site_name" content="米空格">
+<meta property="og:description" content="又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章
+首先重现BUG(此Demo仅CSS3支持，Chrome/Safari最佳)：
+.t_shell{ border:1px solid #ddd">
+<meta property="og:updated_time" content="2016-06-20T15:48:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 背景居中次像素无法重合">
+<meta name="twitter:description" content="又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章
+首先重现BUG(此Demo仅CSS3支持，Chrome/Safari最佳)：
+.t_shell{ border:1px solid #ddd">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合/"/>
+
+  <title> CSS 背景居中次像素无法重合 | 米空格 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=4571571&web_id=4571571" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">米空格</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS 背景居中次像素无法重合
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2012-08-08T12:26:03+08:00" content="2012-08-08">
+              2012-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2012/08/08/CSS-背景居中次像素无法重合/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2012/08/08/CSS-背景居中次像素无法重合/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章</p>
+<p>首先重现BUG(此Demo仅CSS3支持，Chrome/Safari最佳)：</p>
+<p><style type="text/css">.t_shell{ border:1px solid #ddd; margin-bottom:15px; padding:20px 0 0; width:500px; position:relative;}.t_wrap{ background:#eee; margin:0 auto 20px; width:401px;}.t_wrap:before{ content:’.t_wrap’; position:absolute;}.t_panel{ background: #299a0b;background: -moz-linear-gradient(top, #299a0b 0%, #299a0b 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#299a0b), color-stop(100%,#299a0b));background: -webkit-linear-gradient(top, #299a0b 0%,#299a0b 100%);background: -o-linear-gradient(top,  #299a0b 0%,#299a0b 100%);background: -ms-linear-gradient(top,  #299a0b 0%,#299a0b 100%);background: linear-gradient(to bottom,  #299a0b 0%,#299a0b 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#299a0b’, endColorstr=’#299a0b’,GradientType=0 );}.t_inner{ background: #cf0404;background: -moz-linear-gradient(top, #cf0404 43%, #ff3019 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(43%,#cf0404), color-stop(100%,#ff3019));background: -webkit-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: -o-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: -ms-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: linear-gradient(to bottom,  #cf0404 43%,#ff3019 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#cf0404’, endColorstr=’#ff3019’,GradientType=0 );}.t_panel{ background-repeat:no-repeat; background-size:200px 120px; background-position:50% 20px; padding:140px 0 0 0; height:140px;}/<em>.t_panel:before{ content:’.t_panel’; position:absolute; width:100%;}</em>/.t_inner{ background-repeat:no-repeat; margin:0 auto; height:120px; width:200px;}.t_inner:before{ color:#fff; content:’.t_inner’; position:absolute;}.t_btns{ border-top:1px solid #ddd; padding:10px 20px;}.t_btns button{ padding:5px;}</style></p>
+<p><div class="t_shell">    <div class="t_wrap">        <div class="t_panel">            <div class="t_inner" title=".t_inner"></div>        </div>    </div>    <div class="t_btns"><button onclick="var el=$('.t_wrap'); el.width(el.width()+3);">.t_wrap width +3px</button><button onclick="var el=$('.t_wrap'); el.width(el.width()-3);">.t_wrap width -3px</button></div></div><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"t_shell"</span>&gt;</span>	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"t_wrap"</span>&gt;</span>		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"t_panel"</span>&gt;</span>			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"t_inner"</span> <span class="attr">title</span>=<span class="string">".t_inner"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>		<span class="tag">&lt;/<span class="name">div</span>&gt;</span>	<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.t_wrap</span>&#123; <span class="attribute">background</span>:<span class="number">#eee</span>; <span class="attribute">margin</span>:<span class="number">0</span> auto; <span class="attribute">width</span>:<span class="number">401px</span>;&#125;</span><br><span class="line"><span class="selector-class">.t_panel</span>&#123; <span class="attribute">background</span>:<span class="built_in">-webkit-linear-gradient</span>(top, #299a0b 0%,#299a0b 100%) no-repeat; <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">20px</span>; <span class="attribute">padding</span>:<span class="number">140px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>; <span class="attribute">height</span>:<span class="number">140px</span>;&#125;</span><br><span class="line"><span class="selector-class">.t_inner</span>&#123; <span class="attribute">background</span>:<span class="built_in">-webkit-linear-gradient</span>(top, #cf0404 43%,#ff3019 100%); <span class="attribute">margin</span>:<span class="number">0</span> auto; <span class="attribute">height</span>:<span class="number">120px</span>; <span class="attribute">width</span>:<span class="number">200px</span>;&#125;</span><br></pre></td></tr></table></figure>
+<p>点击“.t_wrap width +3px”按钮增加(div.t_wrap)宽度时候，能够很明显的看到绿色块(div.t_panel)有1px左右的来回摆动。</p>
+<p>出现以上BUG的原因，国外“ACKO”给出的原因如下：</p>
+<ul>
+<li><p>The width of the viewport</p>
+</li>
+<li><p>The odd/even size of the box/element</p>
+</li>
+<li><p>Background image is bigger/smaller than the viewport</p>
+</li>
+<li><p>Background image is padded evenly/unevenly around the box (1px difference). (<em>)&gt; (</em>) Note that there is a choice whether to pad more on the left or on the right. I chose the left. This means that the last 4 rows of test cases are inherently ambiguous: a browser that misaligns all of these in the same fashion is in fact being consistent, just in the opposite direction.</p>
+</li>
+</ul>
+<p>原文地址：<a href="http://acko.net/blog/css-sub-pixel-background-misalignments/" target="_blank" rel="external">Sub-pixel-background-misalignments</a></p>
+<p>解决方案：</p>
+<p>在我测试过程中，发现基本上只要上面给出原因前面两条不出现，<strong>即：宽度不跟随视图变化，容器的宽度适中为偶数或者奇数；就可以有效避免</strong></p>
+<p>另外，在查找资料的过程中，发现另外一个解决方案，不过我根据我测试的好像不是很给力，当视图宽度变化时，依然能重现：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (-webkit-min-device-pixel-ratio:<span class="number">0</span>)&#123;</span><br><span class="line">	<span class="selector-class">.t_panel</span>&#123; <span class="attribute">background-position</span>:<span class="number">50.001%</span> <span class="number">20px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>原文地址：<a href="http://philfreo.com/blog/fixing-safaris-1px-background-image-centering-problem/" target="_blank" rel="external">Fixing-Safari-1px-background-image-centering-problem</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML-CSS/" rel="tag">#HTML/CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2012/08/03/JPG渐进-amp-PNG-PNG24-交错测试/" rel="next" title="JPG渐进 &amp; PNG/PNG24 交错测试">
+                <i class="fa fa-chevron-left"></i> JPG渐进 &amp; PNG/PNG24 交错测试
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/10/23/7行崩掉-Crash-Chrome/" rel="prev" title="7行崩掉(Crash)Chrome">
+                7行崩掉(Crash)Chrome <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2012/08/08/CSS-背景居中次像素无法重合/"
+           data-title="CSS 背景居中次像素无法重合" data-url="http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/laoshu133" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">米空格</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"laoshu133"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

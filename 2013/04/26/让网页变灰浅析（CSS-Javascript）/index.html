@@ -114,7 +114,7 @@ IE：">
 IE：">
 <meta property="og:image" content="http://www.laoshu133.com/upload/3d_girl.jpg">
 <meta property="og:image" content="http://www.laoshu133.com/upload/3d_girl.jpg">
-<meta property="og:updated_time" content="2016-06-20T14:53:36.000Z">
+<meta property="og:updated_time" content="2016-06-20T15:49:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让网页变灰浅析（CSS+Javascript）">
 <meta name="twitter:description" content=".log_item br{ display:none;}
@@ -220,6 +220,16 @@ IE：">
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -230,12 +240,12 @@ IE：">
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            标签
+            关于
           </a>
         </li>
       
@@ -354,7 +364,7 @@ IE：">
 <p>乍一看，虽然让我想起了还有SVG这么个东西可以使，不过估计也就IE和Chrome行吧，印象中真没记得FF有支持<code>filter</code>，然后打开FF测试了下，还真可以。</p>
 <p>然后自己也动手去谷歌了下，才想上面的代码出处应该是在这里：<a href="http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html" target="_blank" rel="external">http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html</a></p>
 <p>后面又发现在stackoverflow上也有讨论：<a href="http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css" target="_blank" rel="external">http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css</a></p>
-<p>然后又找了些资料，总结方案如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* SVG，不建议单独SVG文件</span><br><span class="line">	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下</span><br><span class="line">	* SVG文件：http://www.laoshu133.com/test/grayscale.svg</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="comment">/* filter: url(grayscale.svg#grayscale); */</span></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* 有哥们研究说SVG的支持情况如下：</span><br><span class="line">	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/</span><br><span class="line">	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below</span><br><span class="line">	* 不过我测试了下IE10(WIN7&amp;WIN8)都不支持，所以基本兼容情况如下：</span><br><span class="line">	* Chorme 25/26不支持，手上没有更低版本的Chorme测试</span><br><span class="line">	* FF3.5+</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">url</span>(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);</span><br><span class="line">	<span class="comment">/* Webkit only, Chrome &amp; Safari 6+ */</span></span><br><span class="line">	<span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* future-proof */</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* IE4-8 and 9 (deprecated). */</span></span><br><span class="line">	<span class="attribute">filter</span>:gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后又找了些资料，总结方案如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* SVG，不建议单独SVG文件</span><br><span class="line">	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下</span><br><span class="line">	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="comment">/* filter: url(grayscale.svg#grayscale); */</span></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* 有哥们研究说SVG的支持情况如下：</span><br><span class="line">	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/</span><br><span class="line">	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below</span><br><span class="line">	* 不过我测试了下IE10(WIN7&amp;WIN8)都不支持，所以基本兼容情况如下：</span><br><span class="line">	* Chorme 25/26不支持，手上没有更低版本的Chorme测试</span><br><span class="line">	* FF3.5+</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">url</span>(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);</span><br><span class="line">	<span class="comment">/* Webkit only, Chrome &amp; Safari 6+ */</span></span><br><span class="line">	<span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* future-proof */</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* IE4-8 and 9 (deprecated). */</span></span><br><span class="line">	<span class="attribute">filter</span>:gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>从上面注释基本可以看出对于IE10和低版本Opera CSS处理基本就是没折了；</p>
 <p>以上代码使用时属性顺序不能调换；</p>
 <p>以上选择器建议html或作用于html上，否则在IE下可能会看到部分元素依旧彩色，当然IE9无论怎样都处理的不是很好</p>
@@ -492,7 +502,7 @@ IE：">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -502,7 +512,7 @@ IE：">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

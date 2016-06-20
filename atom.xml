@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.laoshu133.com/"/>
-  <updated>2016-06-20T14:33:44.000Z</updated>
+  <updated>2016-06-20T15:48:17.000Z</updated>
   <id>http://www.laoshu133.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.laoshu133.com/2014/11/20/JS%E7%AC%94%E8%AE%B0-javascript-base64-Encode-Decode/"/>
     <id>http://www.laoshu133.com/2014/11/20/JS笔记-javascript-base64-Encode-Decode/</id>
     <published>2014-11-20T13:54:34.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;p&gt;以下方案仅限于浏览器环境！&lt;/p&gt;
 &lt;p&gt;浏览器内置的方法 &lt;code&gt;atob, btoa&lt;/code&gt; 仅能处理 utf-8 编码的 ascii 字符，不能直接作用于 Unicode 字符串，所以需要搞定 utf-8 编码，解码：&lt;/p&gt;
@@ -61,13 +61,13 @@
     <link href="http://www.laoshu133.com/2014/06/22/grunt-css-sprite/"/>
     <id>http://www.laoshu133.com/2014/06/22/grunt-css-sprite/</id>
     <published>2014-06-22T13:21:41.000Z</published>
-    <updated>2016-06-20T14:53:34.000Z</updated>
+    <updated>2016-06-20T15:47:28.000Z</updated>
     
-    <content type="html">&lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://www.laoshu133.com/admin/admin_default.asp&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；&lt;br&gt;其灵感来源 &lt;code&gt;grunt-sprite&lt;/code&gt;，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；&lt;br&gt;它的主要功能是：&lt;br&gt;&lt;br&gt;1.  对css文件进行处理，收集切片序列，生成雪碧图&lt;br&gt;2.  在原css代码中为切片添加&lt;code&gt;background-position&lt;/code&gt;属性&lt;br&gt;3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码&lt;br&gt;4.  支持 &lt;code&gt;image-set&lt;/code&gt; 配置高清雪碧图&lt;br&gt;5.  在引用雪碧图的位置打上时间戳&lt;br&gt;6.  在样式末尾追加时间戳&lt;br&gt;7.  按照时间戳命名文件&lt;br&gt;&lt;br&gt;### 使用 &amp;amp; 帮助更新&lt;br&gt;&lt;br&gt;NPM: &lt;a href=&quot;https://www.npmjs.org/package/grunt-css-sprite&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.npmjs.org/package/grunt-css-sprite&lt;/a&gt;&lt;br&gt;Github: &lt;a href=&quot;https://github.com/laoshu133/grunt-css-sprite/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/laoshu133/grunt-css-sprite/&lt;/a&gt;&lt;br&gt;&lt;div title=&quot;MDH:PHA+6L+Z5piv5LiA5Liq5biu5Yqp5YmN56uv5byA5Y+R5bel56iL5biI5bCGY3Nz5Luj56CB5Lit55qE5YiH54mH5ZCI5bm25oiQ6Zuq56Kn5Zu+55qE5bel5YW377ybPC9wPjxwPuWFtueBteaEn+adpea6kCBgZ3J1bnQtc3ByaXRlYO+8jOeUseS6juWFtumFjee9ruWPguaVsOmZkOWItuebruW9lee7k+aehOetie+8jOS4jeiDvea7oei2s+mAmueUqOmhueebrumcgOaxgu+8jOeOsOmHjeaWsOmAoOi9ruWtkOWPkeW4g++8mzwvcD48cD7lroPnmoTkuLvopoHlip/og73mmK/vvJo8L3A+PHA+PGJyPjwvcD48cD4xLiDlr7ljc3Pmlofku7bov5vooYzlpITnkIbvvIzmlLbpm4bliIfniYfluo/liJfvvIznlJ/miJDpm6rnoqflm748L3A+PHA+Mi4g5Zyo5Y6fY3Nz5Luj56CB5Lit5Li65YiH54mH5re75YqgYGJhY2tncm91bmQtcG9zaXRpb25g5bGe5oCnPC9wPjxwPjMuIOeUn+aIkOeUqOS6jumrmOa4heiuvuWkh+eahOmrmOa4hembqueip+Wbvu+8jOW5tuWcqGNzc+aWh+S7tuacq+Wwvui/veWKoOWqkuS9k+afpeivouS7o+eggTwvcD48cD40LiDmlK/mjIEgYGltYWdlLXNldGAg6YWN572u6auY5riF6Zuq56Kn5Zu+PC9wPjxwPjQuIOWcqOW8leeUqOmbqueip+WbvueahOS9jee9ruaJk+S4iuaXtumXtOaIszwvcD48cD41LiDlnKjmoLflvI/mnKvlsL7ov73liqDml7bpl7TmiLM8L3A+PHA+Ni4g5oyJ54Wn5pe26Ze05oiz5ZG95ZCN5paH5Lu2PC9wPjxwPjxiciB0eXBlPSJfbW96Ij48L3A+PHA+IyMjIOS9v+eUqCAmYW1wOyDluK7liqnmm7TmlrA8L3A+PHA+TlBNOiZuYnNwO2h0dHBzOi8vd3d3Lm5wbWpzLm9yZy9wYWNrYWdlL2dydW50LWNzcy1zcHJpdGU8L3A+PHA+R2l0aHViOiZuYnNwO2h0dHBzOi8vZ2l0aHViLmNvbS9sYW9zaHUxMzMvZ3J1bnQtY3NzLXNwcml0ZS88L3A+PHA+PC9wPg==&quot; style=&quot;height:0;font-size:0em;padding:0;margin:0;&quot;&gt;​&lt;/div&gt;&lt;/div&gt;</content>
+    <content type="html">&lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://www.laoshu133.cn/admin/admin_default.asp&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；&lt;br&gt;其灵感来源 &lt;code&gt;grunt-sprite&lt;/code&gt;，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；&lt;br&gt;它的主要功能是：&lt;br&gt;&lt;br&gt;1.  对css文件进行处理，收集切片序列，生成雪碧图&lt;br&gt;2.  在原css代码中为切片添加&lt;code&gt;background-position&lt;/code&gt;属性&lt;br&gt;3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码&lt;br&gt;4.  支持 &lt;code&gt;image-set&lt;/code&gt; 配置高清雪碧图&lt;br&gt;5.  在引用雪碧图的位置打上时间戳&lt;br&gt;6.  在样式末尾追加时间戳&lt;br&gt;7.  按照时间戳命名文件&lt;br&gt;&lt;br&gt;### 使用 &amp;amp; 帮助更新&lt;br&gt;&lt;br&gt;NPM: &lt;a href=&quot;https://www.npmjs.org/package/grunt-css-sprite&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.npmjs.org/package/grunt-css-sprite&lt;/a&gt;&lt;br&gt;Github: &lt;a href=&quot;https://github.com/laoshu133/grunt-css-sprite/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/laoshu133/grunt-css-sprite/&lt;/a&gt;&lt;br&gt;&lt;div title=&quot;MDH:PHA+6L+Z5piv5LiA5Liq5biu5Yqp5YmN56uv5byA5Y+R5bel56iL5biI5bCGY3Nz5Luj56CB5Lit55qE5YiH54mH5ZCI5bm25oiQ6Zuq56Kn5Zu+55qE5bel5YW377ybPC9wPjxwPuWFtueBteaEn+adpea6kCBgZ3J1bnQtc3ByaXRlYO+8jOeUseS6juWFtumFjee9ruWPguaVsOmZkOWItuebruW9lee7k+aehOetie+8jOS4jeiDvea7oei2s+mAmueUqOmhueebrumcgOaxgu+8jOeOsOmHjeaWsOmAoOi9ruWtkOWPkeW4g++8mzwvcD48cD7lroPnmoTkuLvopoHlip/og73mmK/vvJo8L3A+PHA+PGJyPjwvcD48cD4xLiDlr7ljc3Pmlofku7bov5vooYzlpITnkIbvvIzmlLbpm4bliIfniYfluo/liJfvvIznlJ/miJDpm6rnoqflm748L3A+PHA+Mi4g5Zyo5Y6fY3Nz5Luj56CB5Lit5Li65YiH54mH5re75YqgYGJhY2tncm91bmQtcG9zaXRpb25g5bGe5oCnPC9wPjxwPjMuIOeUn+aIkOeUqOS6jumrmOa4heiuvuWkh+eahOmrmOa4hembqueip+Wbvu+8jOW5tuWcqGNzc+aWh+S7tuacq+Wwvui/veWKoOWqkuS9k+afpeivouS7o+eggTwvcD48cD40LiDmlK/mjIEgYGltYWdlLXNldGAg6YWN572u6auY5riF6Zuq56Kn5Zu+PC9wPjxwPjQuIOWcqOW8leeUqOmbqueip+WbvueahOS9jee9ruaJk+S4iuaXtumXtOaIszwvcD48cD41LiDlnKjmoLflvI/mnKvlsL7ov73liqDml7bpl7TmiLM8L3A+PHA+Ni4g5oyJ54Wn5pe26Ze05oiz5ZG95ZCN5paH5Lu2PC9wPjxwPjxiciB0eXBlPSJfbW96Ij48L3A+PHA+IyMjIOS9v+eUqCAmYW1wOyDluK7liqnmm7TmlrA8L3A+PHA+TlBNOiZuYnNwO2h0dHBzOi8vd3d3Lm5wbWpzLm9yZy9wYWNrYWdlL2dydW50LWNzcy1zcHJpdGU8L3A+PHA+R2l0aHViOiZuYnNwO2h0dHBzOi8vZ2l0aHViLmNvbS9sYW9zaHUxMzMvZ3J1bnQtY3NzLXNwcml0ZS88L3A+PHA+PC9wPg==&quot; style=&quot;height:0;font-size:0em;padding:0;margin:0;&quot;&gt;​&lt;/div&gt;&lt;/div&gt;</content>
     
     <summary type="html">
     
-      &lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://www.laoshu133.com/admin/admin_default.asp&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;这是一个帮助前端开发工程师将css代码中的切片合并
+      &lt;div class=&quot;markdown-here-wrapper&quot; data-md-url=&quot;http://www.laoshu133.cn/admin/admin_default.asp&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;br&gt;这是一个帮助前端开发工程师将css代码中的切片合并成
     
     </summary>
     
@@ -81,7 +81,7 @@
     <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E5%93%8D%E5%BA%94%E5%BC%8F%E9%A1%B5%E9%9D%A2%E8%A7%86%E9%A2%91%E7%AD%89%E6%AF%94%E7%BC%A9%E6%94%BE/"/>
     <id>http://www.laoshu133.com/2014/04/08/CSS笔记-响应式页面视频等比缩放/</id>
     <published>2014-04-08T09:11:16.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;p&gt;在响应式布局中我们常用用一下代码来处理图片的自适应宽度&lt;/p&gt;
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;img&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: auto; &lt;span class=&quot;attribute&quot;&gt;max-width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100%&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -107,7 +107,7 @@
     <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%B1%85%E4%B8%AD-Absolute-Centering/"/>
     <id>http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/</id>
     <published>2014-04-08T08:51:36.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;p&gt;我们经常用 &lt;code&gt;margin:0 auto&lt;/code&gt; 来实现水平居中，而一直认为 &lt;code&gt;margin:auto&lt;/code&gt; 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：&lt;/p&gt;
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.Absolute-Center&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;: absolute;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;top&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;left&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;bottom&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;right&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -131,7 +131,7 @@
     <link href="http://www.laoshu133.com/2014/03/03/Chrome%E6%8F%92%E4%BB%B6%EF%BC%88%E6%89%A9%E5%B1%95%EF%BC%89%E2%80%9C%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B%E2%80%9D/"/>
     <id>http://www.laoshu133.com/2014/03/03/Chrome插件（扩展）“二维码小助手”/</id>
     <published>2014-03-03T02:13:55.000Z</published>
-    <updated>2016-06-20T14:57:46.000Z</updated>
+    <updated>2016-06-20T15:53:38.000Z</updated>
     
     <content type="html">&lt;p&gt;一时兴起，发布一款Chrome插件（扩展），“二维码小助手”&lt;br&gt;Chrome Store地址：&lt;a href=&quot;https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B/acdfkjjfbghehjbojgnmjijpbgahmhee&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B/acdfkjjfbghehjbojgnmjijpbgahmhee&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;放两张截图：&quot;&gt;&lt;a href=&quot;#放两张截图：&quot; class=&quot;headerlink&quot; title=&quot;放两张截图：&quot;&gt;&lt;/a&gt;放两张截图：&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/upload/201403031801394700.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -155,7 +155,7 @@
     <link href="http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/"/>
     <id>http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/</id>
     <published>2013-11-28T03:39:13.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;p&gt;今天在调一个Applet上传组件，调试IE11时又差点踩坑里了，&lt;code&gt;typeof window.ActiveXObject&lt;/code&gt;返回&lt;code&gt;undefined&lt;/code&gt;了。。。&lt;/p&gt;
 &lt;p&gt;但是&lt;code&gt;window.ActiveXObject === undefined&lt;/code&gt;又是不成立的。。。&lt;/p&gt;
@@ -182,7 +182,7 @@
     <link href="http://www.laoshu133.com/2013/09/03/CSS%E5%85%BC%E5%AE%B9%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%A4%84%E7%90%86/"/>
     <id>http://www.laoshu133.com/2013/09/03/CSS兼容背景透明处理/</id>
     <published>2013-09-02T16:43:27.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;style type=&quot;text/css&quot;&gt;br{ display:none}&lt;/style&gt;
 
@@ -223,7 +223,7 @@
     <link href="http://www.laoshu133.com/2013/07/11/javascript%E4%BD%8D%E8%BF%90%E7%AE%97%E8%BD%AC%E6%95%B4%E5%9E%8B%E5%AD%98%E5%9C%A8%E9%A3%8E%E9%99%A9/"/>
     <id>http://www.laoshu133.com/2013/07/11/javascript位运算转整型存在风险/</id>
     <published>2013-07-11T09:28:52.000Z</published>
-    <updated>2016-06-20T14:33:44.000Z</updated>
+    <updated>2016-06-20T15:48:17.000Z</updated>
     
     <content type="html">&lt;p&gt;上午看到司徒正美发的博文，&lt;a href=&quot;http://www.cnblogs.com/rubylouvre/p/3183616.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《javascript 的位操作符转换推断》&lt;/a&gt;，看的时候自己也觉得推断的挺好的；不过刚好下午写了一个团购倒计时页面，同事拿过去用之后，发现时间过长会出现倒计时不走的情况，伪代码如下&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timer, timeout = ~~elem.getAttribute(&lt;span class=&quot;string&quot;&gt;&#39;data-timeout&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(timeout &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	timer = startTimeout(timeout, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;queue&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;//...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;其中的&lt;code&gt;~~elem.getAttribute(&amp;#39;data-timeout&amp;#39;)&lt;/code&gt;（&lt;code&gt;elem.getAttribute(&amp;#39;data-timeout&amp;#39;)|0&lt;/code&gt;，效果相同）就是偷懒的方式去强制转整型，其类似的等价于&lt;code&gt;parseInt(elem.getAttribute(&amp;#39;data-timeout&amp;#39;),10)||0&lt;/code&gt;，以前一直认为是等价的，但是现在只能说是类似等价。&lt;/p&gt;
@@ -249,7 +249,7 @@
     <link href="http://www.laoshu133.com/2013/04/26/%E8%AE%A9%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E6%B5%85%E6%9E%90%EF%BC%88CSS-Javascript%EF%BC%89/"/>
     <id>http://www.laoshu133.com/2013/04/26/让网页变灰浅析（CSS-Javascript）/</id>
     <published>2013-04-26T07:45:33.000Z</published>
-    <updated>2016-06-20T14:53:36.000Z</updated>
+    <updated>2016-06-20T15:49:03.000Z</updated>
     
     <content type="html">&lt;style type=&quot;text/css&quot;&gt;.log_item br{ display:none;}&lt;/style&gt;
 
@@ -281,7 +281,7 @@
 &lt;p&gt;乍一看，虽然让我想起了还有SVG这么个东西可以使，不过估计也就IE和Chrome行吧，印象中真没记得FF有支持&lt;code&gt;filter&lt;/code&gt;，然后打开FF测试了下，还真可以。&lt;/p&gt;
 &lt;p&gt;然后自己也动手去谷歌了下，才想上面的代码出处应该是在这里：&lt;a href=&quot;http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;后面又发现在stackoverflow上也有讨论：&lt;a href=&quot;http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后又找了些资料，总结方案如下：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG，不建议单独SVG文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG文件：http://www.laoshu133.com/test/grayscale.svg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* filter: url(grayscale.svg#grayscale); */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 有哥们研究说SVG的支持情况如下：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 不过我测试了下IE10(WIN7&amp;amp;WIN8)都不支持，所以基本兼容情况如下：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* Chorme 25/26不支持，手上没有更低版本的Chorme测试&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* FF3.5+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;url&lt;/span&gt;(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* Webkit only, Chrome &amp;amp; Safari 6+ */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;-webkit-filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;grayscale&lt;/span&gt;(100%);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* future-proof */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;grayscale&lt;/span&gt;(100%);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* IE4-8 and 9 (deprecated). */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:gray;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后又找了些资料，总结方案如下：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG，不建议单独SVG文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* filter: url(grayscale.svg#grayscale); */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 有哥们研究说SVG的支持情况如下：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* 不过我测试了下IE10(WIN7&amp;amp;WIN8)都不支持，所以基本兼容情况如下：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* Chorme 25/26不支持，手上没有更低版本的Chorme测试&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	* FF3.5+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;url&lt;/span&gt;(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* Webkit only, Chrome &amp;amp; Safari 6+ */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;-webkit-filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;grayscale&lt;/span&gt;(100%);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* future-proof */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;grayscale&lt;/span&gt;(100%);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;/* IE4-8 and 9 (deprecated). */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;attribute&quot;&gt;filter&lt;/span&gt;:gray;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;从上面注释基本可以看出对于IE10和低版本Opera CSS处理基本就是没折了；&lt;/p&gt;
 &lt;p&gt;以上代码使用时属性顺序不能调换；&lt;/p&gt;
 &lt;p&gt;以上选择器建议html或作用于html上，否则在IE下可能会看到部分元素依旧彩色，当然IE9无论怎样都处理的不是很好&lt;/p&gt;
@@ -336,7 +336,7 @@
     <link href="http://www.laoshu133.com/2013/02/27/Chrome%E6%9B%B4%E6%94%B9parseInt%E9%BB%98%E8%AE%A4%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/"/>
     <id>http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则/</id>
     <published>2013-02-27T15:33:20.000Z</published>
-    <updated>2016-06-20T14:26:50.000Z</updated>
+    <updated>2016-06-20T15:47:28.000Z</updated>
     
     <content type="html">&lt;p&gt;今天看到Chrome有更新，就升级了，目前最新稳定版本&lt;strong&gt;Chrome 25.0.1364.97 m&lt;/strong&gt;，然后很高兴的发现之前的&lt;a href=&quot;/post/crash_chrome.html&quot;&gt;崩溃BUG&lt;/a&gt;居然已经修复了。&lt;/p&gt;
 &lt;p&gt;不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到&lt;code&gt;parseInt&lt;/code&gt;的一个经典陷阱。&lt;/p&gt;
@@ -368,6 +368,391 @@
     
       &lt;p&gt;今天看到Chrome有更新，就升级了，目前最新稳定版本&lt;strong&gt;Chrome 25.0.1364.97 m&lt;/strong&gt;，然后很高兴的发现之前的&lt;a href=&quot;/post/crash_chrome.html&quot;&gt;崩溃BUG&lt;/a&gt;居然已经修复了。&lt;/p&gt;
 &lt;p&gt;不
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7行崩掉(Crash)Chrome</title>
+    <link href="http://www.laoshu133.com/2012/10/23/7%E8%A1%8C%E5%B4%A9%E6%8E%89-Crash-Chrome/"/>
+    <id>http://www.laoshu133.com/2012/10/23/7行崩掉-Crash-Chrome/</id>
+    <published>2012-10-23T13:08:29.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;升级到&lt;strong&gt;Chrome 25.0.1364.97 m&lt;/strong&gt;，此BUG已经修复&lt;/p&gt;
+&lt;p&gt;昨天在写页面时，无意间写了一个&lt;code&gt;ul&amp;gt;li&amp;gt;input:file&lt;/code&gt;的结构，然后&lt;code&gt;li&lt;/code&gt;左浮动（实际后面发现左/右浮动是一样的）&lt;code&gt;li{float:left;}&lt;/code&gt;，&lt;code&gt;li&lt;/code&gt;的上级有一个很经典的&lt;code&gt;.clearfix&lt;/code&gt;，在然后发现Chrome居然崩溃了，崩溃了。。。&lt;/p&gt;
+&lt;p&gt;然后今天特意花了点时间来重现我们万能的Chrome的BUG（别的平台均未重现，包括Safari），最后发现通过如下7行代码，可以轻松重现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试环境：WIN7/XP/MAC 20.0.1132.57 m/22.0.1229.94 m&lt;/li&gt;
+&lt;li&gt;重现条件：CSS部分缺一不可，HTML结构随意，input一定要是file&lt;/li&gt;
+&lt;li&gt;具体原因未知&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix:after&amp;#123; content:&quot;&quot;; display:block;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix li&amp;#123; float:left;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;file&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;废话不多，给出&lt;a href=&quot;/Lab/crash_chrome/&quot;&gt;DEMO地址&lt;/a&gt;，欢迎拍砖。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级到&lt;strong&gt;Chrome 25.0.1364.97 m&lt;/strong&gt;，此BUG已经修复&lt;/p&gt;
+&lt;p&gt;昨天在写页面时，无意间写了一个&lt;code&gt;ul&amp;gt;li&amp;gt;input:file&lt;/code&gt;的结构，然后&lt;code&gt;li&lt;/code&gt;左浮动（实际后面
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://www.laoshu133.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS 背景居中次像素无法重合</title>
+    <link href="http://www.laoshu133.com/2012/08/08/CSS-%E8%83%8C%E6%99%AF%E5%B1%85%E4%B8%AD%E6%AC%A1%E5%83%8F%E7%B4%A0%E6%97%A0%E6%B3%95%E9%87%8D%E5%90%88/"/>
+    <id>http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合/</id>
+    <published>2012-08-08T04:26:03.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章&lt;/p&gt;
+&lt;p&gt;首先重现BUG(此Demo仅CSS3支持，Chrome/Safari最佳)：&lt;/p&gt;
+&lt;p&gt;&lt;style type=&quot;text/css&quot;&gt;.t_shell{ border:1px solid #ddd; margin-bottom:15px; padding:20px 0 0; width:500px; position:relative;}.t_wrap{ background:#eee; margin:0 auto 20px; width:401px;}.t_wrap:before{ content:’.t_wrap’; position:absolute;}.t_panel{ background: #299a0b;background: -moz-linear-gradient(top, #299a0b 0%, #299a0b 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#299a0b), color-stop(100%,#299a0b));background: -webkit-linear-gradient(top, #299a0b 0%,#299a0b 100%);background: -o-linear-gradient(top,  #299a0b 0%,#299a0b 100%);background: -ms-linear-gradient(top,  #299a0b 0%,#299a0b 100%);background: linear-gradient(to bottom,  #299a0b 0%,#299a0b 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#299a0b’, endColorstr=’#299a0b’,GradientType=0 );}.t_inner{ background: #cf0404;background: -moz-linear-gradient(top, #cf0404 43%, #ff3019 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(43%,#cf0404), color-stop(100%,#ff3019));background: -webkit-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: -o-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: -ms-linear-gradient(top,  #cf0404 43%,#ff3019 100%);background: linear-gradient(to bottom,  #cf0404 43%,#ff3019 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=’#cf0404’, endColorstr=’#ff3019’,GradientType=0 );}.t_panel{ background-repeat:no-repeat; background-size:200px 120px; background-position:50% 20px; padding:140px 0 0 0; height:140px;}/&lt;em&gt;.t_panel:before{ content:’.t_panel’; position:absolute; width:100%;}&lt;/em&gt;/.t_inner{ background-repeat:no-repeat; margin:0 auto; height:120px; width:200px;}.t_inner:before{ color:#fff; content:’.t_inner’; position:absolute;}.t_btns{ border-top:1px solid #ddd; padding:10px 20px;}.t_btns button{ padding:5px;}&lt;/style&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;t_shell&quot;&gt;    &lt;div class=&quot;t_wrap&quot;&gt;        &lt;div class=&quot;t_panel&quot;&gt;            &lt;div class=&quot;t_inner&quot; title=&quot;.t_inner&quot;&gt;&lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;    &lt;div class=&quot;t_btns&quot;&gt;&lt;button onclick=&quot;var el=$(&#39;.t_wrap&#39;); el.width(el.width()+3);&quot;&gt;.t_wrap width +3px&lt;/button&gt;&lt;button onclick=&quot;var el=$(&#39;.t_wrap&#39;); el.width(el.width()-3);&quot;&gt;.t_wrap width -3px&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;t_shell&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;t_wrap&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;t_panel&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;t_inner&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;.t_inner&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.t_wrap&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;#eee&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; auto; &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;401px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.t_panel&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;-webkit-linear-gradient&lt;/span&gt;(top, #299a0b 0%,#299a0b 100%) no-repeat; &lt;span class=&quot;attribute&quot;&gt;background-position&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;50%&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;20px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;140px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;140px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.t_inner&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;built_in&quot;&gt;-webkit-linear-gradient&lt;/span&gt;(top, #cf0404 43%,#ff3019 100%); &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; auto; &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;120px&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;200px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;点击“.t_wrap width +3px”按钮增加(div.t_wrap)宽度时候，能够很明显的看到绿色块(div.t_panel)有1px左右的来回摆动。&lt;/p&gt;
+&lt;p&gt;出现以上BUG的原因，国外“ACKO”给出的原因如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The width of the viewport&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The odd/even size of the box/element&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Background image is bigger/smaller than the viewport&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Background image is padded evenly/unevenly around the box (1px difference). (&lt;em&gt;)&amp;gt; (&lt;/em&gt;) Note that there is a choice whether to pad more on the left or on the right. I chose the left. This means that the last 4 rows of test cases are inherently ambiguous: a browser that misaligns all of these in the same fashion is in fact being consistent, just in the opposite direction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;http://acko.net/blog/css-sub-pixel-background-misalignments/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Sub-pixel-background-misalignments&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;/p&gt;
+&lt;p&gt;在我测试过程中，发现基本上只要上面给出原因前面两条不出现，&lt;strong&gt;即：宽度不跟随视图变化，容器的宽度适中为偶数或者奇数；就可以有效避免&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外，在查找资料的过程中，发现另外一个解决方案，不过我根据我测试的好像不是很给力，当视图宽度变化时，依然能重现：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; screen and (-webkit-min-device-pixel-ratio:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;selector-class&quot;&gt;.t_panel&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;background-position&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;50.001%&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;20px&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;http://philfreo.com/blog/fixing-safaris-1px-background-image-centering-problem/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Fixing-Safari-1px-background-image-centering-problem&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;又见CSS BUG，昨天赶工写完一个页面，专题页面，又需要重用，没花太多时间处理细节上的东西，因为大部分模块都可以直接替换；今天早上同事和我说：“Safari 下面背景是不是有1px偏移？”，听完觉得挺奇怪，一般不应该存在这样的问题的，然后一看就有了这篇文章&lt;/p&gt;
+&lt;p&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML/CSS" scheme="http://www.laoshu133.com/tags/HTML-CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JPG渐进 &amp;amp; PNG/PNG24 交错测试</title>
+    <link href="http://www.laoshu133.com/2012/08/03/JPG%E6%B8%90%E8%BF%9B-amp-PNG-PNG24-%E4%BA%A4%E9%94%99%E6%B5%8B%E8%AF%95/"/>
+    <id>http://www.laoshu133.com/2012/08/03/JPG渐进-amp-PNG-PNG24-交错测试/</id>
+    <published>2012-08-03T08:20:35.000Z</published>
+    <updated>2016-06-20T15:47:28.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天由同事说起，PS导出PNG时，有个选项”交错“是干啥的，想起这也是个问题，所以特意搞了个测试页面：&lt;/p&gt;
+&lt;p&gt;引用网上”交错-就是类似旧式电视的隔行扫描，让图片只花50%的时间就可以看到图片全貌“，&lt;br&gt;另外JPG的”渐进“也有类似效果，可惜支持的浏览器不多&lt;/p&gt;
+&lt;p&gt;在测试各个浏览器（未说明都为最新版本）时发现：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Chrome对“渐进”和“交错”都支持良好&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Safari(PC/MAC)对“渐进”不支持，“交错支持良好”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fiefox对“渐进”和“交错”都支持良好&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Opera对“渐进”和“交错”都支持良好&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;IE9对“渐进”和“交错”都不支持&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;测试地址：&lt;a href=&quot;http://www.laoshu133.cn/Interlace_test/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Interlace_test&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从测试的加载情况可以很容易看出，在对于需要加载大图片的情况下，在导出图片时选择“交错”（PS里JPG选择“连续”），对于用户体验上有很大的改善&lt;/p&gt;
+&lt;p&gt;另外，在&amp;lt;img /&amp;gt;标签有个lowsrc属性，可以指定图片的缩略图，用于避免，页面打开时一片空白；不过现在这个属性出现的概率貌似有点低；&lt;/p&gt;
+&lt;p&gt;引用某处关于“渐进”(Interlace)和“交错”(Progressive)的解释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JPEG、GIF和PNG这三种图像格式都提供了一种功能，让图像能够更快地显示。图像可以以一种特殊方式存储，显示时先大概显示图像的草图，当文件全部下载后再填充细节。这起到一种很有意义的心理效果，因为这样使人们有东西可看，而不必坐着干等大型图像慢慢显示在屏幕上。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天由同事说起，PS导出PNG时，有个选项”交错“是干啥的，想起这也是个问题，所以特意搞了个测试页面：&lt;/p&gt;
+&lt;p&gt;引用网上”交错-就是类似旧式电视的隔行扫描，让图片只花50%的时间就可以看到图片全貌“，&lt;br&gt;另外JPG的”渐进“也有类似效果，可惜支持的浏览器不多&lt;/p
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://www.laoshu133.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DatePicker - 基于jQuery 的日期选择控件</title>
+    <link href="http://www.laoshu133.com/2012/07/30/DatePicker-%E5%9F%BA%E4%BA%8EjQuery-%E7%9A%84%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6/"/>
+    <id>http://www.laoshu133.com/2012/07/30/DatePicker-基于jQuery-的日期选择控件/</id>
+    <published>2012-07-30T06:30:58.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;前不久因为公司活动需求，需要一个简单的日期选择控件，而且时效性不是很短，所以不想去用JQuery UI那样笨重的日期选择插件，于是就有了今天这篇：&lt;/p&gt;
+&lt;p&gt;首先从需求角度出发，我们对日期要求不高，比如不要求一定要有明确的星期几，不要求有明确的用户输入日期；但是要求：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;体积够小，速度够快&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;高度可定制性，配置参数完善&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;于是，我打算不用图片处理界面，采用CSS3降级处理，单文件，HTML模板和CSS采用动态注入的方式。&lt;/p&gt;
+&lt;p&gt;完整代码（16KB）：&lt;a href=&quot;http://www.laoshu133.cn/Lab/DatePicker/jquery.DatePicker.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jquery.DatePicker.js(未压缩)&lt;/a&gt;，完善的&lt;a href=&quot;http://www.laoshu133.cn/Lab/DatePicker/#all_option&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置参数&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;完整DEMO地址：&lt;a href=&quot;http://www.laoshu133.cn/Lab/DatePicker/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DatePicker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一个简单DEMO：&lt;/p&gt;
+&lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;date_picker_demo&quot; value=&quot;2012-12-12&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;text/javascript&quot;&gt;window.onload = function(){$.getScript(‘&lt;a href=&quot;http://www.laoshu133.cn/Lab/DatePicker/jquery.DatePicker.js&quot;&gt;http://www.laoshu133.cn/Lab/DatePicker/jquery.DatePicker.js&lt;/a&gt;‘, function(){$(‘#date_picker_demo’).datePicker({followOffset : [0, 24]}).focus();});}&lt;/script&gt;&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.onload = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	$.getScript(&lt;span class=&quot;string&quot;&gt;&#39;http://www.laoshu133.cn/Lab/DatePicker/jquery.DatePicker.js&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		$(&lt;span class=&quot;string&quot;&gt;&#39;#date_picker_demo&#39;&lt;/span&gt;).datePicker(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			followOffset : [&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		.focus();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;其实，说小那是相对于 JQuery UI那样的笨重的插件来说的，本来以为不用多少代码就可以搞定了，没想到写着写着就 16KB 了。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前不久因为公司活动需求，需要一个简单的日期选择控件，而且时效性不是很短，所以不想去用JQuery UI那样笨重的日期选择插件，于是就有了今天这篇：&lt;/p&gt;
+&lt;p&gt;首先从需求角度出发，我们对日期要求不高，比如不要求一定要有明确的星期几，不要求有明确的用户输入日期；但是要求：&lt;
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于给定路径求相对路径</title>
+    <link href="http://www.laoshu133.com/2012/07/19/%E5%9F%BA%E4%BA%8E%E7%BB%99%E5%AE%9A%E8%B7%AF%E5%BE%84%E6%B1%82%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/"/>
+    <id>http://www.laoshu133.com/2012/07/19/基于给定路径求相对路径/</id>
+    <published>2012-07-19T02:27:13.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天群里出了个题目，原题如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;求一函数
+原字符串为
+var str = &quot;aaa/bbb/ccc/&quot;
+如果用户输入
+ &#39;../dd.js&#39;
+那么返回
+aaa/bbb/dd.js
+如果用户输入
+ &#39;../../ee.js&#39;
+那么返回
+aaa/ee.js
+如果用户输入
+ &#39;../../../hh.js&#39;
+那么返回
+hh.js
+function adjustPath(str, user){
+
+}&lt;/pre&gt;
+
+&lt;/blockquote&gt;
+&lt;p&gt;另外应群里童鞋处理特许情况，又需要处理一下情况&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;URL中存在&lt;code&gt;./&lt;/code&gt;，例如：&lt;code&gt;../..//xx.js&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;URL中存在&lt;code&gt;//&lt;/code&gt;，例如：&lt;code&gt;./ii.js&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其实对于这题，很早以前就看到过，只是一直没去花时间，正好今天早上闲着，就写了个：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;absPath&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;str, user&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; sCount = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; url = (user + &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;).replace(&lt;span class=&quot;regexp&quot;&gt;/\.\.\//g&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sCount++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	.replace(&lt;span class=&quot;regexp&quot;&gt;/\.\//g&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	str = (str + &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;).replace(&lt;span class=&quot;regexp&quot;&gt;/\/+$/&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	str = str.split(&lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt;).slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, sCount &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; ? -sCount : &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;).join(&lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	url = str.length &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; ? str + &lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt; + url : url;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; url.replace(&lt;span class=&quot;regexp&quot;&gt;/\/\/+/g&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在以上代码发出去后，群里影响几乎为 0 的情况下，出去喝了杯水，想到应该得出点奇淫技巧了，于是就又有了：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//MS 还是比较给力的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;absPath&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;str, user&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a.href = str + user;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//console.info(&#39;getAttribute, href = &#39;, a.getAttribute(&#39;href&#39;, 4));&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; urlPri = location.href.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, location.href.lastIndexOf(&lt;span class=&quot;string&quot;&gt;&#39;/&#39;&lt;/span&gt;) + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//实际只有IE7- 需要 a.getAttribute(&#39;href&#39;, 4) 取得浏览器拼接好的URL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (!-[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,] ? a.getAttribute(&lt;span class=&quot;string&quot;&gt;&#39;href&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;) : a.href).replace(urlPri, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;测试代码如下：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&#39;test 1 - &#39;&lt;/span&gt;, absPath(&lt;span class=&quot;string&quot;&gt;&#39;aaa/bbb/ccc/&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;../dd.js&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&#39;test 2 - &#39;&lt;/span&gt;, absPath(&lt;span class=&quot;string&quot;&gt;&#39;aaa/bbb/ccc/&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;../../ee.js&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&#39;test 3 - &#39;&lt;/span&gt;, absPath(&lt;span class=&quot;string&quot;&gt;&#39;aaa/bbb/ccc/&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;../../../hh.js&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&#39;test 4 - &#39;&lt;/span&gt;, absPath(&lt;span class=&quot;string&quot;&gt;&#39;aaa/bbb/ccc/&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;../..//xx.js&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&#39;test 5 - &#39;&lt;/span&gt;, absPath(&lt;span class=&quot;string&quot;&gt;&#39;aaa/bbb/ccc/&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;./ii.js&#39;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;最后给出群里 “糖果男孩” 的一个比较给力函数，不过如果需要支持上面说的几个特许情况，还得改造一下：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;adjustPath&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;str, user&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; patharr = str.replace(&lt;span class=&quot;regexp&quot;&gt;/\/$/&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;).split(&lt;span class=&quot;string&quot;&gt;&quot;\/&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; nstr = user.replace(&lt;span class=&quot;regexp&quot;&gt;/\.\.\//g&lt;/span&gt;,&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		patharr.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; patharr.join(&lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;)+&lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;+nstr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天群里出了个题目，原题如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;求一函数
+原字符串为
+var str = &quot;aaa/bbb/ccc/&quot;
+如果用户输入
+ &#39;../dd.js&#39;
+那么返回
+aaa/bbb/dd.js
+如果用户输入
+ &#39;../../ee.js&#39;
+那么返
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZBLOG主题[Ceedo] V2.0</title>
+    <link href="http://www.laoshu133.com/2012/02/27/ZBLOG%E4%B8%BB%E9%A2%98-Ceedo-V2-0/"/>
+    <id>http://www.laoshu133.com/2012/02/27/ZBLOG主题-Ceedo-V2-0/</id>
+    <published>2012-02-26T20:11:00.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;又其实，这篇日志又是老早就准备更新了，因为各种原因，一直拖到现在，下面说下这次的主要更新：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修正所有已知BUG  &lt;/li&gt;&lt;li&gt;重构了1.0的页面结构，对于自适应和页面布局方面完全取消对图片的依赖  &lt;/li&gt;&lt;li&gt;重设了背景区域和正文区域的背景，更加突出阅读重点  &lt;/li&gt;&lt;li&gt;重写了文章评论/回复部分，修复了原有的各种BUG，更加给力了回复功能和表情插入  &lt;/li&gt;&lt;li&gt;重写了页面的所有脚本逻辑交互，完全取消了对ZBLOG的common.js的依赖  &lt;/li&gt;&lt;li&gt;将所有非插件插入脚本全部移入文档底部，加速页面渲染（对速度有要求的朋友应该比较喜欢）  &lt;/li&gt;&lt;li&gt;对主题资源进行整合，在没有插件情况下首页只有6个外部资源请求（CSS&lt;em&gt;1+JS&lt;/em&gt;2+IMG*3）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总之，Ceedo 2.0 给你一个干净，简洁，够快的ZBLOG主题。&lt;/p&gt;
+&lt;p&gt;OK，感觉有点废话了，下面给出下载地址： &lt;a href=&quot;http://www.laoshu133.cn/dl/#Ceedo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ceedo 2.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;另外，给希望在文章中插入代码而且需要高亮的朋友一个漂亮的代码高亮插件 &lt;a href=&quot;http://www.laoshu133.cn/post/DsLighter.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DsLight&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后，欢迎&lt;a href=&quot;http://www.laoshu133.cn/guestbook.asp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;各种板砖，各种建议&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;—————————–华丽的分割线（v1.0）———————————-&amp;nbsp; &lt;/p&gt;&lt;p&gt;其实早就准备写这篇文章了，只是空间不怎么给力，更不幸的是，在写这篇文章的时候自己一个不小心把电源给踩掉了-_-|||，结果又写第二遍…，主题是两周以前开始写的，到今天为止也算是正式发布了。  &lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/themes/Ceedo/screenshot.png&quot; alt=&quot;&quot;&gt;这次主题总的来说我自己还是很满意的，虽然期间也遇到不少问题，但总算还是站着走过来了，其中自认为不错也是比较喜欢的几个效果，NAV导航，页面顶部底部导航，以及&lt;a href=&quot;http://10.138.0.62/zblog/tags.asp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TAGS页面&lt;/a&gt;的效果，详细的自己看看小站就晓得啦，至于那版权什么的，有问题就直接找我吧，以下说下主题的特点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;整站自适应布局，仿两列等高，是一款很耐看，很实在的主题  &lt;/li&gt;&lt;li&gt;完全断开了很多主题所需的原程序中的common.js，当然，为了兼容插件依然引入了JQuery，并且升级版本为1.3.2  &lt;/li&gt;&lt;li&gt;高度的兼容浏览器，在已测的范围内，基本上没区别的，细微的，在个人能力范围内在所难免  &lt;/li&gt;&lt;li&gt;页面动画效果简单实在，个人相当喜欢，不过这主要还是要归功于JQuery的功劳  &lt;/li&gt;&lt;li&gt;整个主题加起来181K，不到200K的体积我自己是相当满意的，而且还是内置了JQ1.3.2的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看完如果发现有喜欢可以&lt;a href=&quot;mailto:laoshu133@vip.qq.com?subject=%E6%88%91%E8%A6%81%E4%B8%BB%E9%A2%98Ceedo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;猛击此处&lt;/a&gt;找我要，本来是很想直接挂下载链接的，但是空间真的很不给力啊，说完优点，缺点肯定也是有的，说下在制作过程的比较纠结的一个问题，其实一开始我就是想好要“自适应两列等高布局”，在实际中也一直是按照这个宗旨前进着，在前期做自适应的时候还是很顺手的，因为网站布局只有两列，我一开始就用用的，&lt;a href=&quot;http://10.138.0.62/zblog/view.asp?id=2&quot; title=&quot;详情见我以前写的一篇小关于自适应的文章&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;左列固定自适应&lt;/a&gt;，右列绝对的定位的方式布局，在自适应上面下过相当不错了，不过也很快就发现问题了，因为右列用的是绝对定位，已经脱离了文档流，当右列高度大于左列的时候，会出现右列盖住底部的情况，不过这个问题如果pass掉IE6的话，也很好解决，加个min-height就搞定，而且还需要实现两列等高，实现两列等高自然还是采用相当经典的“padding-bottom - margin-bottom法”，这样只要再让主体容器overflow:hidden;就可以很简单的实现两列等高了，个人觉得边框模拟，多层嵌套什么的都是不实用的。&lt;/p&gt;
+&lt;p&gt;很不幸，现实总是和我们预想的是有那么点点区别的，很快BUG就出现了，先不说它不兼容IE6，更严重的是，我后来做文章显示页面，因为有评论，所以需要很多锚点，或者ID来导航、或者定位什么的，然后在定位评论框的时候，出现了在主体容器里面只剩下评论框的情况（本来很想上传图片的，空间忒不给力……），记得早些时候看过一篇关于“不要使用overflow:hidden清除浮动，overflow:hidden会元素在FF下获得焦点”，因为我测试也正好也是FF，以为是单例，结果一测发现在所有浏览器都表现的那么从来没有过的一致啊，我当时那个-_-|||，后来一想，其实这样是正常现象，overflow:hidden只是让容器不显示滚动条而已，当容器里的内容需要滚动的时候依然还是滚动的，只是溢出的部分隐藏了。&lt;/p&gt;
+&lt;p&gt;至此，上面的方法是不行了，然后在想了一个上午后，忽然想起以前岁月飞歌写过一篇文章，他说继上次“圣杯布局”以来，我们又迎来了“负来负去”布局的时代，我觉得这个确实也还是蛮有道理的，继续我们作为IT业中还算比较潮的一行，自然也需要试试“负来负去”的感觉，为了让左列自适应，不得不还给左列加上一层标签包裹起来，这次让左右两列都左浮动，然后左列宽度100%，左边负边距右列宽度，为了解决IE6的“下沉”现象，还得加上overflow-x:hidden，再然后让左列包裹层，左边正边距右列宽度就达到自适应的目的了，具体看代码吧&lt;br&gt;&lt;code&gt;css.content, .slider{ float:left;} .content{ margin-left:-290px; overflow-x:hidden; width:100%;} .main{ margin-left:290px;}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后实现自适应了，前面已经说了，“padding-bottom - margin-bottom法”是有BUG的了，肯定也是不行的了，多层嵌套什么的，也不是很喜欢，太浪费标签了，那么就背景模拟吧，因为前面右列用的绝对定位，所以主题容器上面加了position:relative，结果因为这个又杯具了，在除了IE6的浏览器下面都正常，但就是在IE6下面主题容器的背景硬就是不跟着浏览器的大小走（真的很想上图片的），还得我又调试了一上午才找到问题所在，最后我又特意去翻了一遍关于W3C对position:relative的解释：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相对定位的元素框会偏移某个距离。元素仍然保持其未定位前的形状，它原本所占的空间仍保留”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;结果看来IE6还真是相当遵从它的“规定”啊，一点不让地方减少啊，整个容器的内容都在随着窗口的缩小而缩小，可是容器背景的位置就是不变，然后把position:relative去掉就解决问题了。&lt;/p&gt;
+&lt;p&gt;最后说下，可能有些时候在两列都左浮动的时候可能会产生IE6 3px bug，其实只要做到让左列右边和右列的左边没有外边距，基本上就木有问题了，还有当浏览器窗口相当小于一定大小后IE6会出现右列下沉的现象，其实解决也很简单，只要让左边容器overflow-x:hidden或者word-break:break-all，也就基本解决问题了。  &lt;/p&gt;&lt;p&gt;以上如有错误之处还望指正，如果您看完了此文，那么我是相当感激您的，对于我这么一个文笔相当差人来说，这已经是对我最大的尊敬了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;又其实，这篇日志又是老早就准备更新了，因为各种原因，一直拖到现在，下面说下这次的主要更新：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修正所有已知BUG  &lt;/li&gt;&lt;li&gt;重构了1.0的页面结构，对于自适应和页面布局方面完全取消对图片的依赖  &lt;/li&gt;&lt;li&gt;重设了背景区域和正文区域的
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://www.laoshu133.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在线五子棋对战</title>
+    <link href="http://www.laoshu133.com/2011/10/28/%E5%9C%A8%E7%BA%BF%E4%BA%94%E5%AD%90%E6%A3%8B%E5%AF%B9%E6%88%98/"/>
+    <id>http://www.laoshu133.com/2011/10/28/在线五子棋对战/</id>
+    <published>2011-10-28T08:27:45.000Z</published>
+    <updated>2016-06-20T15:47:28.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;a href=&quot;/five/&quot;&gt;在线五子棋对战&lt;/a&gt;终于倒腾出来了 ^_^&lt;/p&gt;
+&lt;p&gt;在经过了长达半个月窝在屋里的时间终于让我折腾出了一点点值得欣慰的东西，总的来说自己还算满意，基本能做到不需要用户手册就能开玩。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/five/&quot;&gt;在线五子棋对战&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.laoshu133.cn/five/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://five.laoshu133.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;mailto:laoshu133@vip.qq.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联系我&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;/guestbook.asp?act=report&amp;amp;type=bug&quot;&gt;BUG反馈&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目前五子棋支持3种模式，显示棋谱、双手互搏、在线对战，至于人机对战，因为能力有限，没研究多少人工智能，尚不支持。&lt;/p&gt;
+&lt;p&gt;显示棋谱：&lt;a href=&quot;/five/?map=IFJEKELEMFMGMHLIKJJKILHMGLFKEJDICHCGCFDEEEFEGFHG&amp;amp;delay=420&quot; title=&quot;画心棋谱&quot;&gt;画心演示&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后两个模式就可以在&lt;a href=&quot;http://www.laoshu133.cn/five/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://five.laoshu133.com&lt;/a&gt;自动切换了&lt;/p&gt;
+&lt;p&gt;主要说下，对战模式的实现&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对战模式采用的是AJAX轮询的方式实现的，所以延迟也必然是有的，后端是ASP写的，所以 长连接 也估计只能说浮云了&lt;/li&gt;
+&lt;li&gt;只是实现了简单的对战，前端，后端都没有做安全处理，所以外挂什么的是很容易的，路过请轻拍&lt;/li&gt;
+&lt;li&gt;如果你有兴趣看看后端数据模式，可以在对战下按下F12键，切换到网络模式，可以查看每次返回的数据，所有当前的对战信息在&lt;a href=&quot;/five/five.asp?act=debug&quot;&gt;这里&lt;/a&gt;能看到&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后，就是如果您觉得这个还算看得过去，请转发 &lt;a href=&quot;http://www.laoshu133.cn/five/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://five.laoshu133.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;求广告，求推广&lt;/p&gt;
+&lt;p&gt;求BUG，求反馈&lt;/p&gt;
+&lt;p&gt;求板砖，还请轻拍&lt;br&gt;&amp;lt;!–&lt;/p&gt;
+&lt;p&gt;最后，由于本人当前失业中，求&lt;a href=&quot;/133.doc&quot;&gt;被面&lt;/a&gt;&lt;br&gt;–&amp;gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;/five/&quot;&gt;在线五子棋对战&lt;/a&gt;终于倒腾出来了 ^_^&lt;/p&gt;
+&lt;p&gt;在经过了长达半个月窝在屋里的时间终于让我折腾出了一点点值得欣慰的东西，总的来说自己还算满意，基本能做到不需要用户手册就能开玩。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/five/&quot;&gt;在线
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈javascript 与 flash通信</title>
+    <link href="http://www.laoshu133.com/2011/10/21/%E6%B5%85%E8%B0%88javascript-%E4%B8%8E-flash%E9%80%9A%E4%BF%A1/"/>
+    <id>http://www.laoshu133.com/2011/10/21/浅谈javascript-与-flash通信/</id>
+    <published>2011-10-21T01:51:46.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在弄一个小游戏，玩游戏总要有点声音的，然后选择了用Flash出声，在做JS与Flash通信的时候，又一次被externalInterface.addCallback 和 embed 标签坑了，详情如下：&lt;/p&gt;
+&lt;p&gt;Flash设计的是 5 帧， 后面4帧每帧一个声音，然后用脚本控制播放，在最开始的时候，JS调用Flash原生的Play()方法，在各个浏览器下面都表现相当不错，接着使用如下AS脚本为JS添加回调，&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//导入包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; flash.external.*;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//允许哪些域访问&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;system.Security.allowDomain(&lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//提供JS访问的函数名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;methodName:&lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt; = &lt;span class=&quot;string&quot;&gt;&quot;playSound&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//指定本地函数中this变量的作用域，可设置为null留空&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;self:&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt; = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//AS内部函数名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;soundMap = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	down : &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	win : &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	draw : &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	lose : &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;playSound:&lt;span class=&quot;built_in&quot;&gt;Function&lt;/span&gt; = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;type&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!!soundMap[type])&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndStop(soundMap[type]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndStop(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//将函数注册到容器列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//这里需要检测是否注册成功，因为如果是从缓存读取的，不一定是在flash完全load之后才执行此处&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;regRet:&lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt; = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;regFn = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	regRet = ExternalInterface.addCallback(methodName, self, playSound);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(regRet)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; regRet;	&lt;span class=&quot;comment&quot;&gt;//注册成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//注册失败，重新注册&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	setTimeout(regFn, &lt;span class=&quot;number&quot;&gt;500&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;regFn();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这里我还特意规避了一个以前弄一个&lt;a href=&quot;/Lab/tester/&quot;&gt;JS剪贴板&lt;/a&gt;时遇到的一个问题，如果Flash是从缓存加载，有可能在调用ExternalInterface.addCallback()时，Flash还未加载完成，造成接口注册失败的问题，然而不幸的事情依旧还是发生了，此方法在IE下面表现良好，但是到了FF等下面，Flash依旧不来米，然后又经过了N个小时排查，总算找到了问题所在，又是因为IE和别的浏览器显示Flash用的模式不一致，我在调用Flash的时候一般用的自己写的一个&lt;a href=&quot;/ds/flash.js&quot;&gt;小JS库&lt;/a&gt;，输出Flash，在做输出HTML的时候，默认参数是设置Flash的 &lt;code&gt;wmode=&amp;quot;transparent&amp;quot;&lt;/code&gt;，因为这样能避免DIV盖不住Flash之类的问题，结果没想到这样居然也会让Flash接口失效.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;最后这里的解决办法自然也就了然了，设置 &lt;code&gt;wmode=&amp;quot;window&amp;quot;&lt;/code&gt;，顺利解决问题，仅此小记一笔。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在弄一个小游戏，玩游戏总要有点声音的，然后选择了用Flash出声，在做JS与Flash通信的时候，又一次被externalInterface.addCallback 和 embed 标签坑了，详情如下：&lt;/p&gt;
+&lt;p&gt;Flash设计的是 5 帧， 后面4帧每帧一个声音，
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZBLOG代码高亮插件 DsLighter</title>
+    <link href="http://www.laoshu133.com/2011/09/08/ZBLOG%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%8F%92%E4%BB%B6-DsLighter/"/>
+    <id>http://www.laoshu133.com/2011/09/08/ZBLOG代码高亮插件-DsLighter/</id>
+    <published>2011-09-08T02:38:49.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;因为自己也经常也在BLOG上面贴点小代码，没有代码高亮感觉看着很不舒服，在菠萝格上面转了一圈，好不容易找到一个能用的，还发现效果很不满意，于是乎，就只好自己动手了，昨天在无意间在Node.js 逛的时候，发现他的代码高亮的效果感觉很不错，又于是乎，就给顺手牵过来了，此次代码高亮插件由 &lt;a href=&quot;http://shjs.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SHJS&lt;/a&gt; 驱动。&lt;/p&gt;
+&lt;p&gt;效果请见（JS） ：&lt;a href=&quot;http://www.laoshu133.cn/post/browser.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.laoshu133.cn/post/browser.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CSS 效果 ：&lt;br&gt;&lt;code&gt;css table { border-collapse: collapse; border-spacing: 0; } h2 { font-size:16px; } hr { height:1px; border:none; border-top:1px dashed #ccc; margin:0; } .left { float:left; } .right { float:right; } .clr { clear:both; }&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如有需要，请狂点 &lt;a href=&quot;http://www.laoshu133.cn/dl/#DsLighter&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;此处下载&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为自己也经常也在BLOG上面贴点小代码，没有代码高亮感觉看着很不舒服，在菠萝格上面转了一圈，好不容易找到一个能用的，还发现效果很不满意，于是乎，就只好自己动手了，昨天在无意间在Node.js 逛的时候，发现他的代码高亮的效果感觉很不错，又于是乎，就给顺手牵过来了，此次代码
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://www.laoshu133.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈谈浏览器检测 BOM</title>
+    <link href="http://www.laoshu133.com/2011/09/02/%E8%B0%88%E8%B0%88%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A3%80%E6%B5%8B-BOM/"/>
+    <id>http://www.laoshu133.com/2011/09/02/谈谈浏览器检测-BOM/</id>
+    <published>2011-09-02T10:46:21.000Z</published>
+    <updated>2016-06-20T15:48:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在谈到浏览器检测的时候，相信很多同学都会说这是一个很老的话题了，而且首先想到的肯定就是检测 navigator.userAgent，然后再想到的肯定就是对于IE这个庞大的体系的HACK。&lt;/p&gt;
+&lt;p&gt;简单展示一下几个浏览器的userAgent:&lt;/p&gt;
+&lt;p&gt;IE7 - Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;IE9 - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;Chrome12 - Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;FF6 - Mozilla/5.0 (Windows NT 6.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1&lt;/p&gt;
+&lt;p&gt;很明显，其中的规律不是难发现，浏览器的版本MSIE 7.0，&amp;nbsp;Chrome/12.0.742.122，要么是跟在&amp;quot;/&amp;quot;后面，要么是跟在空格后面，所以下面给出我的实现方案：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;names&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; rword = &lt;span class=&quot;regexp&quot;&gt;/[^, \|]+/g&lt;/span&gt;, brows = &amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	names.replace(rword, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name&lt;/span&gt;)&lt;/span&gt;&amp;#123; brows[name] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;(&#39;&lt;/span&gt; + names + &lt;span class=&quot;string&quot;&gt;&#39;)[ \\/](\\d+)\\.&#39;&lt;/span&gt;).test(navigator.userAgent))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		brows[&lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;built_in&quot;&gt;parseInt&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		browser : brows,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		ieVer : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;ver&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _ver = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.browser.IE;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;isNaN&lt;/span&gt;(ver) ? _ver : _ver == ver;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(&lt;span class=&quot;string&quot;&gt;&#39;Chrome|Firefox|IE|Opera|Safari&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不过对于IE系列一些HACK已知没有停止过，类似一些比较常用的：&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;是否为：IE - !+[1,] (在IE9下已经失效)，!+’\v1’  (lt IE9不支持垂直制表符，同样IE9已经失效)&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;另外给出 司徒正美总结的&lt;a href=&quot;http://www.cnblogs.com/rubylouvre/archive/2009/10/14/1583362.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一些检测方案&lt;/a&gt; ，&lt;/p&gt;
+&lt;p&gt;从上面不难看出，HACK检测方案都是不安全的，随着浏览器的的升级很可能HACK就处问题了。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;对于基础的检测，我给出的方案应该能胜任了，希望能看到更好的解决方案，等有时间再给出JQ的browser模块。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在谈到浏览器检测的时候，相信很多同学都会说这是一个很老的话题了，而且首先想到的肯定就是检测 navigator.userAgent，然后再想到的肯定就是对于IE这个庞大的体系的HACK。&lt;/p&gt;
+&lt;p&gt;简单展示一下几个浏览器的userAgent:&lt;/p&gt;
+&lt;p&gt;IE7 - 
     
     </summary>
     
