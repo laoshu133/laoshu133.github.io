@@ -88,13 +88,12 @@
 
 <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://www.laoshu133.com/tags/index.html">
+<meta property="og:title" content="米空格">
+<meta property="og:url" content="http://www.laoshu133.com/page/2/index.html">
 <meta property="og:site_name" content="米空格">
 <meta property="og:description">
-<meta property="og:updated_time" content="2016-06-19T17:16:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
+<meta name="twitter:title" content="米空格">
 <meta name="twitter:description">
 
 
@@ -116,15 +115,9 @@
 
 
 
-  <link rel="canonical" href="http://www.laoshu133.com/tags/"/>
+  <link rel="canonical" href="http://www.laoshu133.com/page/2/"/>
 
-  <title>
-  
-
-  
-    标签 | 米空格
-  
-</title>
+  <title> 米空格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,7 +144,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,20 +223,139 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 3 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/02/27/Chrome更改parseInt默认转换规则/" itemprop="url">
+                  Chrome更改parseInt默认转换规则
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-02-27T23:33:20+08:00" content="2013-02-27">
+              2013-02-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/02/27/Chrome更改parseInt默认转换规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/02/27/Chrome更改parseInt默认转换规则/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/HTML-CSS/" style="font-size: 21px; color: #6f6f6f">HTML/CSS</a> <a href="/tags/Javascript/" style="font-size: 30px; color: #111">Javascript</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a>
-        </div>
-      </div>
+      </header>
     
-  </div>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天看到Chrome有更新，就升级了，目前最新稳定版本<strong>Chrome 25.0.1364.97 m</strong>，然后很高兴的发现之前的<a href="/post/crash_chrome.html">崩溃BUG</a>居然已经修复了。</p>
+<p>不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到<code>parseInt</code>的一个经典陷阱。</p>
+<p>首先回顾一下<code>parseInt(string, radix)</code>当省略<code>radix</code>参数时，大致的解析过程：</p>
+<ul>
+<li><p>当<code>string</code>以0开头，且后面紧跟x时，按照<code>parseInt(string, 16)</code>处理</p>
+</li>
+<li><p>当<code>string</code>以0开头，且后面紧跟非x时，按照<code>parseInt(string, 8)</code>处理</p>
+</li>
+<li><p>其余统一按照<code>parseInt(string, 10)</code>处理</p>
+</li>
+</ul>
+<p>当然强烈建议始终使用<code>radix</code>参数</p>
+<p>&nbsp;</p>
+<p>按照上面的解析规则，<code>parseInt(&#39;010&#39;)</code>很自然应该返回<code>8</code> ，不过奇怪的是Chorme返回的居然是<code>10</code>，难道最新版Chrome改掉了以前默认的转换规则？</p>
+<p>晚上回家又拿Chrome 24.0.1312.56试了一下，发现结果也是一样的（没有更早的版本了），看来Chrome改掉这个规则已经不是一两天了，不知其他浏览器会不会效仿。。。</p>
+<p>最后趁着这赶脚，再稍微回顾一下<code>parseInt</code>和<code>parseFloat</code>转换数字上的区别：</p>
+<ul>
+<li><p><code>parseFloat</code>只能转换10进制，而<code>parseInt</code>则支持第二个参数<code>parseInt(string[, radix])</code>，理论上支持任意进制的数字</p>
+</li>
+<li><p><code>parseInt</code>不能转换科学计数<code>parseInt(&#39;1e2&#39;);//1</code>，<code>parseFloat(&#39;1e2&#39;);//100</code></p>
+</li>
+<li><p><code>parseInt</code>无法转换省略小数点前面0的数字<code>parseInt(&#39;.1&#39;);//NaN</code>，<code>parseFloat(&#39;.1&#39;);//0.1</code></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -249,14 +363,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="标签" data-url="http://www.laoshu133.com/tags/index.html">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -288,7 +394,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -246,8 +246,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/20/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2014/11/20/JS笔记-javascript-base64-Encode-Decode/" itemprop="url">
+                  [JS笔记] javascript base64 Encode, Decode
                 </a>
               
             
@@ -260,8 +260,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T01:16:15+08:00" content="2016-06-20">
-              2016-06-20
+            <time itemprop="dateCreated" datetime="2014-11-20T21:54:34+08:00" content="2014-11-20">
+              2014-11-20
             </time>
           </span>
 
@@ -271,8 +271,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/20/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2014/11/20/JS笔记-javascript-base64-Encode-Decode/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/20/JS笔记-javascript-base64-Encode-Decode/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,7 +297,1054 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+            <p>以下方案仅限于浏览器环境！</p>
+<p>浏览器内置的方法 <code>atob, btoa</code> 仅能处理 utf-8 编码的 ascii 字符，不能直接作用于 Unicode 字符串，所以需要搞定 utf-8 编码，解码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utf-8 encode, decode</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode_utf8</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(s));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decode_utf8</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(s));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>来源：<a href="http://ecmanaut.blogspot.jp/2006/07/encoding-decoding-utf8-in-javascript.html" target="_blank" rel="external">http://ecmanaut.blogspot.jp/2006/07/encoding-decoding-utf8-in-javascript.html</a><br>另：<a href="http://www.ruanyifeng.com/blog/2010/02/url_encoding.html" target="_blank" rel="external">关于URL编码</a></p>
+<p>然后 base64 自然就有了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// base64, encode, decode</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">base64Encode</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> btoa(<span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">base64Decode</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(atob(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// utf-8 encode, decode</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode_utf8</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(s));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decode_utf8</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(s));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>兼容情况如下：</p>
+<p><dl>    <dt>Win32</dt>    <dd></dd></dl></p>
+<ul>
+<li>Firefox 1.5.0.6</li>
+<li><del>Firefox 1.5.0.4</del></li>
+<li><del>Internet Explorer 6.0</del><span style="color: #cccccc;">.2900.2180</span></li>
+<li><p>Opera 9.0<span style="color: #cccccc;">.8502</span>        <dt>MacOS</dt>    <dd></dd></p>
+</li>
+<li><p>Camino <span style="color: #cccccc;">2006061318</span> (1.0.2)</p>
+</li>
+<li>Firefox 1.5.0.4</li>
+<li>Safari 2.0.4 (419.3)<br>当然，依然存在可能失败的情况。<br>具体请参考 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_.231_.E2.80.93_escaping_the_string_before_encoding_it" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/06/22/grunt-css-sprite/" itemprop="url">
+                  grunt-css-sprite
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-06-22T21:21:41+08:00" content="2014-06-22">
+              2014-06-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/06/22/grunt-css-sprite/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/06/22/grunt-css-sprite/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="markdown-here-wrapper" data-md-url="http://www.laoshu133.cn/admin/admin_default.asp" style=""><br><br>这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；<br>其灵感来源 <code>grunt-sprite</code>，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；<br>它的主要功能是：<br><br>1.  对css文件进行处理，收集切片序列，生成雪碧图<br>2.  在原css代码中为切片添加<code>background-position</code>属性<br>3.  生成用于高清设备的高清雪碧图，并在css文件末尾追加媒体查询代码<br>4.  支持 <code>image-set</code> 配置高清雪碧图<br>5.  在引用雪碧图的位置打上时间戳<br>6.  在样式末尾追加时间戳<br>7.  按照时间戳命名文件<br><br>### 使用 &amp; 帮助更新<br><br>NPM: <a href="https://www.npmjs.org/package/grunt-css-sprite" target="_blank" rel="external">https://www.npmjs.org/package/grunt-css-sprite</a><br>Github: <a href="https://github.com/laoshu133/grunt-css-sprite/" target="_blank" rel="external">https://github.com/laoshu133/grunt-css-sprite/</a><br><div title="MDH:PHA+6L+Z5piv5LiA5Liq5biu5Yqp5YmN56uv5byA5Y+R5bel56iL5biI5bCGY3Nz5Luj56CB5Lit55qE5YiH54mH5ZCI5bm25oiQ6Zuq56Kn5Zu+55qE5bel5YW377ybPC9wPjxwPuWFtueBteaEn+adpea6kCBgZ3J1bnQtc3ByaXRlYO+8jOeUseS6juWFtumFjee9ruWPguaVsOmZkOWItuebruW9lee7k+aehOetie+8jOS4jeiDvea7oei2s+mAmueUqOmhueebrumcgOaxgu+8jOeOsOmHjeaWsOmAoOi9ruWtkOWPkeW4g++8mzwvcD48cD7lroPnmoTkuLvopoHlip/og73mmK/vvJo8L3A+PHA+PGJyPjwvcD48cD4xLiDlr7ljc3Pmlofku7bov5vooYzlpITnkIbvvIzmlLbpm4bliIfniYfluo/liJfvvIznlJ/miJDpm6rnoqflm748L3A+PHA+Mi4g5Zyo5Y6fY3Nz5Luj56CB5Lit5Li65YiH54mH5re75YqgYGJhY2tncm91bmQtcG9zaXRpb25g5bGe5oCnPC9wPjxwPjMuIOeUn+aIkOeUqOS6jumrmOa4heiuvuWkh+eahOmrmOa4hembqueip+Wbvu+8jOW5tuWcqGNzc+aWh+S7tuacq+Wwvui/veWKoOWqkuS9k+afpeivouS7o+eggTwvcD48cD40LiDmlK/mjIEgYGltYWdlLXNldGAg6YWN572u6auY5riF6Zuq56Kn5Zu+PC9wPjxwPjQuIOWcqOW8leeUqOmbqueip+WbvueahOS9jee9ruaJk+S4iuaXtumXtOaIszwvcD48cD41LiDlnKjmoLflvI/mnKvlsL7ov73liqDml7bpl7TmiLM8L3A+PHA+Ni4g5oyJ54Wn5pe26Ze05oiz5ZG95ZCN5paH5Lu2PC9wPjxwPjxiciB0eXBlPSJfbW96Ij48L3A+PHA+IyMjIOS9v+eUqCAmYW1wOyDluK7liqnmm7TmlrA8L3A+PHA+TlBNOiZuYnNwO2h0dHBzOi8vd3d3Lm5wbWpzLm9yZy9wYWNrYWdlL2dydW50LWNzcy1zcHJpdGU8L3A+PHA+R2l0aHViOiZuYnNwO2h0dHBzOi8vZ2l0aHViLmNvbS9sYW9zaHUxMzMvZ3J1bnQtY3NzLXNwcml0ZS88L3A+PHA+PC9wPg==" style="height:0;font-size:0em;padding:0;margin:0;">​</div></div>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/04/08/CSS笔记-响应式页面视频等比缩放/" itemprop="url">
+                  [CSS笔记]响应式页面视频等比缩放
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-08T17:11:16+08:00" content="2014-04-08">
+              2014-04-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/08/CSS笔记-响应式页面视频等比缩放/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/08/CSS笔记-响应式页面视频等比缩放/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在响应式布局中我们常用用一下代码来处理图片的自适应宽度</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span>&#123; <span class="attribute">height</span>: auto; <span class="attribute">max-width</span>: <span class="number">100%</span>;&#125;</span><br></pre></td></tr></table></figure>
+<p>不过对于视频，这个貌似就有心无力了，不过这难不倒我们，<br>根据CSS规范，<code>margin</code> 和 <code>padding</code> 在接受百分比值时，其上下值为相对于元素的宽度，于是就有了以下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.video</span>&#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">overflow</span>: hidden; <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">56.25%</span>; <span class="comment">/* 16:9 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.video</span> <span class="selector-tag">video</span>, <span class="selector-class">.video</span> <span class="selector-tag">iframe</span>&#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>; <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute; <span class="attribute">left</span>: <span class="number">0</span>; <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果可见：<a href="http://webdesignerwall.com/demo/responsive-css-tricks/" target="_blank" rel="external">DEMO页面</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/" itemprop="url">
+                  [CSS笔记]绝对定位居中(Absolute Centering)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-08T16:51:36+08:00" content="2014-04-08">
+              2014-04-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我们经常用 <code>margin:0 auto</code> 来实现水平居中，而一直认为 <code>margin:auto</code> 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Absolute-Center</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; <span class="attribute">bottom</span>: <span class="number">0</span>; <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其兼容情况为：Modern &amp; IE8+<br>原理&amp;DEMO： <a href="http://s.codepen.io/shshaw/fulldetails/gEiDt" target="_blank" rel="external">英文</a> <a href="http://blog.csdn.net/freshlover/article/details/11579669" target="_blank" rel="external">中文</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/03/03/Chrome插件（扩展）“二维码小助手”/" itemprop="url">
+                  Chrome插件（扩展）“二维码小助手”
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-03-03T10:13:55+08:00" content="2014-03-03">
+              2014-03-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/03/03/Chrome插件（扩展）“二维码小助手”/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/03/Chrome插件（扩展）“二维码小助手”/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一时兴起，发布一款Chrome插件（扩展），“二维码小助手”<br>Chrome Store地址：<a href="https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B/acdfkjjfbghehjbojgnmjijpbgahmhee" target="_blank" rel="external">https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B/acdfkjjfbghehjbojgnmjijpbgahmhee</a></p>
+<h4 id="放两张截图："><a href="#放两张截图：" class="headerlink" title="放两张截图："></a>放两张截图：</h4><p><img src="http://www.laoshu133.cn/upload/201403031801394700.jpg" alt=""></p>
+<p><img src="http://www.laoshu133.cn/upload/201403031802015118.jpg" alt=""></p>
+<p>欢迎拍砖，请轻拍；如有BUG或者意见请在评论区留言，我会及时修正。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/" itemprop="url">
+                  IE11 typeof window.ActiveXObject === &quot;undefined&quot;
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-11-28T11:39:13+08:00" content="2013-11-28">
+              2013-11-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在调一个Applet上传组件，调试IE11时又差点踩坑里了，<code>typeof window.ActiveXObject</code>返回<code>undefined</code>了。。。</p>
+<p>但是<code>window.ActiveXObject === undefined</code>又是不成立的。。。</p>
+<p>以后靠谱的检测需要换成<code>window.ActiveXObject === undefined</code>，客官可以见DEMO页和本人WIN7 IE11下测试结果：</p>
+<p><a href="/test/ie11_activexobject_test.html">DEMO页面</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">navigator.appName; <span class="comment">//Netscape</span></span><br><span class="line">navigator.userAgent; <span class="comment">//Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; rv:11.0) like Gecko</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">window</span>.ActiveXObject; <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">window</span>.ActiveXObject === <span class="string">"undefined"</span>; <span class="comment">//true</span></span><br><span class="line">!!<span class="built_in">window</span>.ActiveXObject; <span class="comment">//false</span></span><br><span class="line"><span class="built_in">window</span>.ActiveXObject === <span class="literal">undefined</span>; <span class="comment">//false</span></span><br><span class="line"><span class="built_in">window</span>.ActiveXObject === <span class="keyword">void</span> <span class="number">0</span>; <span class="comment">//false</span></span><br><span class="line"><span class="built_in">window</span>.ActiveXObject == <span class="literal">undefined</span>; <span class="comment">//true</span></span><br><span class="line"><span class="built_in">window</span>.ActiveXObject == <span class="keyword">void</span> <span class="number">0</span>; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>另外在<a href="http://www.guokr.com/post/449426/" target="_blank" rel="external">http://www.guokr.com/post/449426/</a>看到IE11将<code>navigator.appName</code>改成<code>Netscape</code>了，引用页面中一句：“IE 10是最后一个appName叫做Microsoft Internet Explorer的网页浏览器了，突然好悲伤。。。”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/09/03/CSS兼容背景透明处理/" itemprop="url">
+                  CSS兼容背景透明处理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-09-03T00:43:27+08:00" content="2013-09-03">
+              2013-09-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/09/03/CSS兼容背景透明处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/09/03/CSS兼容背景透明处理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <style type="text/css">br{ display:none}</style>
+
+<p>说到CSS背景半透明，各位CSSer肯定都不陌生，写过页面的大部分都干过这个事情，尤其是CSS2时代走过来的。</p>
+<p>老题新解，现在已经步入CSS3时代了，对于处理CSS背景半透明应该已经不是很难的事了，不过请不要忘了咱在天朝，IE6的份额依旧不少， <a href="http://www.ie6countdown.com/" target="_blank" rel="external">查看份额</a>。</p>
+<p>不扯，入正题，先看<a href="/Lab/bg_transparence_test.html">完整DEMO</a>：</p>
+<h3 id="opacity-filter-alpha"><a href="#opacity-filter-alpha" class="headerlink" title="opacity + filter:alpha"></a>opacity + filter:alpha</h3><p>大部分情况下我们做背景透明都是这么写的，代码简单，写起来也方便；不过大部分情况是需要多增加一个标签，因为这么写会连文字一起透明<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.opacity</span> <span class="selector-class">.test</span>&#123; <span class="attribute">background</span>:<span class="number">#fff</span>; <span class="attribute">opacity</span>:.<span class="number">4</span>; <span class="attribute">filter</span>:<span class="built_in">Alpha</span>(opacity=40);&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Rgba-filter-progid-DXImageTransform-Microsoft-Gradient"><a href="#Rgba-filter-progid-DXImageTransform-Microsoft-Gradient" class="headerlink" title="Rgba + filter:progid:DXImageTransform.Microsoft.Gradient"></a>Rgba + filter:progid:DXImageTransform.Microsoft.Gradient</h3><p>首先说说<code>background:rgab/hsla</code>，这两个新的颜色函数都能定义alpha通道值，然后可以使得背景半透明，甚至还可以使用CSS3<code>gradient</code>的渐变函数，生成更为复杂的背景，具体请自行谷歌；</p>
+<p>在CSS2后面某个时候，有童鞋发现了<code>filter:progid:DXImageTransform.Microsoft.Gradient</code>IE下能通过渐变滤镜去模拟背景透明，而不用文字透明</p>
+<p>当然，有利必然有弊，这么写，代码略长，写起来麻烦：</p>
+<p>IE滤镜采用AARRGGBB（16进制）进行排列，AA位值也为 00-FF，也就是说10进制需要转成16进制</p>
+<p>计算规则 <code>10进制值*256/100</code>然后再转16进制，就是说如果设置0.4的透明度<code>0.4*256/100 = 102.4</code>转16进制为<code>66</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.rgba</span> <span class="selector-class">.test</span>&#123; <span class="attribute">background</span>:<span class="built_in">rgba</span>(255,255,255,.4); <span class="attribute">background</span>:none\<span class="number">9</span>; <span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">Gradient</span>(startColorStr=#66FFFFFF,endColorStr=#66FFFFFF);&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Rgba-with-last-child"><a href="#Rgba-with-last-child" class="headerlink" title="Rgba with last-child"></a>Rgba with last-child</h3><p>上面背景透明的实现已经是本文的核心部分，但是如果你够细心，会发现此效果在IE9下透明度明显不对，</p>
+<p>IE9当background:rgba和filter同时使用时，会出现两个效果叠加，</p>
+<p>不过我们可以用:last-child巧妙修复；因IE6不支持 :first/last-child伪类，IE7,8-仅支持:first-child伪类，IE9+全部支持<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.rgba_with_lastchild</span> <span class="selector-class">.test</span>&#123; <span class="attribute">background</span>:none; <span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">Gradient</span>(startColorStr=#66FFFFFF,endColorStr=#66FFFFFF);&#125;</span><br><span class="line"><span class="selector-class">.rgba_with_lastchild</span> <span class="selector-class">.test</span><span class="selector-pseudo">:last-child</span>&#123; <span class="attribute">background</span>:<span class="built_in">rgba</span>(255,255,255,.4); <span class="attribute">filter</span>:none;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当看到此处的时候，应该本文应该是能结尾了，因为上面的效果在各个浏览器下已经接近完美了，不过还有个不得不说的密码</p>
+<h3 id="Filter-with-overflow"><a href="#Filter-with-overflow" class="headerlink" title="Filter with overflow"></a>Filter with overflow</h3><p>IE7- 当使用滤镜时，大部分情况会使得元素具有 overflow:hidden 特性，具体请见<a href="/Lab/bg_transparence_test.html">DEMO最后</a></p>
+<p>全文完，欢迎拍砖。</p>
+<p>最后在放一次<a href="/Lab/bg_transparence_test.html">DEMO地址</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/07/11/javascript位运算转整型存在风险/" itemprop="url">
+                  javascript位运算转整型存在风险
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-07-11T17:28:52+08:00" content="2013-07-11">
+              2013-07-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/07/11/javascript位运算转整型存在风险/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/07/11/javascript位运算转整型存在风险/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>上午看到司徒正美发的博文，<a href="http://www.cnblogs.com/rubylouvre/p/3183616.html" target="_blank" rel="external">《javascript 的位操作符转换推断》</a>，看的时候自己也觉得推断的挺好的；不过刚好下午写了一个团购倒计时页面，同事拿过去用之后，发现时间过长会出现倒计时不走的情况，伪代码如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timer, timeout = ~~elem.getAttribute(<span class="string">'data-timeout'</span>);</span><br><span class="line"><span class="keyword">if</span>(timeout &gt; <span class="number">0</span>)&#123;</span><br><span class="line">	timer = startTimeout(timeout, <span class="function"><span class="keyword">function</span>(<span class="params">queue</span>)</span>&#123;</span><br><span class="line">		<span class="comment">//...</span></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中的<code>~~elem.getAttribute(&#39;data-timeout&#39;)</code>（<code>elem.getAttribute(&#39;data-timeout&#39;)|0</code>，效果相同）就是偷懒的方式去强制转整型，其类似的等价于<code>parseInt(elem.getAttribute(&#39;data-timeout&#39;),10)||0</code>，以前一直认为是等价的，但是现在只能说是类似等价。</p>
+<p>但是同事输出的数值为：2703986000，在断点调试时，发现没有进<code>if</code>也就是说转换或的数值小于0了，为了验证做了如下测试：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">~~<span class="string">'2703986000'</span>; <span class="comment">//-1590981296</span></span><br><span class="line"></span><br><span class="line"><span class="string">'2703986000'</span> | <span class="number">0</span>; <span class="comment">//-1590981296</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2703986000'</span>); <span class="comment">//2703986000</span></span><br><span class="line"></span><br><span class="line">~~<span class="string">'-15909812967'</span>; <span class="comment">//1270056217</span></span><br><span class="line"></span><br><span class="line"><span class="string">'-15909812967'</span> | <span class="number">0</span>; <span class="comment">//1270056217</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'-15909812967'</span>, <span class="number">10</span>); <span class="comment">//-15909812967</span></span><br></pre></td></tr></table></figure></p>
+<p>测试发现位运算强制转整型有边界值，而且边界值小于<code>Number.MAX_VALUE</code>，并且大于<code>Number.MIN_VALUE</code>，所以当在处理大数值的时候，使用位运算是有风险的；</p>
+<p>然后又做部分测试，求了一下位运算的边界值（对位运算不了解，可能与平台也有关系）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~~<span class="string">'2147483647'</span>; <span class="comment">//2147483647</span></span><br><span class="line"></span><br><span class="line">~~<span class="string">'2147483648'</span>; <span class="comment">//-2147483648</span></span><br><span class="line"></span><br><span class="line">~~<span class="string">'-2147483648'</span>; <span class="comment">//-2147483648</span></span><br><span class="line"></span><br><span class="line">~~<span class="string">'-2147483649'</span>; <span class="comment">//2147483647</span></span><br></pre></td></tr></table></figure></p>
+<p>其实仔细看的话，上面还是有规律的；涉及到位运算，不对之处请拍砖！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/04/26/让网页变灰浅析（CSS-Javascript）/" itemprop="url">
+                  让网页变灰浅析（CSS+Javascript）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-04-26T15:45:33+08:00" content="2013-04-26">
+              2013-04-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/04/26/让网页变灰浅析（CSS-Javascript）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/04/26/让网页变灰浅析（CSS-Javascript）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <style type="text/css">.log_item br{ display:none;}</style>
+
+<p>事出自然有因，本文也是如此，雅安，加油！</p>
+<p>相信最近不少站长和技术在度娘谷歌“CSS 网页 灰色”</p>
+<p>本来觉得这类的介绍网上已经很多了，不想再插一脚了，不过今天忽然有朋友又向我问起，自以为自己很了解的情况下给了几个方案：</p>
+<ol>
+<li><p><strong>堪称完美级</strong></p>
+<p>整站换图片，不过就是工作量稍大，还得换回来，要是有会员上传的图就更麻烦了（明显调侃）</p>
+</li>
+<li><p><strong>纯CSS实现</strong></p>
+<p>IE：filter</p>
+<p>Chrome：filter</p>
+<p>效果很不错，实现也简单，不过 FF, OPERA,SAFARI 不支持， 手机端就更不行了</p>
+</li>
+<li><p><strong>HTML5 filereader实现去色功能</strong></p>
+<p>效果良好，而且有不错类库实现了</p>
+<p>代码量稍大，不过低版本浏览器全挂掉</p>
+</li>
+<li><p><strong>结合前面两点</strong></p>
+<p>filter - 略</p>
+<p>grayscale.js - <a href="http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers" target="_blank" rel="external">http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers</a></p>
+<p>缺点：</p>
+<p>如果页面图片量很大，图片加载时间很很长，页面可能会出现闪屏</p>
+<p>然后，JS本来效率就偏低，所以处理大量图片，自然页面会卡</p>
+</li>
+</ol>
+<p>然后在自己小得意的时候，朋友发过来一段（说是同事给的）：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">url</span>(<span class="string">"data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"</span>);</span><br><span class="line">    <span class="attribute">filter</span>:gray;</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(100%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>乍一看，虽然让我想起了还有SVG这么个东西可以使，不过估计也就IE和Chrome行吧，印象中真没记得FF有支持<code>filter</code>，然后打开FF测试了下，还真可以。</p>
+<p>然后自己也动手去谷歌了下，才想上面的代码出处应该是在这里：<a href="http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html" target="_blank" rel="external">http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html</a></p>
+<p>后面又发现在stackoverflow上也有讨论：<a href="http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css" target="_blank" rel="external">http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css</a></p>
+<p>然后又找了些资料，总结方案如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* SVG，不建议单独SVG文件</span><br><span class="line">	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下</span><br><span class="line">	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="comment">/* filter: url(grayscale.svg#grayscale); */</span></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	* 有哥们研究说SVG的支持情况如下：</span><br><span class="line">	* http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/</span><br><span class="line">	* SVG version for IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 -- does not, need to be prefixed. See below</span><br><span class="line">	* 不过我测试了下IE10(WIN7&amp;WIN8)都不支持，所以基本兼容情况如下：</span><br><span class="line">	* Chorme 25/26不支持，手上没有更低版本的Chorme测试</span><br><span class="line">	* FF3.5+</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">url</span>(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);</span><br><span class="line">	<span class="comment">/* Webkit only, Chrome &amp; Safari 6+ */</span></span><br><span class="line">	<span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* future-proof */</span></span><br><span class="line">	<span class="attribute">filter</span>:<span class="built_in">grayscale</span>(100%);</span><br><span class="line">	<span class="comment">/* IE4-8 and 9 (deprecated). */</span></span><br><span class="line">	<span class="attribute">filter</span>:gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从上面注释基本可以看出对于IE10和低版本Opera CSS处理基本就是没折了；</p>
+<p>以上代码使用时属性顺序不能调换；</p>
+<p>以上选择器建议html或作用于html上，否则在IE下可能会看到部分元素依旧彩色，当然IE9无论怎样都处理的不是很好</p>
+<p>说了这么多，我们来实践下：</p>
+<div id="demo_code_grayscale_css" class="demo_code"><textarea id="demo_code_txt">.grayscale{filter:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxmaWx0ZXIgaWQ9ImdyYXlzY2FsZSI+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAuMzMzMyAwLjMzMzMgMC4zMzMzIDAgMCAwLjMzMzMgMC4zMzMzIDAuMzMzMyAwIDAgMC4zMzMzIDAuMzMzMyAwLjMzMzMgMCAwIDAgMCAwIDEgMCIvPjwvZmlsdGVyPjwvc3ZnPg==#grayscale);-webkit-filter:grayscale(100%);filter:grayscale(100%);filter:gray}</textarea><br><div class="demo_btns">    <button class="run">点击灰掉当前页</button><br></div><script type="text/javascript" src="/themes/Ceedo/js/jquery.min.js"></script><br><script type="text/javascript">jQuery(function($){var style,garyed=false,docElem=$(‘html’),shell=$(‘#demo_code_grayscale_css’);shell.find(‘button.run’).bind(‘click’,function(){if(!style){var css=shell.find(‘textarea’).val();style=document.createElement(‘style’);style.type=’text/css’;if(style.styleSheet){style.styleSheet.cssText=css;}else{style.innerHTML=css;}$(‘head’).prepend(style);}if(!garyed){docElem.addClass(‘grayscale’);this.innerHTML=’恢复当前页面’;}else{docElem.removeClass(‘grayscale’);this.innerHTML=’灰掉当前页’;}garyed=!garyed;});});</script><br></div>
+
+<p>来张美女看效果：</p>
+<p><img src="/upload/3d_girl.jpg" alt="3D Girl"></p>
+<p>到了这里，在找资料的过程还发现一个Future-filter的测试页，可以看看未来的filter，下面还有”Filtered Video“ ^O^</p>
+<p><a href="http://davidwalsh.name/demo/css-filters.php" target="_blank" rel="external">http://davidwalsh.name/demo/css-filters.php</a></p>
+<p>&nbsp;</p>
+<p>OK，上面说的都是CSS解决方案，我前面还说了有JS的解决方案；主要说下<code>grayscale.js</code>的，如果自己去写原生JS解决，看后可以自己动手试试</p>
+<p>项目地址：<a href="http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/" target="_blank" rel="external">http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/</a></p>
+<p>首先，<code>grayscale.js</code>不是兼容所有浏览器，看其主页的标题：《“Grayscaling” in non-IE browsers》 ，解决方案并不适应于IE，至少是低版本的IE</p>
+<p>然后DEMO效果在此：<a href="http://james.padolsey.com/demos/grayscale" target="_blank" rel="external">http://james.padolsey.com/demos/grayscale</a></p>
+<p>最后来<code>grayscale.js</code>的用法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById( <span class="string">'myEl'</span> );</span><br><span class="line">grayscale( el );</span><br><span class="line"></span><br><span class="line"><span class="comment">// Alternatively, pass a DOM collection</span></span><br><span class="line"><span class="comment">// (all elements will get "grayscaled")</span></span><br><span class="line">grayscale( <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>) );</span><br><span class="line"></span><br><span class="line"><span class="comment">//可作用于jQuery</span></span><br><span class="line"><span class="comment">// Even works with jQuery collections:</span></span><br><span class="line">grayscale( $(<span class="string">'div'</span>) );</span><br><span class="line"><span class="comment">//To reset an element (back to its original colourful state) you must call grayscale.reset() and pass whatever elements you want reset:</span></span><br><span class="line">grayscale.reset( el );</span><br><span class="line"><span class="comment">// reset() also accepts DOM/jQuery collections</span></span><br><span class="line">grayscale.reset( $(<span class="string">'div'</span>) );</span><br><span class="line"></span><br><span class="line"><span class="comment">//预处理，主要用于大图片</span></span><br><span class="line"><span class="comment">//The ‘prepare’ function, as discussed earlier, should be called when there’s a large image to process or even if there are several smaller images. Be aware that larger images will take quite a while to process (just a 300×300 PNG takes about 3 seconds in ‘prepare’ mode).</span></span><br><span class="line">grayscale.prepare( <span class="built_in">document</span>.getElementById(<span class="string">'myEl'</span>) );</span><br><span class="line"><span class="comment">// Also accepts DOM/jQuery collections</span></span><br><span class="line">grayscale.prepare( $(<span class="string">'.gall_img'</span>) );</span><br></pre></td></tr></table></figure></p>
+<p>来演示一下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grayscale(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure></p>
+<div id="demo_code_grayscale_js" class="demo_code"><div class="demo_btns">    <button class="run">点击灰掉当前页</button><br></div><script type="text/javascript" src="/Lab/js/grayscale/grayscale.js"></script><br><script type="text/javascript">jQuery(function($){var garyed=false,shell=$(‘#demo_code_grayscale_js’);shell.find(‘button.run’).bind(‘click’,function(){if(!garyed){grayscale(document.body);this.innerHTML=’恢复当前页面’;}else{grayscale.reset(document.body);this.innerHTML=’灰掉当前页’;}garyed=!garyed;});});</script><br></div>
+
+<p>来张美女看效果：</p>
+<p><img src="/upload/3d_girl.jpg" alt="3D Girl"></p>
+<p>&nbsp;</p>
+<blockquote>
+<p><em>参考：</em></p>
+<ul>
+<li><a href="http://davidwalsh.name/css-filters" target="_blank" rel="external">http://davidwalsh.name/css-filters</a></li>
+<li><a href="http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/" target="_blank" rel="external">http://www.fettblog.eu/blog/2012/06/11/forcing-chrome-to-print-all-pages-in-grayscale/</a></li>
+<li><a href="http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css" target="_blank" rel="external">http://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css</a></li>
+<li><a href="http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html" target="_blank" rel="external">http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html</a></li>
+<li><a href="http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/" target="_blank" rel="external">http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/</a></li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/02/27/Chrome更改parseInt默认转换规则/" itemprop="url">
+                  Chrome更改parseInt默认转换规则
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-02-27T23:33:20+08:00" content="2013-02-27">
+              2013-02-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/02/27/Chrome更改parseInt默认转换规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/02/27/Chrome更改parseInt默认转换规则/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天看到Chrome有更新，就升级了，目前最新稳定版本<strong>Chrome 25.0.1364.97 m</strong>，然后很高兴的发现之前的<a href="/post/crash_chrome.html">崩溃BUG</a>居然已经修复了。</p>
+<p>不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到<code>parseInt</code>的一个经典陷阱。</p>
+<p>首先回顾一下<code>parseInt(string, radix)</code>当省略<code>radix</code>参数时，大致的解析过程：</p>
+<ul>
+<li><p>当<code>string</code>以0开头，且后面紧跟x时，按照<code>parseInt(string, 16)</code>处理</p>
+</li>
+<li><p>当<code>string</code>以0开头，且后面紧跟非x时，按照<code>parseInt(string, 8)</code>处理</p>
+</li>
+<li><p>其余统一按照<code>parseInt(string, 10)</code>处理</p>
+</li>
+</ul>
+<p>当然强烈建议始终使用<code>radix</code>参数</p>
+<p>&nbsp;</p>
+<p>按照上面的解析规则，<code>parseInt(&#39;010&#39;)</code>很自然应该返回<code>8</code> ，不过奇怪的是Chorme返回的居然是<code>10</code>，难道最新版Chrome改掉了以前默认的转换规则？</p>
+<p>晚上回家又拿Chrome 24.0.1312.56试了一下，发现结果也是一样的（没有更早的版本了），看来Chrome改掉这个规则已经不是一两天了，不知其他浏览器会不会效仿。。。</p>
+<p>最后趁着这赶脚，再稍微回顾一下<code>parseInt</code>和<code>parseFloat</code>转换数字上的区别：</p>
+<ul>
+<li><p><code>parseFloat</code>只能转换10进制，而<code>parseInt</code>则支持第二个参数<code>parseInt(string[, radix])</code>，理论上支持任意进制的数字</p>
+</li>
+<li><p><code>parseInt</code>不能转换科学计数<code>parseInt(&#39;1e2&#39;);//1</code>，<code>parseFloat(&#39;1e2&#39;);//100</code></p>
+</li>
+<li><p><code>parseInt</code>无法转换省略小数点前面0的数字<code>parseInt(&#39;.1&#39;);//NaN</code>，<code>parseFloat(&#39;.1&#39;);//0.1</code></p>
+</li>
+</ul>
 
           
         
@@ -367,13 +1414,20 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

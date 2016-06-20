@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -86,16 +86,28 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://www.laoshu133.com/tags/index.html">
+<meta name="description" content="今天看到Chrome有更新，就升级了，目前最新稳定版本Chrome 25.0.1364.97 m，然后很高兴的发现之前的崩溃BUG居然已经修复了。
+不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到parseInt的一个经典陷阱。
+首先回顾一下parseInt(string, radix)当省略radix参数时，大致的解析过程：
+
+当string以0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome更改parseInt默认转换规则">
+<meta property="og:url" content="http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则/index.html">
 <meta property="og:site_name" content="米空格">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-06-19T17:16:15.000Z">
+<meta property="og:description" content="今天看到Chrome有更新，就升级了，目前最新稳定版本Chrome 25.0.1364.97 m，然后很高兴的发现之前的崩溃BUG居然已经修复了。
+不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到parseInt的一个经典陷阱。
+首先回顾一下parseInt(string, radix)当省略radix参数时，大致的解析过程：
+
+当string以0">
+<meta property="og:updated_time" content="2016-06-20T14:26:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Chrome更改parseInt默认转换规则">
+<meta name="twitter:description" content="今天看到Chrome有更新，就升级了，目前最新稳定版本Chrome 25.0.1364.97 m，然后很高兴的发现之前的崩溃BUG居然已经修复了。
+不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到parseInt的一个经典陷阱。
+首先回顾一下parseInt(string, radix)当省略radix参数时，大致的解析过程：
+
+当string以0">
 
 
 
@@ -116,15 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://www.laoshu133.com/tags/"/>
+  <link rel="canonical" href="http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则/"/>
 
-  <title>
-  
-
-  
-    标签 | 米空格
-  
-</title>
+  <title> Chrome更改parseInt默认转换规则 | 米空格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,7 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,16 +237,148 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 3 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Chrome更改parseInt默认转换规则
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-02-27T23:33:20+08:00" content="2013-02-27">
+              2013-02-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/02/27/Chrome更改parseInt默认转换规则/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/02/27/Chrome更改parseInt默认转换规则/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/HTML-CSS/" style="font-size: 21px; color: #6f6f6f">HTML/CSS</a> <a href="/tags/Javascript/" style="font-size: 30px; color: #111">Javascript</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天看到Chrome有更新，就升级了，目前最新稳定版本<strong>Chrome 25.0.1364.97 m</strong>，然后很高兴的发现之前的<a href="/post/crash_chrome.html">崩溃BUG</a>居然已经修复了。</p>
+<p>不过很显然新的问题又出来了，不然就不会有这么一篇文章了，下午在弄一个公司培训的PPT，里面需要写到<code>parseInt</code>的一个经典陷阱。</p>
+<p>首先回顾一下<code>parseInt(string, radix)</code>当省略<code>radix</code>参数时，大致的解析过程：</p>
+<ul>
+<li><p>当<code>string</code>以0开头，且后面紧跟x时，按照<code>parseInt(string, 16)</code>处理</p>
+</li>
+<li><p>当<code>string</code>以0开头，且后面紧跟非x时，按照<code>parseInt(string, 8)</code>处理</p>
+</li>
+<li><p>其余统一按照<code>parseInt(string, 10)</code>处理</p>
+</li>
+</ul>
+<p>当然强烈建议始终使用<code>radix</code>参数</p>
+<p>&nbsp;</p>
+<p>按照上面的解析规则，<code>parseInt(&#39;010&#39;)</code>很自然应该返回<code>8</code> ，不过奇怪的是Chorme返回的居然是<code>10</code>，难道最新版Chrome改掉了以前默认的转换规则？</p>
+<p>晚上回家又拿Chrome 24.0.1312.56试了一下，发现结果也是一样的（没有更早的版本了），看来Chrome改掉这个规则已经不是一两天了，不知其他浏览器会不会效仿。。。</p>
+<p>最后趁着这赶脚，再稍微回顾一下<code>parseInt</code>和<code>parseFloat</code>转换数字上的区别：</p>
+<ul>
+<li><p><code>parseFloat</code>只能转换10进制，而<code>parseInt</code>则支持第二个参数<code>parseInt(string[, radix])</code>，理论上支持任意进制的数字</p>
+</li>
+<li><p><code>parseInt</code>不能转换科学计数<code>parseInt(&#39;1e2&#39;);//1</code>，<code>parseFloat(&#39;1e2&#39;);//100</code></p>
+</li>
+<li><p><code>parseInt</code>无法转换省略小数点前面0的数字<code>parseInt(&#39;.1&#39;);//NaN</code>，<code>parseFloat(&#39;.1&#39;);//0.1</code></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/04/26/让网页变灰浅析（CSS-Javascript）/" rel="prev" title="让网页变灰浅析（CSS+Javascript）">
+                让网页变灰浅析（CSS+Javascript） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -251,8 +389,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="标签" data-url="http://www.laoshu133.com/tags/index.html">
+      <div class="ds-thread" data-thread-key="2013/02/27/Chrome更改parseInt默认转换规则/"
+           data-title="Chrome更改parseInt默认转换规则" data-url="http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则/">
       </div>
     
   </div>
@@ -276,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -338,6 +485,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -441,6 +599,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

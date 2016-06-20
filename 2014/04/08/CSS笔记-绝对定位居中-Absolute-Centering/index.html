@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="HTML/CSS," />
 
 
 
@@ -86,16 +86,22 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://www.laoshu133.com/tags/index.html">
+<meta name="description" content="我们经常用 margin:0 auto 来实现水平居中，而一直认为 margin:auto 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：
+12345.Absolute-Center &amp;#123;  margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;&amp;#125;
+其兼容情况为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[CSS笔记]绝对定位居中(Absolute Centering)">
+<meta property="og:url" content="http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/index.html">
 <meta property="og:site_name" content="米空格">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-06-19T17:16:15.000Z">
+<meta property="og:description" content="我们经常用 margin:0 auto 来实现水平居中，而一直认为 margin:auto 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：
+12345.Absolute-Center &amp;#123;  margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;&amp;#125;
+其兼容情况为">
+<meta property="og:updated_time" content="2016-06-20T14:33:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description">
+<meta name="twitter:title" content="[CSS笔记]绝对定位居中(Absolute Centering)">
+<meta name="twitter:description" content="我们经常用 margin:0 auto 来实现水平居中，而一直认为 margin:auto 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：
+12345.Absolute-Center &amp;#123;  margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;&amp;#125;
+其兼容情况为">
 
 
 
@@ -116,15 +122,9 @@
 
 
 
-  <link rel="canonical" href="http://www.laoshu133.com/tags/"/>
+  <link rel="canonical" href="http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/"/>
 
-  <title>
-  
-
-  
-    标签 | 米空格
-  
-</title>
+  <title> [CSS笔记]绝对定位居中(Absolute Centering) | 米空格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,7 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,16 +231,131 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 3 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                [CSS笔记]绝对定位居中(Absolute Centering)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-08T16:51:36+08:00" content="2014-04-08">
+              2014-04-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/HTML-CSS/" style="font-size: 21px; color: #6f6f6f">HTML/CSS</a> <a href="/tags/Javascript/" style="font-size: 30px; color: #111">Javascript</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我们经常用 <code>margin:0 auto</code> 来实现水平居中，而一直认为 <code>margin:auto</code> 不能实现垂直居中……实际上，实现垂直居中仅需要声明元素高度和下面的CSS：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.Absolute-Center</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; <span class="attribute">bottom</span>: <span class="number">0</span>; <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其兼容情况为：Modern &amp; IE8+<br>原理&amp;DEMO： <a href="http://s.codepen.io/shshaw/fulldetails/gEiDt" target="_blank" rel="external">英文</a> <a href="http://blog.csdn.net/freshlover/article/details/11579669" target="_blank" rel="external">中文</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML-CSS/" rel="tag">#HTML/CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/03/03/Chrome插件（扩展）“二维码小助手”/" rel="next" title="Chrome插件（扩展）“二维码小助手”">
+                <i class="fa fa-chevron-left"></i> Chrome插件（扩展）“二维码小助手”
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/04/08/CSS笔记-响应式页面视频等比缩放/" rel="prev" title="[CSS笔记]响应式页面视频等比缩放">
+                [CSS笔记]响应式页面视频等比缩放 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -251,8 +366,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="标签" data-url="http://www.laoshu133.com/tags/index.html">
+      <div class="ds-thread" data-thread-key="2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/"
+           data-title="[CSS笔记]绝对定位居中(Absolute Centering)" data-url="http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/">
       </div>
     
   </div>
@@ -276,8 +391,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -338,6 +462,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -441,6 +576,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
