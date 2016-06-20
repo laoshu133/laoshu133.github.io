@@ -62,7 +62,7 @@ html{
 	/*
 	* SVG，不建议单独SVG文件
 	* 会增加一次请求，如果支持SVG基本data:基本也就没压力了，如下
-	* SVG文件：http://www.laoshu133.com/test/grayscale.svg
+	* SVG文件：http://www.laoshu133.cn/test/grayscale.svg
 	*/
 	/* filter: url(grayscale.svg#grayscale); */
 	/*

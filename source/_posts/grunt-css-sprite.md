@@ -5,7 +5,7 @@ tags:
 date: 2014-06-22 21:21:41
 ---
 
-<div class="markdown-here-wrapper" data-md-url="http://www.laoshu133.com/admin/admin_default.asp" style="">
+<div class="markdown-here-wrapper" data-md-url="http://www.laoshu133.cn/admin/admin_default.asp" style="">
 
 这是一个帮助前端开发工程师将css代码中的切片合并成雪碧图的工具；
 其灵感来源 `grunt-sprite`，由于其配置参数限制目录结构等，不能满足通用项目需求，现重新造轮子发布；
