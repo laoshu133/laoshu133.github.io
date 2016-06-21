@@ -241,10 +241,10 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: laoshu133
+# duoshuo_shortname: laoshu133
 
 # Disqus
-#disqus_shortname:
+disqus_shortname: laoshu133
 
 # Baidu Share
 # Available value:
