@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星级评分 2 - 流畅选择星级</title>
+<!--
+//-------------------使用说明-------------------
+//autohor:米
+//update:2011.05.04
+//测试兼容浏览器 IE6+ ,FF3+, CHROME10
+-->
+<script type="text/javascript" src="js/star.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var s = new StarLevel({
+		shell : 'stars',
+		url : 'http://www.laoshu133.com/?star=%s',
+		topLevel : 8,
+		onSelect : function(e){
+			document.getElementById('debug').innerHTML = '<p>选择星级为：' + this.level + '</p><p>POST URL:' + this.url + '</p>';
+		}
+	});
+	//外部方法
+	document.getElementById('debug').onclick = function(){
+		s.resetAll();
+		//alert(s.resetAll);
+	};
+	
+	var s2 = new StarLevel({
+		shell : 'stars2',
+		onSelect : function(){
+			alert('Level - ' + this.level + '; url:' + this.url);
+		}
+	});
+
+}
+</script>
+<style type="text/css">
+*{ padding:0; margin:0;}
+ul{ list-style:none;}
+
+.star_level{ height:32px; position:relative;}
+.star_level li{ background:url(images/star.gif) no-repeat; cursor:pointer; float:left; height:30px; text-indent:-99em; width:30px; overflow:hidden;}
+.star_level .vernier{ background:url(images/star.gif) repeat-x 0 -30px; position:absolute; left:0; top:0; width:0;}
+.star_level .star_curr{ background-position:0 -60px;}
+
+#stars{ width:300px;}
+#stars2{ width:240px;}
+/*额外的*/
+#stars,#stars2{ margin:30px;}
+#debug{ border:1px dashed #ddd; color:#c90; cursor:default; padding:20px; margin:30px; width:360px;}
+</style>
+</head>
+</head>
+
+<body>
+<div id="stars"></div>
+<div id="debug" title="点击此处可以复位上面星级选择器">选择星级以后，点击此处可以复位上面星级选择器</div>
+
+<hr />
+
+<div id="stars2"></div>
+<p><strong>IE6 貌似有点BUG</strong></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FadeList demo</title>
+<script type="text/javascript" src="/ds/ds.js"></script>
+<script type="text/javascript" src="js/FadeList.js"></script>
+<link href="style/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.focus_nav2{ position:absolute; bottom:10px; right:10px;}
+.focus_nav2 a{ background:#fff; border:1px solid #FF7300; color:#FF7300; display:block; float:left; line-height:16px; height:16px; width:16px; margin-right:6px; display:inline; text-align:center;}
+
+.focus_ad li{ position:absolute;}
+.focus_nav, .focus_nav2{ z-index : 999;}
+.focus_nav .active, .focus_nav2 .active, .focus_nav2 :hover{ background:#FF7300; color:#fff; font-size:15px; font-weight:bold;}
+</style>
+<script type="text/javascript">
+(function(window, doc){
+	var $d = ds.$d;
+
+	ds.ready(function(){
+		var 
+		fade = new FadeList({
+			shell : 'focus_ad',
+			navId : 'focus_nav',
+			itemNodeName : 'li',
+			trigger : 'mouseenter',
+			duration : 1200,
+			delay : 4800,
+			auto : true,
+			isAnimate : true
+		});
+		
+		var fade2 = new FadeList({
+			shell : 'focus_ad2',
+			navId : 'focus_nav2',
+			itemNodeName : 'li',
+			trigger : 'click',
+			duration : 800,
+			delay : 4800,
+			auto : false,
+			isAnimate : true
+		});
+	});
+})(window, window.document);
+</script>
+</head>
+<body>
+<h2>自动播放 + mouseenter触发</h2>
+<div id="focus_ad" class="focus_ad">
+	<ul>
+		<li><a href="#"><img alt="" src="../images/b1.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b2.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b3.jpg" /></a></li>
+	</ul>
+</div>
+<h2>not 自动播放 + click触发</h2>
+<div id="focus_ad2" class="focus_ad">
+	<ul>
+		<li><a href="#"><img alt="" src="../images/b1.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b2.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b3.jpg" /></a></li>
+	</ul>
+</div>
+</body>
+</html>

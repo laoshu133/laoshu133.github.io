@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>区域选择测试</title>
+	<style type="text/css">
+	/* Base */
+	*{ margin:0; padding:0;}
+	
+	/* Widget */
+	.widget{ color:#000; font:12px/1.5 "Microsoft Yahei",Arial,Simsun; width:320px; position:absolute; left:45%; top:200px; z-index:99;}
+	.widget .widget_title{}
+	.widget .widget_title .fix_bg div, .widget .widget_footer .fix_bg div{ background:red; margin:0 auto; height:1px; width:314px; overflow:hidden;} 
+	.widget .widget_title .fix_bg .b_2{ width:316px;} 
+	.widget .widget_title .fix_bg .b_3{ width:318px;} 
+	.widget .widget_title h3{ background:red; color:#fff; font-size:12px; line-height:22px; padding:0 8px; height:24px;}
+	.widget .widget_title h3{ background:red;}
+	.widget .widget_inner{ background:#FEEACB; border:1px solid red; border-width:0 1px; padding:30px 0;}
+	.widget .weight_close{ padding:10px; text-align:center;}
+	.widget .weight_close a{ color:#06c; margin:0 5px;}
+	.widget .widget_footer .fix_bg div{ background:#FEEACB; border:1px solid red; border-width:0 1px; width:316px;}
+	.widget .widget_footer .fix_bg .b_2{ width:314px;}
+	.widget .widget_footer .fix_bg .b_3{ background:red; width:312px;}
+	
+	/* Range */
+	.range_value{ padding:10px 30px 10px;;}
+	.range_value em{ color:red; font-style:normal; margin-left:5px;}
+	.range_panel{ margin:0 30px 10px;}
+	.range_shell{ background:#DDD; height:24px; width:166px; position:relative;}
+	.range_shell .lines, .range_shell .dials{ margin-top:7px; width:100%; position:absolute; left:0; top:0;}
+	.range_shell .lines i{ display:block; background:#3b3b3b; height:1px; width:100%; overflow:hidden;}
+	.range_shell .lines .b_2{ background:#CCC;}
+	.range_shell .lines .b_3{ background:#EEE;}
+	.range_shell .dials{ margin-top:13px;}
+	.range_shell .dials i{ background:#d1baba; height:5px; width:1px; position:absolute; overflow:hidden;}
+	.range_shell .pointer{ margin-left:-5px; width:11px; position:absolute; left:7px; top:0; z-index:9;}
+	.range_shell .pointer i{ display:block; background:red; height:1px; overflow:hidden;}
+	.range_shell .pointer .bg{ background:#CCC; border-top:1px solid #999; border-right:1px solid #666; height:9px; width:10px;}
+	.range_shell .pointer .arrow{ border-right:1px solid #900; margin:0 auto; width:8px;}
+	.range_shell .pointer .b_4{ width:6px;}
+	.range_shell .pointer .b_3{ width:4px;}
+	.range_shell .pointer .b_2{ width:2px;}
+	.range_shell .pointer .b_1{ width:0;}
+	
+	/* Mask */
+	.global_mask{ background:#000; height:100%; width:100%; position:fixed; left:0; top:0; opacity:.5; filter:Alpha(opacity=50);}
+	</style>
+</head>
+<body>
+	<div id="widget_led" class="widget" style="display:none">
+		<div class="widget_title">
+			<div class="fix_bg"><div class="b_1"></div><div class="b_2"></div><div class="b_3"></div></div>
+			<h3>⊙ Range Select Test</h3>
+		</div>
+		<div class="widget_inner">
+			<div class="range_value"><span>当前选取：</span><em id="range_value_per">0%</em></div>
+			<div id="range_panel" class="range_panel">
+				<!-- <div class="range_shell">
+					<div class="pointer"><i class="bg"></i><i class="arrow b_5"></i><i class="arrow b_4"></i><i class="arrow b_3"></i><i class="arrow b_2"></i><i class="arrow b_1"></i></div>
+					<div class="lines"><i class="b_1"></i><i class="b_2"></i><i class="b_3"></i></div>
+					<div class="dials"><i style="left:7px"></i><i style="left:22px"></i><i style="left:37px"></i></div>
+				</div> -->
+			</div>
+			<div class="weight_close"><span>[<a href="javascript:hideWidget();">关闭</a>]</span></div>
+		</div>
+		<div class="widget_footer">
+			<div class="fix_bg"><div class="b_1"></div><div class="b_2"></div><div class="b_3"></div></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	(function(global, document, undefined){
+		//Base
+		var 
+		_uuid = 0,
+		noop = function(){},
+		w3c = 'dispatchEvent' in document,
+		$ = function(id){ return document.getElementById(id);},
+		ds = global.ds = {
+			$: $,
+			uuid: function(){
+				return ++_uuid;
+			},
+			//基础事件支持
+			on: w3c ? function(elem, type, handler){
+				elem.addEventListener(type, handler, false);
+				return this;
+			} : function(elem, type, handler){
+				elem.attachEvent('on' + type, handler);
+				return this;
+			},
+			un: w3c ? function(elem, type, handler){
+				elem.removeEventListener(type, handler, false);
+				return this;
+			} : function(elem, type, handler){
+				elem.detachEvent('on' + type, handler);
+				return this;
+			},
+			//DOM
+			getOffset: function(elem){
+				if(!elem){ return null;}
+				return 'getBoundingClientRect' in elem ? elem.getBoundingClientRect() : {left: elem.offsetLeft, top: elem.offsetTop};
+			},
+			//基础模板引擎
+			fill: function(tmpl, data){
+				var k, ret = tmpl;
+				for(k in data){
+					ret = ret.replace(new RegExp('\\{' + k + '\\}', 'g'), data[k]);
+				}
+				return ret;
+			},
+			//Range
+			createRange: function(panel, onchange, onchangeend, defaultValue){
+				if(typeof panel === 'string'){
+					panel = $(panel);
+				}
+				defaultValue = parseInt(defaultValue, 10) || 0;
+				onchange = typeof onchange === 'function' ? onchange : noop;
+				onchangeend = typeof onchangeend === 'function' ? onchangeend : noop;
+				
+				//基本约定
+				var dialUnitSize = 15; //一个刻度 15px
+				var dialLength = 11; //共11个刻度
+				
+				//模板
+				var 
+				shellTmpl = '<div id="{id}_pointer" class="pointer"><i class="bg"></i><i class="arrow b_5"></i><i class="arrow b_4"></i><i class="arrow b_3"></i><i class="arrow b_2"></i><i class="arrow b_1"></i></div><div class="lines"><i class="b_1"></i><i class="b_2"></i><i class="b_3"></i></div><div class="dials">{dials}</div></div>',
+				dialTmpl = '<i style="left:{left}px"></i>';
+				
+				//基础函数
+				var 
+				getDials = function(){
+					var i = 0, dials = '', offset = dialOffset;
+					for(; i<dialLength; i++){
+						dials += ds.fill(dialTmpl, {left:offset + i * dialUnitSize});
+					}
+					return dials;
+				},
+				clearRanges = 'getSelection' in global ? function(){
+					global.getSelection().removeAllRanges();
+				} : function(){
+					document.selection && document.selection.empty();
+				};
+				
+				//Init
+				var 
+				id = 'range_' + ds.uuid(),
+				shell = document.createElement('div'),
+				dialOffset = Math.floor(dialUnitSize / 2);
+				
+				shell.id = id;
+				shell.className = 'range_shell';
+				shell.innerHTML = ds.fill(shellTmpl, {id: id, dials: getDials()});
+				
+				//Append To Dom
+				panel.appendChild(shell);
+				
+				//Set Value
+				var 
+				pointer = $(id + '_pointer'),
+				prevValue = 0,
+				setValue = function(value){
+					value = Math.max(0, Math.min(dialLength - 1, parseInt(value, 10) || 0));
+					if(prevValue !== value){
+						prevValue = value;
+						if(onchange.call(shell, value) !== false){
+							pointer.style.left = (dialOffset + value * dialUnitSize) + 'px';
+						}
+					}
+				};
+				setValue(defaultValue);
+				
+				//事件
+				(function(){
+					var 
+					dragTarget = null,
+					pointer = $(id + '_pointer'),
+					hasCapture = 'setCapture' in pointer,
+					moveHandler = function(e){
+						e = e || window.event;
+						if(!!dragTarget){
+							var pageX = e.pageX || e.clientX;
+							var left = pageX - dragTarget.parentOffsetLeft;
+							//dragTarget.style.left = left + 'px';
+							setValue((left - dialOffset) / dialUnitSize);
+							
+							clearRanges();
+						}
+					},
+					endHandler = function(e){
+						dragTarget = null;
+						ds.un(document, 'mousemove', moveHandler);
+						ds.un(document, 'mouseup', endHandler);
+						hasCapture && pointer.releaseCapture();
+						
+						onchangeend.call(shell, prevValue);
+					};
+					ds.on(pointer, 'mousedown', function(e){
+						e = e || window.event;
+						var pageX = e.pageX || e.clientX;
+						var parentOffsetLeft = pointer.offsetParent ? ds.getOffset(pointer.offsetParent).left : 0;
+						dragTarget = {
+							style: pointer.style,
+							parentOffsetLeft: parentOffsetLeft,
+							leftOffset: pageX - parentOffsetLeft
+						};
+
+						ds.on(document, 'mousemove', moveHandler);
+						ds.on(document, 'mouseup', endHandler);
+						
+						e.preventDefault && e.preventDefault();
+						hasCapture && pointer.setCapture();
+						return false;
+					});
+					ds.on(pointer, 'click', function(e){
+						e.stopPropagation ? e.stopPropagation() : (e.cancelBubble = true);
+					});
+					ds.on(shell, 'click', function(e){
+						var pageX = e.pageX || e.clientX;
+						var left = pageX - ds.getOffset(shell).left;
+						setValue(left / dialUnitSize);
+					});
+				})();
+			},
+			//Debug
+			log: function(str){
+				global.console && console.log(str);
+			}
+		};
+	})(window, window.document);
+	</script>
+	
+	<script type="text/javascript">
+	//Mask
+	var 
+	getMask = function(){
+		if(!getMask.handler){
+			var 
+			isIE6 = !-[1,] && !window.XMLHttpRequest,
+			elem = document.createElement('div');
+			elem.className = 'global_mask';
+			elem.style.cssText = 'display:none; background:#000; height:100%; width:100%; position:fixed; left:0; top:0; opacity:.5; filter:Alpha(opacity=50);';
+			//IE6-
+			if(isIE6){
+				elem.innerHTML = '<iframe src="javascript:false" frameborder="0" style="border:0;height:100%;width:100%;opacity:0;filter:Alpha(opacity=0;);"></iframe>';
+			}
+			document.body.appendChild(elem);
+			
+			getMask.handler = {
+				elem: elem,
+				show: function(){
+					if(isIE6){
+						elem.style.position = 'absolute';
+						elem.style.height = (document.documentElement.offsetHeight || document.body.offsetHeight) + 'px';
+					}
+					elem.style.display = 'block';
+				},
+				hide: function(){
+					elem.style.display = 'none';
+				}
+			};
+		}
+		return getMask.handler;
+	};
+	
+	//Widget
+	var 
+	initRange = false,
+	showWidget = function(){
+		getMask().show();
+		if(!initRange){
+			initRange = true;
+			ds.createRange('range_panel', function(value){
+				ds.log('Set Range Value, value = ' + value);
+				ds.$('range_value_per').innerHTML = (value * 10) + '%';
+			}, function(value){
+				ds.log('Set Range Value End, value = ' + value);
+			}, 0);
+		}
+		
+		var docElem = document.documentElement, body = document.body;
+		var widget = ds.$('widget_led'), style = widget.style;
+		style.display = 'block';
+		
+		var left = (Math.max(docElem.offsetWidth, body.offsetWidth) - widget.offsetWidth) / 2;
+		var scrollTop = Math.max(docElem.scrollTop, body.scrollTop);
+		var top = scrollTop + (Math.max(docElem.clientHeight, body.clientHeight) - widget.offsetHeight) * .382;
+		
+		style.left = left + 'px';
+		style.top = top + 'px';
+	},
+	hideWidget = function(){
+		getMask().hide();
+		ds.$('widget_led').style.display = 'none';
+	};
+	
+	
+	showWidget();
+	</script>
+	
+	
+	<button onclick="showWidget()" style="margin:40px">点击弹出提示</button>
+	
+	<script type="text/javascript" src="/51_min.js"></script>
+</body>
+</html>

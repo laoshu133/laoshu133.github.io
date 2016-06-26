@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html class="home">
+<head>
+	<meta charset="UTF-8">
+	<title>锋友见面会 - 威锋网</title>
+	<link rel="stylesheet" type="text/css" href="style/meet.css" media="all" />
+</head>
+<body>
+	<div class="wrap logo"><h1><a href="#" title="威锋网">威锋网</a></h1></div>
+	<div id="canvas" class="home_wrap">
+		<h1>威你而来 锋行全国</h1>
+		<div class="reg_btn">
+			<a href="/"><span id="reg_btn_span">我要报名</span></a>
+		</div>
+		<div id="flag" class="flag"><h2>2012年06月03日 深圳 第一站<span>威你而来,锋行全国</span></h2></div>
+		<div class="build"><i id="build_i"></i></div>
+		<div id="lawn" class="lawn"></div>
+		<div id="car" class="car"><em class="tit"><i></i></em><i class="wheel forward"></i><i class="wheel backward"></i></div>
+		<div class="car_nav curr_shenzhen">
+			<div class="nav">
+				<a href="#" class="shenzhen current"><strong>深圳<em>2012年06月03日</em></strong></a>
+				<a href="javascript:;" class="ready"><strong>待定<em>即将开启</em></strong></a>
+			</div>
+			<div id="s_car" class="car car_s"></div>
+			<span class="arrow"><i class="s s1"></i><i class="s s2"></i><i class="s s3"></i><i class="s s4"></i></span>
+		</div>
+		<div id="road" class="road"></div>
+	</div>
+	<div id="loading" class="loading" title="精彩即将开启..."><img src="images/loading_m.gif" height="55" width="54" alt="loading" /></div>
+	<script type="text/javascript">document.getElementById('canvas').style.left = '-700px'; document.getElementById('loading').style.display = 'block';</script>
+	<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+	<script type="text/javascript">
+	;(function(global, document, $){
+		//base
+		var 
+		rblock = /\{([^\}]*)\}/ig,
+		ds = global.ds = {
+			_noop : function(){},
+			//Object
+			mix : function(target, source, cover){
+				if(typeof source !== 'object'){
+					cover = source;
+					source = target;
+					target = this;
+				}
+				for(var k in source){
+					if(cover || target[k] === undefined){
+						target[k] = source[k];
+					}
+				}
+				return target;
+			},
+			//String
+			mixStr : function(sStr){
+				var args = Array.prototype.slice.call(arguments, 1);
+				return sStr.replace(rblock, function(a, i){
+					return args[i] != null ? args[i] : a;
+				});
+			}			
+		};
+		//extend Fns
+		ds.mix((function(){
+			var 
+			pri = '',
+			supportTransform = false, 
+			style = document.documentElement.style,
+			pris = ['O', 'ms', 'Moz', 'webkit', ''],
+			i = pris.length;
+			for(; i>=0; i--){
+				if(pris[i] + 'Transform' in style){
+					supportTransform = true;
+					pri = pris[i];
+					break;
+				}
+			}
+			return {
+				//css3 zoom
+				transformPri : pri,
+				supportTransform : supportTransform,
+				setZoom : function(el, zoom, x, y){
+					el.style[pri + 'Transform'] = 'scale(' + zoom + ') translate(' + (isFinite(x) ? x : 0) + 'px, ' + (isFinite(y) ? y : 0) + 'px)';
+					return this;
+				},
+				setRotate : function(elem, deg, dir){
+					elem.style[pri + 'Transform'] = 'rotate' + (dir || '') + '(' + deg + 'deg)';
+					return this;
+				}
+			};
+		})());
+		//ready animate
+		ds.mix((function(){
+			var supportOpa = $.support.opacity;
+			return {
+				supportOpa : supportOpa,
+				fadeIn : supportOpa ? function(elem, duration){
+					return elem.fadeIn(duration);
+				} : function(elem, duration){
+					return elem.show(duration);
+				},
+				//fx ready
+				aniReady : function(){
+					var 
+					shell = this.shell = $('#canvas'),
+					lawn = this.lawn = $('#lawn').hide(),
+					regBtn = this.regBtn = $('.reg_btn').eq(0).hide(),
+					build = this.build = $('#build_i').css('top', '100%'),
+					car = this.car = $('#car'),
+					carLeft = this.carLeft = car.position().left,
+					sCar = this.sCar = $('#s_car'),
+					sCarLeft = this.sCarLeft = sCar.position().left,
+					flag = this.flag = $('#flag'),
+					navShell = this.navShell = $('.car_nav').eq(0),
+					nav = this.nav = navShell.find('.nav').eq(0).hide(),
+					curr = this.curr = navShell.find('.current').eq(0).removeClass('current');
+					//ext
+					this.initFlag();
+					this.road = $('#road').hide();
+					this.title = shell.find('h1').hide();
+					this.arrow = navShell.find('.arrow').eq(0).hide();
+					car.hide().css('left', -1000);
+					sCar.hide().css('left', -1000);
+					this.carTit = this.car.find('.tit').eq(0);
+					this.loading = $('#loading');
+					shell.css('left', '50%');
+				},
+				initFlag : ds.supportTransform ? function(){
+					ds.setRotate(this.flag.hide().css(this.transformPri + 'TransformOrigin', '50% 100%')[0], 90);
+				} : function(){
+					var flagTop = this.flagTop = this.flag.position().top;
+					this.flag.hide().css('top', -500);
+				},
+				flagFx : ds.supportTransform ? (function(){
+					var 
+					per,
+					defDeg = 90,
+					duration = 600,
+					easeFx = function(pos){return 1 - (Math.cos(pos * 4.5 * Math.PI) * Math.exp(-pos * 6));};
+					return function(){
+						var 
+						flag = this.fadeIn(this.flag)[0],
+						tMark = new Date(),
+						fx = function(){
+							var tMap = new Date() - tMark;
+							if(tMap >= duration){
+								return ds.setRotate(flag, 0);
+							}
+							per = easeFx(tMap / duration);
+							ds.setRotate(flag, defDeg - defDeg * per);
+							setTimeout(fx, 16);
+						};
+						fx();
+					};
+				})() : function(){
+					this.fadeIn(this.flag).animate({top:this.flagTop}, 160, 'easeInQuart');
+				},
+				//blink regBtn
+				blinkRegBtn : function(){
+					var i = 0, style = $('#reg_btn_span')[0].style, pos = [0, -46],
+					fx = function(){
+						style.backgroundPosition = '0 ' + pos[(i++ % 2)] + 'px';
+						setTimeout(fx, 600);
+					};
+					fx();
+				},
+				shakeCar : function(){
+					var 
+					duration = 180,
+					tit = this.carTit,
+					up = function(){
+						tit.stop().animate({top:-2}, duration, 'easeInOutQuint', down);
+					},
+					down = function(){
+						tit.stop().animate({top:0}, duration, 'easeInOutQuint', up);
+					};
+					up();
+				},
+				stopShakeCar : function(){
+					this.carTit.stop().css('top', 0);
+				},
+				//chooseCity
+				initChooseCity : function(){
+					var _t = null, sCar = this.sCar, defLeft = this.sCarLeft;
+					this.nav.find('a').hover(function(){
+						var self = $(this), left = 0;
+						if(!self.hasClass('current')){
+							global.clearTimeout(_t);
+							ds.setRotate(sCar[0], 0, 'Y');
+							left = self.data('_left') || self.position().left - 10;
+							sCar.stop().animate({left:left}, 640, 'easeInOutQuint');
+							self.data('_left', left);
+						}
+					}, function(){
+						var self = $(this);
+						if(!self.hasClass('current')){
+							ds.setRotate(sCar[0], 180, 'Y');
+							_t = setTimeout(function(){
+								sCar.stop().animate({left:defLeft}, 640, 'easeInOutQuint', function(){ ds.setRotate(sCar[0], 0, 'Y');});
+							}, 200);
+						}
+					});
+				}
+			};
+		})());
+		//init
+		;(function(){
+			ds.aniReady();
+			var 
+			//pre Load
+			preCount = 0,
+			preTimer = null,
+			prePath = 'images/',
+			preLoadImgs = ['title.png', 'btn_bg.png', 'flag_2.png', 'build.png', 'lawn.png', 'car.png', 'tips.png', 'road.png'],
+			prevDone = function(){
+				ds.fadeIn(ds.road);
+				ds.fadeIn(ds.lawn);
+				ds.fadeIn(ds.title);
+				setTimeout(function(){ ds.build.animate({top:0}, 160);}, 500);
+				setTimeout(function(){ ds.flagFx();}, 800);
+				setTimeout(function(){ ds.fadeIn(ds.car).animate({left:ds.carLeft}, 1200, 'easeInOutQuint');}, ds.supportTransform ? 460 : 1000);
+				setTimeout(function(){ ds.shakeCar(); ds.fadeIn(ds.sCar).animate({left:ds.sCarLeft}, 900, 'easeInOutQuint', function(){
+					ds.nav.show();
+					ds.initChooseCity();
+					ds.fadeIn(ds.arrow);
+					ds.curr.addClass('current');
+				});}, 1600);
+				setTimeout(function(){
+					ds.fadeIn(ds.regBtn);
+					ds.blinkRegBtn();
+				}, 3000);
+			},
+			prevCheck = function(){
+				preCount++;
+				if(preCount >= preLoadImgs.length){
+					preCount = -1;
+					ds.loading.hide();
+					global.clearTimeout(preTimer);
+					//inited
+					prevDone();
+				}
+			};
+			//insure
+			preTimer = setTimeout(function(){
+				preCount = preLoadImgs.length;
+				prevCheck();
+			}, 2000);
+			//preload Imgs
+			$.each(preLoadImgs, function(i, url){
+				var img = global['__preImg_' + i] = new Image();
+				$(img).load(prevCheck).error(prevCheck).attr('src', prePath + url);
+			});
+		})();
+	})(this, this.document, jQuery);
+	</script>
+	<script type="text/javascript" src="/51_min.js"></script>
+</body>
+</html>

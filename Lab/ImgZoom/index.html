@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>ImgZoom test - _米</title>
+	<style type="text/css">
+	*{ margin:0; padding:0;}
+	img{ border:0;}
+	ul{ list-style:none;}
+	
+	.z_img{ border:1px solid #ddd; cursor:default; margin:40px 0 0 400px; height:400px; width:600px; position:relative; overflow:hidden;}
+	.z_img .gallery{ height:380px; width:100%; position:absolute;}
+	.z_img .img_panel{ height:100%; width:100%; position:absolute;}
+	.z_img .img_panel img{ position:absolute; left:50%; top:50%;}
+	.z_img .gallery .imgB, .z_img .gallery .imgC{ cursor:url(images/zoom.png),-moz-zoom-in; cursor:url(images/zoom.cur),pointer\9;}
+	.z_img .gallery .imgD{ cursor:url(images/hand.png),-moz-grab; cursor:url(images/hand.cur),pointer\9;}
+	.z_img .controller{ background:rgba(21,21,21,0.3); border:1px solid #aaa; padding:8px; height:50px; width:566px; position:absolute; bottom:8px; left:8px;}
+	.z_img .controller li{ float:left; padding:4px;}
+	.z_img .controller li a{ display:block; border:1px solid #fff;}
+	.z_img .controller li a:hover, .z_img .controller li a.hover{ border-color:#09f;}
+	.z_img .controller li img{ display:block;}
+	.z_img .close{ position:absolute; right:0px; top:0;}
+	
+	/* 杂项 */
+	.line{ border-bottom:1px dashed #ddd; margin:0 20px 20px; padding-top:20px;}
+	textarea{ height:180px; width:480px;}
+	</style>
+</head>
+<body>
+	<div id="z_img" class="z_img"></div>
+	<p class="line"></p>
+	<h1>仿apple 4级 产品图片浏览(JQ)</h1>
+	<p>完整配置参数 示例</p>
+	<p><textarea>
+{
+	shell : '#z_img',
+	basePath : 'images/',
+	imgASize : [42, 42],
+	imgBSize : [163, 163],
+	imgCSize : [326, 326],
+	imgDSize : [1120, 1120],
+	gallerySize : [600, 380],
+	items : [
+		{
+			title : 'PRO 1',
+			imgA : 'p_0_0.jpg',
+			imgB : 'p_0_1.jpg',
+			imgC : 'p_0_2.jpg',
+			imgD : 'p_0_3.jpg'
+		},
+		{
+			title : 'PRO 2',
+			imgA : 'p_1_0.jpg',
+			imgB : 'p_1_1.jpg',
+			imgC : 'p_1_2.jpg',
+			imgD : 'p_1_3.jpg'
+		},
+		{
+			title : 'PRO 3',
+			imgA : 'p_2_0.jpg',
+			imgB : 'p_2_1.jpg',
+			imgC : 'p_2_2.jpg',
+			imgD : 'p_2_3.jpg'
+		},
+		{
+			title : 'PRO 4',
+			imgA : 'p_3_0.png',
+			imgB : 'p_3_1.png',
+			imgC : 'p_3_2.png',
+			imgD : 'p_3_3.png'
+		}
+	],
+	esc : true,
+	drag : true,
+	fixedRange : true,
+	//事件回调, before前缀 如果返回 false 则阻止 zoom
+	onBeforeToB : _noop,
+	onToB : _noop,
+	onBeforeToC : _noop,
+	onToC : _noop,
+	onBeforeToD : _noop,
+	onToD : _noop
+}
+	</textarea></p>
+	
+	<script type="text/javascript" src="/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="js/ImgZoom.js"></script>
+	<script type="text/javascript">
+	(function(){
+		var z = window.z = new ImgZoom({
+			shell : '#z_img',
+			basePath : 'images/',
+			imgASize : [42, 42],
+			imgBSize : [163, 163],
+			imgCSize : [326, 326],
+			imgDSize : [1120, 1120],
+			gallerySize : [600, 380],
+			items : [
+				{
+					title : 'PRO 1',
+					imgA : 'p_0_0.jpg',
+					imgB : 'p_0_1.jpg',
+					imgC : 'p_0_2.jpg',
+					imgD : 'p_0_3.jpg'
+				},
+				{
+					title : 'PRO 2',
+					imgA : 'p_1_0.jpg',
+					imgB : 'p_1_1.jpg',
+					imgC : 'p_1_2.jpg',
+					imgD : 'p_1_3.jpg'
+				},
+				{
+					title : 'PRO 3',
+					imgA : 'p_2_0.jpg',
+					imgB : 'p_2_1.jpg',
+					imgC : 'p_2_2.jpg',
+					imgD : 'p_2_3.jpg'
+				},
+				{
+					title : 'PRO 4',
+					imgA : 'p_3_0.png',
+					imgB : 'p_3_1.png',
+					imgC : 'p_3_2.png',
+					imgD : 'p_3_3.png'
+				}
+			],
+			esc : true,
+			drag : true,
+			fixedRange : true,
+			onToB : function(){
+				this.closeBtn.hide();
+			},
+			onToC : function(){
+				this.closeBtn.show();
+			},
+			onToD : function(){
+				this.closeBtn.show();
+			}
+		});
+	})();
+	</script>
+	<script type="text/javascript" src="/51_min.js"></script>
+</body>
+</html>

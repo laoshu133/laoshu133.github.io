@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+*{ margin: 0; padding: 0;}
+body { line-height: 1; font-family:Geneva, Arial, Helvetica, sans-serif; padding:10px 30px;}
+ol, ul { list-style: none; }
+.clr { clear:both; }
+img{ border:0;}
+
+/*全局样式*/
+body{ background:#96DBF2; font-size:12px;}
+a{ color:#565656; text-decoration:none;}
+
+.focus_ad{ background:url(../../images/b1.jpg) no-repeat; margin-bottom:8px; height:181px; width:530px; position:relative; overflow:hidden;}
+.focus_ad ul{ height:100%; width:100%;}
+.focus_ad li{ float:left; height:181px; width:530px;}
+.focus_nav{ position:absolute; bottom:10px; right:10px;}
+.focus_nav a{ background:#fff; border:1px solid #FF7300; color:#FF7300; display:block; float:left; line-height:16px; height:16px; width:16px; margin-right:6px; display:inline; text-align:center;}
+.focus_nav :hover, .focus_nav .active{ background:#FF7300; color:#fff; font-size:15px; font-weight:bold;}
+
