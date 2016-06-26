@@ -77,6 +77,8 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  extend_dirs:
+    - Lab
   repo: git@github.com:laoshu133/laoshu133.github.io.git
   branch: master
 
