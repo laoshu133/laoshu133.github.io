@@ -16,6 +16,6 @@
     "hexo-server": "^0.2.0",
     "hexo-deployer-git": "^0.2.0",
     "hexo-generator-feed": "^1.1.0",
-    "hexo-migrator-rss": "^0.1.2"
+    "hexo-filter-uri": "^1.0.0"
   }
 }
