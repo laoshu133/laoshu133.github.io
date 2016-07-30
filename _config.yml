@@ -78,6 +78,7 @@ feed:
 deploy:
   type: git
   extend_dirs:
+    - ds
     - Lab
   repo: git@github.com:laoshu133/laoshu133.github.io.git
   branch: master
