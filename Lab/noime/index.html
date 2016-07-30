@@ -8,7 +8,7 @@
 		body{ padding:60px;}
 		.info{ border:1px dashed #666; line-height:1.5; margin:20px 0; padding:10px;}
 		.info ol{ margin-left:34px;}
-		
+
 		.noime{ display:inline-block; position:relative; *zoom:1;}
 		.noime label{ color:#666; cursor:text; margin:4px 0 0 6px; position:absolute;}
 		.noime .txt, .noime .mask{ background:none; border:1px solid #666; line-height:18px\9; margin:0; padding:3px 4px; height:18px; width:200px; outline:0;}
@@ -18,7 +18,7 @@
 		.noime .pointer{ height:16px; width:1px; position:absolute; overflow:hidden;}
 		.noime .place{ display:none;}
 	</style>
-	<script type="text/javascript" src="/jquery-1.7.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 	<span class="noime">
@@ -26,11 +26,11 @@
 		<input type="text" name="noime_1" id="noime_1" class="txt" maxlength="20" /><input type="password" class="mask" value="" />
 		<i class="pointer"><img src="pointer.gif" height="20" width="1" alt="" /></i><span class="place"></span>
 	</span>
-	
+
 	<div id="info" class="info"></div>
 	<script type="text/javascript">
 	(function(){
-		var 
+		var
 		debug = false,
 		info = $('#info')[0],
 		log = function(str){ info.innerHTML += '<p>' + str + '</p>';};
@@ -44,7 +44,7 @@
 		log('<h2>width+height+position correct</h2>');
 		log('txt: width = ' + txt.width() + ' , height = ' + txt.height() + ' , offset = ' + txt.offset().left + ',' + txt.offset().top);
 		log('mask: width = ' + mask.width() + ' , height = ' + mask.height() + ' , offset = ' + mask.offset().left + ',' + mask.offset().top);
-		
+
 	})();
 	//Noime Test
 	(function(){
@@ -58,7 +58,7 @@
 				place.css('position', 'absolute');
 				place.crossCSS = true;
 			}
-			var 
+			var
 			pos = txt.position(),
 			width = place.html(txt.val().slice(0, mask[0].selectionStart)).width(),
 			left = pos.left + parseFloat(txt.css('paddingLeft')) + parseFloat(txt.css('borderLeftWidth'));
@@ -131,6 +131,6 @@
 			<li>最好有对 maxlength 进行设定，否则会有点点不美观</li>
 		</ol>
 	</div>
-	<script type="text/javascript" src="/51_min.js"></script>
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>

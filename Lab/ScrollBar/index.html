@@ -11,7 +11,7 @@
 	.content{ width:1920px;}
 	.content img{ display:block;}
 	.content p{ background:#eee; line-height:120px; word-spacing:120px;}
-	
+
 	.bar_x_panel{ background:#fff; font-size:0; margin-top:10px; width:100%; position:absolute;}
 	.bar_x{ border:1px solid #ddd; border-width:1px 0; margin:0 20px; height:20px; position:relative;}
 	.bar_x a, .bar_y a{ background:#eee; border:1px solid #ddd; font-size:12px; line-height:20px; margin-top:-1px; height:20px; width:20px; position:absolute; text-align:center; text-decoration:none;}
@@ -19,7 +19,7 @@
 	.bar_x .btn_l{ left:-24px;}
 	.bar_x .btn_r{ right:-24px;}
 	.bar_x .bar{ background:#aaa; margin-top:1px; height:18px; width:50%; position:absolute; left:0;}
-	
+
 	.bar_y_panel{ margin-right:-32px; height:100%; position:absolute; right:0; top:0;}
 	.bar_y{ border:1px solid #ddd; border-width:0 1px; margin:20px 0 0; height:280px; width:20px; position:relative;}
 	.bar_y .bar{ background:#aaa; margin-left:1px; height:50%; width:18px; position:absolute; left:0; top:0;}
@@ -55,7 +55,7 @@
 				<a href="#" class="btn_r">→</a>
 			</div>
 		</div>
-		
+
 		<div class="bar_y_panel">
 			<div id="bar_y" class="bar_y">
 				<a href="#" class="btn_t">↑</a>
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<h2>支持窗口自适应大小</h2>
 	<div class="panel" style="margin:0 auto 0; height:400px; width:60%;">
 		<div id="shell_auto" class="panel_inner">
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<h2>完整配置参数</h2>
 	<p><textarea cols="60" rows="20">
 {
@@ -102,12 +102,12 @@
 	oneof : _noop
 }
 	</textarea></p>
-	
-	<script type="text/javascript" src="/jquery-1.7.min.js"></script>
+
+	<script src="//cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.ScrollBar.base.js"></script>
 	<script type="text/javascript" src="jquery.mousewheel.js"></script>
 	<script type="text/javascript">
-	var 
+	var
 	shell = $('#shell'),
 	content = $('#content'),
 	xShell = $('#bar_x'),
@@ -157,7 +157,7 @@
 		}
 	}),
 	x = new ScrollBarX(xOps),
-	
+
 	//auto resize
 	autoBarShell = $('#bar_x_auto'),
 	auto = new ScrollBarX({
@@ -179,6 +179,6 @@
 		}
 	});
 	</script>
-	<script type="text/javascript" src="/51_min.js"></script>
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>

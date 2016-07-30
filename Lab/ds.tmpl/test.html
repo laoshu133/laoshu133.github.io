@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Template test</title>
-<script src="http://www.laoshu133.com/Lab/js/jquery-1.7.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://aui.github.io/artTemplate/test/js/highcharts.js"></script>
 
 <script src="ds.tmpl.js"></script>
@@ -37,8 +37,8 @@ for (var i = 0; i < length; i ++) {
         user: '<strong style="color:red">糖饼</strong>',
         site: 'http://www.planeart.cn',
         weibo: 'http://weibo.com/planeart',
-        QQweibo: 'http://t.qq.com/tangbin'  
-    }); 
+        QQweibo: 'http://t.qq.com/tangbin'
+    });
 };
 
 
@@ -65,7 +65,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'juicer',
         tester: function () {
@@ -77,7 +77,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'doT',
         tester: function () {
@@ -88,7 +88,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'Handlebars',
         tester: function () {
@@ -99,7 +99,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'tmpl',
         tester: function () {
@@ -110,7 +110,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'easyTemplate',
         tester: function () {
@@ -133,7 +133,7 @@ var testList = [
             }
         }
     },
-    
+
     {
         name: 'baiduTemplate',
         tester: function () {
@@ -144,7 +144,7 @@ var testList = [
             }
         }
     },
-    
+
      // jqueryTmpl 太慢，可能导致浏览器停止响应
     /*{
         name: 'jqueryTmpl',
@@ -155,7 +155,7 @@ var testList = [
             }
         }
     },*/
-    
+
     {
         name: 'Mustache',
         tester: function () {
@@ -165,7 +165,7 @@ var testList = [
             }
         }
     }
-    
+
 ];
 
 KISSY.use('template',function(S,T) {
@@ -191,7 +191,7 @@ var startTest = function () {
     Timer.prototype.stop = function(){
         return + new Date - this.startTime;
     };
-    
+
     var colors = Highcharts.getOptions().colors;
     var categories = [];
 
@@ -213,7 +213,7 @@ var startTest = function () {
         subtitle: {
             text: length + ' 条数据 × ' + number + ' 次渲染'
         },
-                
+
         xAxis: {
             categories: categories,
             labels: {
@@ -262,39 +262,39 @@ var startTest = function () {
         }]
 
     });
-    
+
     var log = function (message) {
         document.getElementById('log').innerHTML = message;
     };
-    
+
     var tester = function (target) {
-    
-        
+
+
         var time = new Timer;
         target.tester();
         var endTime = time.stop();
-        
+
         chart.series[0].addPoint({
             color: colors.shift(),
             y: endTime
         });
-        
-        
+
+
         if (!testList.length) {
             log('测试已完成，请不要迷恋速度');
             return;
         }
 
         target = testList.shift();
-        
+
         log('正在测试: ' + target.name + '..');
-        
+
         setTimeout(function () {
             tester(target);
         }, 500);
-        
+
     };
-    
+
     var target = testList.shift();
     log('正在测试: ' + target.name + '..');
     tester(target);
@@ -412,7 +412,7 @@ var startTest = function () {
 <ul>
   <& for (var val, i = 0, l = @list.length; i < l; i ++) { &>
         <& val = @list[i]; &>
-        <li> <&= val.index &>. 用户: <&= val.user &>； 网站：<&= val.site &></li> 
+        <li> <&= val.index &>. 用户: <&= val.user &>； 网站：<&= val.site &></li>
   <& } &>
 </ul>
 </script>
@@ -435,6 +435,6 @@ var startTest = function () {
 <div id="container" style="min-width: 400px; margin: 0 auto"></div>
 
 
-<script type="text/javascript" src="/51_min.js"></script>
+<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>

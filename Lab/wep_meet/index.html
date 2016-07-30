@@ -28,12 +28,12 @@
 	</div>
 	<div id="loading" class="loading" title="精彩即将开启..."><img src="images/loading_m.gif" height="55" width="54" alt="loading" /></div>
 	<script type="text/javascript">document.getElementById('canvas').style.left = '-700px'; document.getElementById('loading').style.display = 'block';</script>
-	<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
 	<script type="text/javascript">
 	;(function(global, document, $){
 		//base
-		var 
+		var
 		rblock = /\{([^\}]*)\}/ig,
 		ds = global.ds = {
 			_noop : function(){},
@@ -57,13 +57,13 @@
 				return sStr.replace(rblock, function(a, i){
 					return args[i] != null ? args[i] : a;
 				});
-			}			
+			}
 		};
 		//extend Fns
 		ds.mix((function(){
-			var 
+			var
 			pri = '',
-			supportTransform = false, 
+			supportTransform = false,
 			style = document.documentElement.style,
 			pris = ['O', 'ms', 'Moz', 'webkit', ''],
 			i = pris.length;
@@ -100,7 +100,7 @@
 				},
 				//fx ready
 				aniReady : function(){
-					var 
+					var
 					shell = this.shell = $('#canvas'),
 					lawn = this.lawn = $('#lawn').hide(),
 					regBtn = this.regBtn = $('.reg_btn').eq(0).hide(),
@@ -131,13 +131,13 @@
 					this.flag.hide().css('top', -500);
 				},
 				flagFx : ds.supportTransform ? (function(){
-					var 
+					var
 					per,
 					defDeg = 90,
 					duration = 600,
 					easeFx = function(pos){return 1 - (Math.cos(pos * 4.5 * Math.PI) * Math.exp(-pos * 6));};
 					return function(){
-						var 
+						var
 						flag = this.fadeIn(this.flag)[0],
 						tMark = new Date(),
 						fx = function(){
@@ -164,7 +164,7 @@
 					fx();
 				},
 				shakeCar : function(){
-					var 
+					var
 					duration = 180,
 					tit = this.carTit,
 					up = function(){
@@ -205,7 +205,7 @@
 		//init
 		;(function(){
 			ds.aniReady();
-			var 
+			var
 			//pre Load
 			preCount = 0,
 			preTimer = null,
@@ -252,6 +252,6 @@
 		})();
 	})(this, this.document, jQuery);
 	</script>
-	<script type="text/javascript" src="/51_min.js"></script>
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>

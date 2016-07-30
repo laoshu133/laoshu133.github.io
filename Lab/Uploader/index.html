@@ -11,7 +11,7 @@
 	.test_uploader .title{ border:1px solid #FFF; border-bottom-color:#DDD; box-shadow:0 1px 5px rgba(0,0,0,.08); padding:10px 15px;}
 	.test_uploader .inner{ border:1px solid #FFF; border-top:0; padding:40px 0;}
 	/*.test_uploader .ds_uploader{ border:1px dashed #080;}*/
-	
+
 	.test_uploader .title em{ cursor:pointer; font-style:normal;}
 	.ds_uploader_tips{ line-height:1.8; white-space:nowrap; word-break:normal;}
 	.hide{ display:none;}
@@ -96,7 +96,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/jquery-1.7.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.uploader.js"></script>
 	<script type="text/javascript">
 	//Debug
@@ -110,7 +110,7 @@
 						elem = $(document.createElement('div'));
 						elem[0].style.cssText = 'background:#FFF;border:1px dashed #03F;padding:10px;position:absolute;right:0;top:0;white-space:nowrap';
 						elem.appendTo('body');
-						
+
 						elem.bind('dblclick', function(){
 							this.innerHTML = '';
 						});
@@ -128,11 +128,11 @@
 			location.reload();
 		});
 	})(jQuery);
-	
-	
+
+
 	//Upload Widget
 	jQuery(function($){ //return;
-		var 
+		var
 		_eventLog = $.noop,
 		eventLog = function(){
 			return _eventLog.apply(this, arguments);
@@ -140,7 +140,7 @@
 		uploadWidget = window.testUploadWidget = new ds.UploadWidget({
 			shell: '#test_uploader_inner',
 			uploadTips: '支持多文件上传、文件列队，<a href="http://www.laoshu133.com/guestbook.asp#add_comment" target="_blank">需要帮助？</a><br>点击XHR,SWF字样可以手动切换上传模式',
-			
+
 			//Uploader Options
 			fieldName: 'file_data',
 			action: '/f/upload_test/uploader.php',
@@ -173,7 +173,7 @@
 						tips += '<br> <b>'+ e.uploadType +'</b> 上传最多只能有一个文件处于“等待上传”！';
 					}
 					uploadWidget.setTips(ops.uploadTips + tips);
-					
+
 					if(this.type === 'swf'){
 						console.log('swfVersion = ', this.getSwfVersion());
 
@@ -200,7 +200,7 @@
 		});
 	});
 	</script>
-	
-	<script type="text/javascript" src="http://www.laoshu133.com/51_min.js"></script>
+
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>

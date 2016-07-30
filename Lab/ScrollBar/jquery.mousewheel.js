@@ -12,7 +12,7 @@ update : 2011.02.13
 -- 用法说明 end --
 */
 ;(function(global, document, $, undefined){
-	var 
+	var
 	id = 0,
 	_event = $.event,
 	w3c = !!document.dispatchEvent,
@@ -35,7 +35,7 @@ update : 2011.02.13
 		}
 	},
 	_handler = function(e){
-		var 
+		var
 		_e = _event.fix(e),
 		args = [].slice.call(arguments, 1);
 		_e.delta = 0;
@@ -48,8 +48,8 @@ update : 2011.02.13
 			_e.delta = -e.detail / 3;
 		}
 		args.unshift(_e);
-		_event.handle.apply(this, args);
-		//$(this).trigger('mousewheel', args);
+		// _event.handlers.apply(this, args);
+		$(this).trigger(_e);
 	};
 	_event.special.mousewheel = {
 		setup : function(){

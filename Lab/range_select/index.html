@@ -6,13 +6,13 @@
 	<style type="text/css">
 	/* Base */
 	*{ margin:0; padding:0;}
-	
+
 	/* Widget */
 	.widget{ color:#000; font:12px/1.5 "Microsoft Yahei",Arial,Simsun; width:320px; position:absolute; left:45%; top:200px; z-index:99;}
 	.widget .widget_title{}
-	.widget .widget_title .fix_bg div, .widget .widget_footer .fix_bg div{ background:red; margin:0 auto; height:1px; width:314px; overflow:hidden;} 
-	.widget .widget_title .fix_bg .b_2{ width:316px;} 
-	.widget .widget_title .fix_bg .b_3{ width:318px;} 
+	.widget .widget_title .fix_bg div, .widget .widget_footer .fix_bg div{ background:red; margin:0 auto; height:1px; width:314px; overflow:hidden;}
+	.widget .widget_title .fix_bg .b_2{ width:316px;}
+	.widget .widget_title .fix_bg .b_3{ width:318px;}
 	.widget .widget_title h3{ background:red; color:#fff; font-size:12px; line-height:22px; padding:0 8px; height:24px;}
 	.widget .widget_title h3{ background:red;}
 	.widget .widget_inner{ background:#FEEACB; border:1px solid red; border-width:0 1px; padding:30px 0;}
@@ -21,7 +21,7 @@
 	.widget .widget_footer .fix_bg div{ background:#FEEACB; border:1px solid red; border-width:0 1px; width:316px;}
 	.widget .widget_footer .fix_bg .b_2{ width:314px;}
 	.widget .widget_footer .fix_bg .b_3{ background:red; width:312px;}
-	
+
 	/* Range */
 	.range_value{ padding:10px 30px 10px;;}
 	.range_value em{ color:red; font-style:normal; margin-left:5px;}
@@ -41,7 +41,7 @@
 	.range_shell .pointer .b_3{ width:4px;}
 	.range_shell .pointer .b_2{ width:2px;}
 	.range_shell .pointer .b_1{ width:0;}
-	
+
 	/* Mask */
 	.global_mask{ background:#000; height:100%; width:100%; position:fixed; left:0; top:0; opacity:.5; filter:Alpha(opacity=50);}
 	</style>
@@ -67,11 +67,11 @@
 			<div class="fix_bg"><div class="b_1"></div><div class="b_2"></div><div class="b_3"></div></div>
 		</div>
 	</div>
-	
+
 	<script type="text/javascript">
 	(function(global, document, undefined){
 		//Base
-		var 
+		var
 		_uuid = 0,
 		noop = function(){},
 		w3c = 'dispatchEvent' in document,
@@ -117,18 +117,18 @@
 				defaultValue = parseInt(defaultValue, 10) || 0;
 				onchange = typeof onchange === 'function' ? onchange : noop;
 				onchangeend = typeof onchangeend === 'function' ? onchangeend : noop;
-				
+
 				//基本约定
 				var dialUnitSize = 15; //一个刻度 15px
 				var dialLength = 11; //共11个刻度
-				
+
 				//模板
-				var 
+				var
 				shellTmpl = '<div id="{id}_pointer" class="pointer"><i class="bg"></i><i class="arrow b_5"></i><i class="arrow b_4"></i><i class="arrow b_3"></i><i class="arrow b_2"></i><i class="arrow b_1"></i></div><div class="lines"><i class="b_1"></i><i class="b_2"></i><i class="b_3"></i></div><div class="dials">{dials}</div></div>',
 				dialTmpl = '<i style="left:{left}px"></i>';
-				
+
 				//基础函数
-				var 
+				var
 				getDials = function(){
 					var i = 0, dials = '', offset = dialOffset;
 					for(; i<dialLength; i++){
@@ -141,22 +141,22 @@
 				} : function(){
 					document.selection && document.selection.empty();
 				};
-				
+
 				//Init
-				var 
+				var
 				id = 'range_' + ds.uuid(),
 				shell = document.createElement('div'),
 				dialOffset = Math.floor(dialUnitSize / 2);
-				
+
 				shell.id = id;
 				shell.className = 'range_shell';
 				shell.innerHTML = ds.fill(shellTmpl, {id: id, dials: getDials()});
-				
+
 				//Append To Dom
 				panel.appendChild(shell);
-				
+
 				//Set Value
-				var 
+				var
 				pointer = $(id + '_pointer'),
 				prevValue = 0,
 				setValue = function(value){
@@ -169,10 +169,10 @@
 					}
 				};
 				setValue(defaultValue);
-				
+
 				//事件
 				(function(){
-					var 
+					var
 					dragTarget = null,
 					pointer = $(id + '_pointer'),
 					hasCapture = 'setCapture' in pointer,
@@ -183,7 +183,7 @@
 							var left = pageX - dragTarget.parentOffsetLeft;
 							//dragTarget.style.left = left + 'px';
 							setValue((left - dialOffset) / dialUnitSize);
-							
+
 							clearRanges();
 						}
 					},
@@ -192,7 +192,7 @@
 						ds.un(document, 'mousemove', moveHandler);
 						ds.un(document, 'mouseup', endHandler);
 						hasCapture && pointer.releaseCapture();
-						
+
 						onchangeend.call(shell, prevValue);
 					};
 					ds.on(pointer, 'mousedown', function(e){
@@ -207,7 +207,7 @@
 
 						ds.on(document, 'mousemove', moveHandler);
 						ds.on(document, 'mouseup', endHandler);
-						
+
 						e.preventDefault && e.preventDefault();
 						hasCapture && pointer.setCapture();
 						return false;
@@ -229,13 +229,13 @@
 		};
 	})(window, window.document);
 	</script>
-	
+
 	<script type="text/javascript">
 	//Mask
-	var 
+	var
 	getMask = function(){
 		if(!getMask.handler){
-			var 
+			var
 			isIE6 = !-[1,] && !window.XMLHttpRequest,
 			elem = document.createElement('div');
 			elem.className = 'global_mask';
@@ -245,7 +245,7 @@
 				elem.innerHTML = '<iframe src="javascript:false" frameborder="0" style="border:0;height:100%;width:100%;opacity:0;filter:Alpha(opacity=0;);"></iframe>';
 			}
 			document.body.appendChild(elem);
-			
+
 			getMask.handler = {
 				elem: elem,
 				show: function(){
@@ -262,9 +262,9 @@
 		}
 		return getMask.handler;
 	};
-	
+
 	//Widget
-	var 
+	var
 	initRange = false,
 	showWidget = function(){
 		getMask().show();
@@ -277,15 +277,15 @@
 				ds.log('Set Range Value End, value = ' + value);
 			}, 0);
 		}
-		
+
 		var docElem = document.documentElement, body = document.body;
 		var widget = ds.$('widget_led'), style = widget.style;
 		style.display = 'block';
-		
+
 		var left = (Math.max(docElem.offsetWidth, body.offsetWidth) - widget.offsetWidth) / 2;
 		var scrollTop = Math.max(docElem.scrollTop, body.scrollTop);
 		var top = scrollTop + (Math.max(docElem.clientHeight, body.clientHeight) - widget.offsetHeight) * .382;
-		
+
 		style.left = left + 'px';
 		style.top = top + 'px';
 	},
@@ -293,14 +293,14 @@
 		getMask().hide();
 		ds.$('widget_led').style.display = 'none';
 	};
-	
-	
+
+
 	showWidget();
 	</script>
-	
-	
+
+
 	<button onclick="showWidget()" style="margin:40px">点击弹出提示</button>
-	
-	<script type="text/javascript" src="/51_min.js"></script>
+
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
 </body>
 </html>
