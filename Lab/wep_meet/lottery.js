@@ -6,9 +6,8 @@
 */
 ;(function(global, document, undefined){
 	//base
-	var 
-	rblock = /\{([^\}]*)\}/ig,
-	ds = global.ds = {
+	var rblock = /\{([^\}]*)\}/ig;
+	ds.extend({
 		_noop : function(){},
 		//Object
 		mix : function(target, source, cover){
@@ -61,48 +60,10 @@
 			elem.removeEventListener(type, handler, false);
 			return this;
 		}
-	};
-	//extend AJAX --only XMLHttpRequest
-	ds.mix((function(){
-		var 
-		_uuid = 0,
-		head = document.head || document.getElementsByTagName('head')[0],
-		_defOps = {
-			
-		};
-		return {
-			uuid : function(){ return _uuid++;},
-			getXHR : function(){
-				return new XMLHttpRequest();
-			},
-			ajax : function(ops){
-				ops = ds.mix(ops || {}, _defOps);
-			},
-			loadScript : function(url, callback, args){
-				var script = document.createElement('script');
-				script.type = 'text/javascript';
-				script.async = true;
-				script.src = url;
-				typeof args === 'object' && ds.mix(script, args);
-				script.onload = function(){
-					(callback || ds._noop).call(this);
-				}
-				head.insertBefore(script, head.firstChild);
-			},
-			getJSON : function(url, callback, args){
-				var name = '_ds_jsonp_callback_' + this.uuid();
-				url = url.indexOf('=?') > -1 ? url.replace('=?', '=' + name) : url + (url.indexOf('?') > -1 ? '&' : '?') + 'callback=' + name;
-				global[name] = function(data){
-					global[name] = null;
-					(callback || ds._noop).call(data, data);
-				};
-				return ds.loadScript(url);
-			}
-		};
-	})());
+	});
 	//extend css, animate
 	ds.mix((function(){
-		var 
+		var
 		easeInOutCubic = function(pos){ return (pos/=.5) < 1 ? .5*Math.pow(pos, 3) : .5*(Math.pow(pos-2, 3)+2);},
 		numberCSS = ['zIndex', 'opacity'].join(',') + ',',
 		rcamels = /-([a-zA-Z])/g,
@@ -143,7 +104,7 @@
 				if(!elem || !elem.style) return this;
 				ease = ease || easeInOutCubic;
 				duration = isFinite(duration) ? duration : 200;
-				var 
+				var
 				_t, tMark,
 				style = elem.style,
 				fxOps = getCurrStyle(elem, ops),
@@ -184,9 +145,9 @@
 	})());
 	//extend Transform
 	ds.mix((function(){
-		var 
+		var
 		pri = '',
-		supportTransform = false, 
+		supportTransform = false,
 		style = document.documentElement.style,
 		pris = ['O', 'ms', 'Moz', 'webkit', ''],
 		i = pris.length;
@@ -226,17 +187,17 @@
 	*/
 	ds.lotteryLevel = global.currLevel || 1;
 	ds.baseUrl = global.baseUrl || 'http://act.weiphone.com/meet/';
-	
+
 	/**
 	* 私有属性
 	*/
-	var 
+	var
 	_baseUrl = ds.baseUrl,
 	_currLevel = ds.lotteryLevel,
 	dataUrl = _baseUrl + (global.getUsersUrl || 'index.php?r=json/getMeetUser&callback=?'),
 	winUsersUrl = _baseUrl + (global.getWinersUrls || 'index.php?r=json/winList&t=2&callback=?'),
 	addWinUserUrl = _baseUrl + (global.addWinerUrl || 'index.php?r=json/winner&callback=x&t=2&p=' + _currLevel + '&u=');
-	
+
 	/**
 	* 扩展获取用户列表方法 & 添加获奖用户方法
 	*/
@@ -293,12 +254,12 @@
 			return this;
 		}
 	});
-	
+
 	/**
 	* 扩展摇奖方法 Roll
 	*/
 	ds.mix((function(){
-		var 
+		var
 		_ops = {
 			shell : null,
 			unitSize : 100,
@@ -336,12 +297,12 @@
 			status : 0,	//0 - init, 1 - speedUp, 2 - speddLinear, 3 - speedDown
 			start : function(){
 				if(this.status !== 0) return this;
-				var 
+				var
 				self = this,
 				ops = this.ops,
 				style = this.shell.style,
 				currTop = this.top = parseFloat(ds.css(this.shell, 'top')),
-				
+
 				top = currTop,
 				realTop = top,
 				linearSpeed = 60,
@@ -378,11 +339,11 @@
 				if(this.status !== 2) return this;
 				global.clearTimeout(this.timer);
 				this.status = 3;
-				var 
+				var
 				self = this,
 				ops = this.ops,
 				style = this.shell.style,
-				
+
 				currTop = Math.round(this.top / ops.unitSize) * ops.unitSize,
 				top = currTop,
 				realTop = top,
@@ -423,11 +384,11 @@
 * create 2012.05
 * update 2012.08.17
 */
-;(function(global, document, undefined){	
+;(function(global, document, undefined){
 	/*
 	* 初始化 页面元素
 	*/
-	var 
+	var
 	winCountElem = ds.$d('win_count'),
 	onlineCountElem = ds.$d('online_count'),
 	loading = ds.$d('loading'),
@@ -442,20 +403,20 @@
 	btn = ds.$D('.start_btn')[0],
 	btnState = ds.$D('span', btn)[0],
 	tmpUl = document.createElement('ul');
-	
+
 	/*
 	* 初始化 抽奖数据
 	*/
-	var 
+	var
 	winCount = 0,
 	_maxLevel = 3,
 	_currLevel = ds.lotteryLevel;
-	
+
 	/*
 	* 初始化 抽奖回调
 	*/
 	var rollCallbackDone = true;
-	/** 
+	/**
 	* 场内抽奖 rollCallback
 	*/
 	ds.rollCallbackInner = function(item, elem, top, realTop){
@@ -487,7 +448,7 @@
 				rollCallbackDone = true;
 			});
 		});
-		
+
 		//Insert To WinUl
 		var _tmpLi, winUlLis = ds.$D('li', winUl);
 		tmpUl.innerHTML = ds.mixStr(winTmpl, ++winCount, '[' + item.join_num + ']' + item.user_name, ' style="opacity:0; height:0"');
@@ -500,11 +461,11 @@
 		}
 		ds.addWinUser(item.user_id, true);
 		setTimeout(function(){ winUl.scrollTop = 0; ds.animate(_tmpLi, {height:38, opacity:1}, 300);}, 500);
-		
+
 		//Debug
 		ds.log('[场内]Roll callback : elem = ', elem, ', name = ', item.user_name, ', realTop = ', realTop);
 	};
-	/** 
+	/**
 	* 场外抽奖 rollCallback
 	*/
 	ds.rollCallbackOuter = function(item, elem, top, realTop){
@@ -545,15 +506,15 @@
 		}
 		ds.addWinUser(item.user_id, true);
 		setTimeout(function(){ winUl.scrollTop = 0; ds.animate(winUl.firstChild, {height:38, opacity:1}, 300);}, 500);
-		
+
 		//Debug
 		ds.log('[场外]Roll callback : elem = ', elem, ', name = ', item.user_name, ', realTop = ', realTop);
 	};
-	
+
 	/*
 	* 初始化 抽奖系统
 	*/
-	var 
+	var
 	rollCallback = ds.rollCallbackInner,
 	lotteryType = global.lotteryType || 'inner';
 	if(lotteryType === 'outer'){
@@ -579,10 +540,10 @@
 			});
 			onlineCountElem.innerHTML = userList.length;
 			cloneUl.innerHTML = userUl.innerHTML = listHTML.join('') + listClone.join('');
-			
+
 			//init WinList
 			;(function(){
-				var 
+				var
 				user, list = [], prevType = _maxLevel,
 				types = ['一等奖(1)', '二等奖(3)', '三等奖(5)', '安慰奖', '参与奖'];
 				for(var c=0, i=winList.length-1; i>=0; i--){
@@ -619,9 +580,9 @@
 			winCountElem.innerHTML = winCount;
 			winUl.innerHTML = listHTML.reverse().join('');
 		}
-		
+
 		//Init Roll
-		var 
+		var
 		setCount = 0,
 		dotChangeCount = 0,
 		readFire = true,
@@ -656,7 +617,7 @@
 			onfinish : function(top, realTop){
 				btnState.className = '';
 				cloneUlStyle.top = realTop + 'px';
-				var 
+				var
 				elem = ds.$D('li', userUl)[-parseInt(realTop / unitSize, 10) + 1],
 				item = ds.getUserById(ds.userHash[elem.id.slice(0, elem.id.lastIndexOf('_'))]);
 				rollCallback.call(this, item, elem, top, realTop);
@@ -702,7 +663,7 @@
 			}
 		}
 	});
-	
+
 	/**
 	* 抽奖系统调试模块
 	*/

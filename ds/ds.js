@@ -19,7 +19,7 @@ www.laoshu133.com
 2011.12.19 --完善AJAX对JSON的支持
 */
 ;(function(window, doc, undefined){
-	var 
+	var
 	//全局id
 	_guid = 0,
 	guid = function(){ return _guid++},
@@ -52,7 +52,7 @@ www.laoshu133.com
 		div = null;
 		return support;
 	})();
-	
+
 	//初始化ds
 	ds = window.ds = {
 		ds : 0.5,
@@ -96,7 +96,7 @@ www.laoshu133.com
 		support : support,
 		debug : true
 	};
-	
+
 	//type, object, string
 	var
 	rword = /[^, \|]+/g,
@@ -113,7 +113,7 @@ www.laoshu133.com
 	},
 	toString = class2type.toString,
 	getType = function(obj, type){
-		var 
+		var
 		_type = obj == null ? String(obj) : class2type[toString.call(obj)] || obj.nodeName || '#';
 		if(_type.charAt(0) === '#'){
 			if(obj == obj.window){
@@ -155,9 +155,9 @@ www.laoshu133.com
 			return str.replace(rnotRepeat, '');
 		}
 	});
-	
+
 	//Data
-	var 
+	var
 	_expando = ('@ds_data_' + new Date().getTime()).slice(17),
 	cache = {};
 	ds.extend({
@@ -221,14 +221,14 @@ www.laoshu133.com
 			return this;
 		}
 	});
-	
+
 	//Event
 	ds.extend({
 		event : {
 			fix : function(e){
 				e = e || window.event;
 				if(e.target) return e;
-				
+
 				//拷贝， 不要直接写event for best
 				var newE = {}, tar = e.srcElement;
 				for(var k in e){
@@ -380,7 +380,7 @@ www.laoshu133.com
 			return this;
 		}
 	});
-	
+
 	//DOM
 	//elems
 	var docEl = doc.documentElement,
@@ -439,9 +439,9 @@ www.laoshu133.com
 			return this;
 		}
 	});
-	
+
 	//css, style
-	var 
+	var
 	rcssDigit = /fontWeight|lineHeight|opacity|zIndex|zoom/i,
 	ralpha = /alpha\([^)]*\)/i,
 	ropacity = /opacity=([^)]*)/i,
@@ -549,7 +549,7 @@ www.laoshu133.com
 			return this;
 		}
 	});
-	
+
 	//display, WH, offset
 	var rroot = /body|html/i;
 	ds.extend({
@@ -610,7 +610,7 @@ www.laoshu133.com
 				for(var i=0,len=cssWidth.length; i<len; i++){
 					w -= parseFloat(_currCss(el, 'padding' + cssWidth[i]));
 					h -= parseFloat(_currCss(el, 'padding' + cssHeight[i]));
-				}	
+				}
 			}
 			return {width:w, height:h};
 		},
@@ -654,7 +654,7 @@ www.laoshu133.com
 			};
 		}
 	});
-	
+
 	//BOM
 	ds.extend((function(names){
 		var brows = {};
@@ -670,9 +670,9 @@ www.laoshu133.com
 			}
 		};
 	})('Chrome|Firefox|IE|Opera|Safari'));
-	
+
 	//AJAX
-	var 
+	var
 	rpart = /([^&=]*)=([^&$]*)/g,
 	_ajaxDefOps = {
 		url : '/',
@@ -689,7 +689,7 @@ www.laoshu133.com
 	};
 	ds.extend({
 		getXhr : function(){
-			var 
+			var
 			xhr = null,
 			xhrs = [
 				function () {return new XMLHttpRequest();},
@@ -726,14 +726,16 @@ www.laoshu133.com
 		},
 		buildUrl : function(url, data, cache){
 			//只处理非POST请求，POST请求本身不缓存
-			var 
+			var
 			ret = this.buildData(data);
-			if(!cache) ret.t_mark = ((new Date()).getTime()/3600).toFixed(0);
+			if(!cache && ret) {
+				ret._ = ((new Date()).getTime()/3600).toFixed(0);
+			}
 			return url + ((ret = this.serialize(ret)).length > 0 ? (url.indexOf('?') > -1 ? '&' : '?') : '') + ret;
 		},
 		ajax : function(ops){
 			ops = this.mix(ops || {}, _ajaxDefOps);
-			var 
+			var
 			xhr = this.getXhr(),
 			isPost = ops.type.toUpperCase() === 'POST';
 			xhr.onreadystatechange = function(){
@@ -790,7 +792,7 @@ www.laoshu133.com
 			return data;
 		}
 	});
-	
+
 	//queue
 	ds.extend({
 		queue : function(el, name, fn){
@@ -828,13 +830,13 @@ www.laoshu133.com
 			return this;
 		}
 	});
-	
-	//loader 
-	var 
+
+	//loader
+	var
 	rloaded = /loaded|complete|undefined/;
 	ds.extend({
 		loadScript : (function(){
-			var 
+			var
 			cache = {},
 			head = doc.head || ds.$D('head')[0],
 			type = w3c ? 'load' : 'readystatechange',
@@ -922,7 +924,7 @@ www.laoshu133.com
 			}
 		})(),
 		loadStyle : function(url, callback){
-			var 
+			var
 			head = doc.head || this.$D('head')[0],
 			el = this.createEl('style', {type:'text/css'});
 			return this.get(url, function(str){
@@ -937,12 +939,12 @@ www.laoshu133.com
 			}, true);
 		}
 	});
-	
+
 	//ready
 	ds.extend({
 		//DOM ready
 		ready : (function(){
-			var 
+			var
 			handler, callbacks = [],
 			bound = false, isReady = false,
 			domType = 'DOMContentLoaded', ieType = 'onreadystatechange',
@@ -1002,9 +1004,9 @@ www.laoshu133.com
 			}
 		})()
 	});
-	
+
 	//animate
-	var 
+	var
 	fxEase = function(t){return (t*=2)<1?.5*t*t:.5*(1-(--t)*(t-2));},
 	cssPris = ['webkit', 'Moz', 'O', 'ms', ''],
 	trainsitionPri = (function(){
@@ -1018,7 +1020,7 @@ www.laoshu133.com
 	})();
 	ds.extend({
 		animate : support.cssTransition ? function(el, fxOps, duration, callback, ease){
-			var 
+			var
 			self = this,
 			durStr = trainsitionPri + 'TransitionDuration',
 			easeStr = trainsitionPri + 'TransitionTimingFunction',
@@ -1085,14 +1087,14 @@ www.laoshu133.com
 			return this.css(el, oneSetOps);
 		},
 		stop : support.cssTransition ? function(el, toEnd){
-			var k, currOps = {}, 
+			var k, currOps = {},
 			name = trainsitionPri + 'TransitionDuration',
 			fxOps = this.data(el, '@ds_fx_ops');
 			if(!fxOps) return this;
 			for(k in fxOps) currOps[k] = this.css(el, k);
 			this.css(el, name, '0s')
 			//FF, Chrome设置TransitionDuration后必须再设置并读取一次才生效, 只能设置当前动画属性才能生效， 读取随便
-			.css(el, currOps).css(el, name); 
+			.css(el, currOps).css(el, name);
 			this.event.trigger(el, trainsitionPri + 'TransitionEnd');
 			return !toEnd ? this : this.css(el, fxOps);
 		} : function(el, toEnd){
@@ -1103,10 +1105,10 @@ www.laoshu133.com
 			return !toEnd ? this : this.css(el, data.fxOps);
 		}
 	});
-	
+
 	//mouseenter, mouseleave
 	(function(){
-		var 
+		var
 		event = ds.event,
 		isElem = function(el){
 			return el && el.nodeType === 1;
@@ -1164,7 +1166,7 @@ www.laoshu133.com
 			this.bind(el, 'mouseenter', enterFn).bind(el, 'mouseleave', leaveFn);
 		}
 	})();
-	
+
 	//debug
 	ds.extend({
 		log : function(/*info1, ...infoN, inDiv*/){

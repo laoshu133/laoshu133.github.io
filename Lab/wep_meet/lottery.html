@@ -36,14 +36,20 @@
 	<script type="text/javascript">
 	var lotteryType = 'outer';
 	var baseUrl = './';
-	var getUsersUrl = 'get_users.asp?act=get_all_user&callback=?';
-	var getWinersUrls = 'get_users.asp?act=get_winer&callback=?';
+	var getUsersUrl = 'users.json';
+	var getWinersUrls = 'users_winers.json';
 	//var addWinerUrl = 'index.php?r=json/winner&callback=x&t=1&p=1&u=';
-	
+
 	var lotteryDebug = true;
 	</script>
-	<script type="text/javascript" src="lottery.js"></script>
-	
+	<script src="/ds/ds.js"></script>
+	<script type="text/javascript">
+	ds.getJSON = function(url, callback) {
+		ds.get(url, callback, 'json');
+	};
+	</script>
+	<script src="lottery.js"></script>
+
 	<!-- Tips -->
 	<script type="text/javascript">
 	ds.on(window, 'load', function(){
