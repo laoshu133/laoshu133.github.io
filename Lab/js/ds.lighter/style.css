@@ -1,0 +1,12 @@
+.sh_sourceCode {
+	background:#f8f8f8; border:1px solid #e8e8e8; border-left-width:6px;
+	margin:-0.5em 0 1.1em; padding:1em 1.2em 1.2em;
+	vertical-align:top; overflow:auto;
+}
+.sh_sourceCode code{font:normal normal 0.98em/1.5438em Monaco, Consolas, "Lucida Console", monospace;}
+.sh_sourceCode .sh_symbol , .sh_sourceCode .sh_cbracket { color: #333;}
+.sh_sourceCode .sh_keyword { color: #c96;}
+.sh_sourceCode .sh_string, .sh_sourceCode .sh_regexp, .sh_sourceCode .sh_number,
+.sh_sourceCode .sh_specialchar, .sh_selector{ color: #690;}
+.sh_sourceCode .sh_comment , .sh_property{color: #666;}
+.sh_value{ color:#069;}
