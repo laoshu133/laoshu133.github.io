@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.laoshu133.com/"/>
-  <updated>2016-06-20T15:48:17.000Z</updated>
+  <updated>2016-06-27T18:15:36.000Z</updated>
   <id>http://www.laoshu133.com/</id>
   
   <author>
@@ -16,9 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>己动手打造一款路由器（一）</title>
+    <link href="http://www.laoshu133.com/2016/06/27/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E6%89%93%E9%80%A0%E4%B8%80%E6%AC%BE%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%88%E4%B8%80%EF%BC%89.html"/>
+    <id>http://www.laoshu133.com/2016/06/27/自己动手打造一款路由器（一）.html</id>
+    <published>2016-06-27T15:59:39.000Z</published>
+    <updated>2016-06-27T18:15:36.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面的路由器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广告劫持；同时自己动手还能解决一些你懂的需求&lt;/p&gt;
+&lt;h2 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h2&gt;&lt;p&gt;先上几张效果图，&lt;br&gt;截至目前路由器已稳定运营 18 天&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wrt/p1.jpg&quot; alt=&quot;摆拍&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wrt/p2.jpg&quot; alt=&quot;摆拍2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wrt/p3.jpg&quot; alt=&quot;管理界面&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;技术选型&quot;&gt;&lt;a href=&quot;#技术选型&quot; class=&quot;headerlink&quot; title=&quot;技术选型&quot;&gt;&lt;/a&gt;技术选型&lt;/h2&gt;&lt;p&gt;我的目标是 “3 年之内不换路由器”；&lt;br&gt;当目标确定后就需要技术选型，&lt;br&gt;首先确定用哪个平台的路由控制，目前可选的一般有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tomato&lt;/li&gt;
+&lt;li&gt;DD-WRT&lt;/li&gt;
+&lt;li&gt;OpenWrt&lt;/li&gt;
+&lt;li&gt;RouterOS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基于爱折腾的原则，我选择了 &lt;code&gt;OpenWrt&lt;/code&gt; 😄&lt;br&gt;平台确定后就需要选硬件了，这个比较麻烦，&lt;br&gt;得益于一个做外贸的好友 HYSTOU 赞助一台 Mini PC，&lt;br&gt;x86 架构，具体配置见前面截图，总的来说这个配置已经很高了&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面的路由器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广告劫持；
+    
+    </summary>
+    
+    
+      <category term="路由器" scheme="http://www.laoshu133.com/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+      <category term="网络" scheme="http://www.laoshu133.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[JS笔记] javascript base64 Encode, Decode</title>
-    <link href="http://www.laoshu133.com/2014/11/20/JS%E7%AC%94%E8%AE%B0-javascript-base64-Encode-Decode/"/>
-    <id>http://www.laoshu133.com/2014/11/20/JS笔记-javascript-base64-Encode-Decode/</id>
+    <link href="http://www.laoshu133.com/2014/11/20/JS%E7%AC%94%E8%AE%B0-javascript-base64-Encode-Decode.html"/>
+    <id>http://www.laoshu133.com/2014/11/20/JS笔记-javascript-base64-Encode-Decode.html</id>
     <published>2014-11-20T13:54:34.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -58,8 +93,8 @@
   
   <entry>
     <title>grunt-css-sprite</title>
-    <link href="http://www.laoshu133.com/2014/06/22/grunt-css-sprite/"/>
-    <id>http://www.laoshu133.com/2014/06/22/grunt-css-sprite/</id>
+    <link href="http://www.laoshu133.com/2014/06/22/grunt-css-sprite.html"/>
+    <id>http://www.laoshu133.com/2014/06/22/grunt-css-sprite.html</id>
     <published>2014-06-22T13:21:41.000Z</published>
     <updated>2016-06-20T15:47:28.000Z</updated>
     
@@ -78,8 +113,8 @@
   
   <entry>
     <title>[CSS笔记]响应式页面视频等比缩放</title>
-    <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E5%93%8D%E5%BA%94%E5%BC%8F%E9%A1%B5%E9%9D%A2%E8%A7%86%E9%A2%91%E7%AD%89%E6%AF%94%E7%BC%A9%E6%94%BE/"/>
-    <id>http://www.laoshu133.com/2014/04/08/CSS笔记-响应式页面视频等比缩放/</id>
+    <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E5%93%8D%E5%BA%94%E5%BC%8F%E9%A1%B5%E9%9D%A2%E8%A7%86%E9%A2%91%E7%AD%89%E6%AF%94%E7%BC%A9%E6%94%BE.html"/>
+    <id>http://www.laoshu133.com/2014/04/08/CSS笔记-响应式页面视频等比缩放.html</id>
     <published>2014-04-08T09:11:16.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -104,8 +139,8 @@
   
   <entry>
     <title>[CSS笔记]绝对定位居中(Absolute Centering)</title>
-    <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%B1%85%E4%B8%AD-Absolute-Centering/"/>
-    <id>http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering/</id>
+    <link href="http://www.laoshu133.com/2014/04/08/CSS%E7%AC%94%E8%AE%B0-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%B1%85%E4%B8%AD-Absolute-Centering.html"/>
+    <id>http://www.laoshu133.com/2014/04/08/CSS笔记-绝对定位居中-Absolute-Centering.html</id>
     <published>2014-04-08T08:51:36.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -128,8 +163,8 @@
   
   <entry>
     <title>Chrome插件（扩展）“二维码小助手”</title>
-    <link href="http://www.laoshu133.com/2014/03/03/Chrome%E6%8F%92%E4%BB%B6%EF%BC%88%E6%89%A9%E5%B1%95%EF%BC%89%E2%80%9C%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B%E2%80%9D/"/>
-    <id>http://www.laoshu133.com/2014/03/03/Chrome插件（扩展）“二维码小助手”/</id>
+    <link href="http://www.laoshu133.com/2014/03/03/Chrome%E6%8F%92%E4%BB%B6%EF%BC%88%E6%89%A9%E5%B1%95%EF%BC%89%E2%80%9C%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B%E2%80%9D.html"/>
+    <id>http://www.laoshu133.com/2014/03/03/Chrome插件（扩展）“二维码小助手”.html</id>
     <published>2014-03-03T02:13:55.000Z</published>
     <updated>2016-06-20T15:53:38.000Z</updated>
     
@@ -152,8 +187,8 @@
   
   <entry>
     <title>IE11 typeof window.ActiveXObject === &amp;quot;undefined&amp;quot;</title>
-    <link href="http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/"/>
-    <id>http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot/</id>
+    <link href="http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot.html"/>
+    <id>http://www.laoshu133.com/2013/11/28/IE11-typeof-window-ActiveXObject-quot-undefined-quot.html</id>
     <published>2013-11-28T03:39:13.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -179,8 +214,8 @@
   
   <entry>
     <title>CSS兼容背景透明处理</title>
-    <link href="http://www.laoshu133.com/2013/09/03/CSS%E5%85%BC%E5%AE%B9%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%A4%84%E7%90%86/"/>
-    <id>http://www.laoshu133.com/2013/09/03/CSS兼容背景透明处理/</id>
+    <link href="http://www.laoshu133.com/2013/09/03/CSS%E5%85%BC%E5%AE%B9%E8%83%8C%E6%99%AF%E9%80%8F%E6%98%8E%E5%A4%84%E7%90%86.html"/>
+    <id>http://www.laoshu133.com/2013/09/03/CSS兼容背景透明处理.html</id>
     <published>2013-09-02T16:43:27.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -220,8 +255,8 @@
   
   <entry>
     <title>javascript位运算转整型存在风险</title>
-    <link href="http://www.laoshu133.com/2013/07/11/javascript%E4%BD%8D%E8%BF%90%E7%AE%97%E8%BD%AC%E6%95%B4%E5%9E%8B%E5%AD%98%E5%9C%A8%E9%A3%8E%E9%99%A9/"/>
-    <id>http://www.laoshu133.com/2013/07/11/javascript位运算转整型存在风险/</id>
+    <link href="http://www.laoshu133.com/2013/07/11/javascript%E4%BD%8D%E8%BF%90%E7%AE%97%E8%BD%AC%E6%95%B4%E5%9E%8B%E5%AD%98%E5%9C%A8%E9%A3%8E%E9%99%A9.html"/>
+    <id>http://www.laoshu133.com/2013/07/11/javascript位运算转整型存在风险.html</id>
     <published>2013-07-11T09:28:52.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -246,8 +281,8 @@
   
   <entry>
     <title>让网页变灰浅析（CSS+Javascript）</title>
-    <link href="http://www.laoshu133.com/2013/04/26/%E8%AE%A9%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E6%B5%85%E6%9E%90%EF%BC%88CSS-Javascript%EF%BC%89/"/>
-    <id>http://www.laoshu133.com/2013/04/26/让网页变灰浅析（CSS-Javascript）/</id>
+    <link href="http://www.laoshu133.com/2013/04/26/%E8%AE%A9%E7%BD%91%E9%A1%B5%E5%8F%98%E7%81%B0%E6%B5%85%E6%9E%90%EF%BC%88CSS-Javascript%EF%BC%89.html"/>
+    <id>http://www.laoshu133.com/2013/04/26/让网页变灰浅析（CSS-Javascript）.html</id>
     <published>2013-04-26T07:45:33.000Z</published>
     <updated>2016-06-20T15:49:03.000Z</updated>
     
@@ -333,8 +368,8 @@
   
   <entry>
     <title>Chrome更改parseInt默认转换规则</title>
-    <link href="http://www.laoshu133.com/2013/02/27/Chrome%E6%9B%B4%E6%94%B9parseInt%E9%BB%98%E8%AE%A4%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99/"/>
-    <id>http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则/</id>
+    <link href="http://www.laoshu133.com/2013/02/27/Chrome%E6%9B%B4%E6%94%B9parseInt%E9%BB%98%E8%AE%A4%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99.html"/>
+    <id>http://www.laoshu133.com/2013/02/27/Chrome更改parseInt默认转换规则.html</id>
     <published>2013-02-27T15:33:20.000Z</published>
     <updated>2016-06-20T15:47:28.000Z</updated>
     
@@ -378,8 +413,8 @@
   
   <entry>
     <title>7行崩掉(Crash)Chrome</title>
-    <link href="http://www.laoshu133.com/2012/10/23/7%E8%A1%8C%E5%B4%A9%E6%8E%89-Crash-Chrome/"/>
-    <id>http://www.laoshu133.com/2012/10/23/7行崩掉-Crash-Chrome/</id>
+    <link href="http://www.laoshu133.com/2012/10/23/7%E8%A1%8C%E5%B4%A9%E6%8E%89-Crash-Chrome.html"/>
+    <id>http://www.laoshu133.com/2012/10/23/7行崩掉-Crash-Chrome.html</id>
     <published>2012-10-23T13:08:29.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -391,7 +426,7 @@
 &lt;li&gt;重现条件：CSS部分缺一不可，HTML结构随意，input一定要是file&lt;/li&gt;
 &lt;li&gt;具体原因未知&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix:after&amp;#123; content:&quot;&quot;; display:block;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix li&amp;#123; float:left;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;file&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;css&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.clearfix&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:after&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;content&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:block;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.clearfix&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;li&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;:left;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;file&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;废话不多，给出&lt;a href=&quot;/Lab/crash_chrome/&quot;&gt;DEMO地址&lt;/a&gt;，欢迎拍砖。&lt;/p&gt;
 </content>
     
@@ -409,8 +444,8 @@
   
   <entry>
     <title>CSS 背景居中次像素无法重合</title>
-    <link href="http://www.laoshu133.com/2012/08/08/CSS-%E8%83%8C%E6%99%AF%E5%B1%85%E4%B8%AD%E6%AC%A1%E5%83%8F%E7%B4%A0%E6%97%A0%E6%B3%95%E9%87%8D%E5%90%88/"/>
-    <id>http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合/</id>
+    <link href="http://www.laoshu133.com/2012/08/08/CSS-%E8%83%8C%E6%99%AF%E5%B1%85%E4%B8%AD%E6%AC%A1%E5%83%8F%E7%B4%A0%E6%97%A0%E6%B3%95%E9%87%8D%E5%90%88.html"/>
+    <id>http://www.laoshu133.com/2012/08/08/CSS-背景居中次像素无法重合.html</id>
     <published>2012-08-08T04:26:03.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -452,8 +487,8 @@
   
   <entry>
     <title>JPG渐进 &amp;amp; PNG/PNG24 交错测试</title>
-    <link href="http://www.laoshu133.com/2012/08/03/JPG%E6%B8%90%E8%BF%9B-amp-PNG-PNG24-%E4%BA%A4%E9%94%99%E6%B5%8B%E8%AF%95/"/>
-    <id>http://www.laoshu133.com/2012/08/03/JPG渐进-amp-PNG-PNG24-交错测试/</id>
+    <link href="http://www.laoshu133.com/2012/08/03/JPG%E6%B8%90%E8%BF%9B-amp-PNG-PNG24-%E4%BA%A4%E9%94%99%E6%B5%8B%E8%AF%95.html"/>
+    <id>http://www.laoshu133.com/2012/08/03/JPG渐进-amp-PNG-PNG24-交错测试.html</id>
     <published>2012-08-03T08:20:35.000Z</published>
     <updated>2016-06-20T15:47:28.000Z</updated>
     
@@ -495,8 +530,8 @@
   
   <entry>
     <title>DatePicker - 基于jQuery 的日期选择控件</title>
-    <link href="http://www.laoshu133.com/2012/07/30/DatePicker-%E5%9F%BA%E4%BA%8EjQuery-%E7%9A%84%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6/"/>
-    <id>http://www.laoshu133.com/2012/07/30/DatePicker-基于jQuery-的日期选择控件/</id>
+    <link href="http://www.laoshu133.com/2012/07/30/DatePicker-%E5%9F%BA%E4%BA%8EjQuery-%E7%9A%84%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6.html"/>
+    <id>http://www.laoshu133.com/2012/07/30/DatePicker-基于jQuery-的日期选择控件.html</id>
     <published>2012-07-30T06:30:58.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -532,8 +567,8 @@
   
   <entry>
     <title>基于给定路径求相对路径</title>
-    <link href="http://www.laoshu133.com/2012/07/19/%E5%9F%BA%E4%BA%8E%E7%BB%99%E5%AE%9A%E8%B7%AF%E5%BE%84%E6%B1%82%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/"/>
-    <id>http://www.laoshu133.com/2012/07/19/基于给定路径求相对路径/</id>
+    <link href="http://www.laoshu133.com/2012/07/19/%E5%9F%BA%E4%BA%8E%E7%BB%99%E5%AE%9A%E8%B7%AF%E5%BE%84%E6%B1%82%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84.html"/>
+    <id>http://www.laoshu133.com/2012/07/19/基于给定路径求相对路径.html</id>
     <published>2012-07-19T02:27:13.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -596,8 +631,8 @@ aaa/bbb/dd.js
   
   <entry>
     <title>ZBLOG主题[Ceedo] V2.0</title>
-    <link href="http://www.laoshu133.com/2012/02/27/ZBLOG%E4%B8%BB%E9%A2%98-Ceedo-V2-0/"/>
-    <id>http://www.laoshu133.com/2012/02/27/ZBLOG主题-Ceedo-V2-0/</id>
+    <link href="http://www.laoshu133.com/2012/02/27/ZBLOG%E4%B8%BB%E9%A2%98-Ceedo-V2-0.html"/>
+    <id>http://www.laoshu133.com/2012/02/27/ZBLOG主题-Ceedo-V2-0.html</id>
     <published>2012-02-26T20:11:00.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -639,8 +674,8 @@ aaa/bbb/dd.js
   
   <entry>
     <title>在线五子棋对战</title>
-    <link href="http://www.laoshu133.com/2011/10/28/%E5%9C%A8%E7%BA%BF%E4%BA%94%E5%AD%90%E6%A3%8B%E5%AF%B9%E6%88%98/"/>
-    <id>http://www.laoshu133.com/2011/10/28/在线五子棋对战/</id>
+    <link href="http://www.laoshu133.com/2011/10/28/%E5%9C%A8%E7%BA%BF%E4%BA%94%E5%AD%90%E6%A3%8B%E5%AF%B9%E6%88%98.html"/>
+    <id>http://www.laoshu133.com/2011/10/28/在线五子棋对战.html</id>
     <published>2011-10-28T08:27:45.000Z</published>
     <updated>2016-06-20T15:47:28.000Z</updated>
     
@@ -680,8 +715,8 @@ aaa/bbb/dd.js
   
   <entry>
     <title>浅谈javascript 与 flash通信</title>
-    <link href="http://www.laoshu133.com/2011/10/21/%E6%B5%85%E8%B0%88javascript-%E4%B8%8E-flash%E9%80%9A%E4%BF%A1/"/>
-    <id>http://www.laoshu133.com/2011/10/21/浅谈javascript-与-flash通信/</id>
+    <link href="http://www.laoshu133.com/2011/10/21/%E6%B5%85%E8%B0%88javascript-%E4%B8%8E-flash%E9%80%9A%E4%BF%A1.html"/>
+    <id>http://www.laoshu133.com/2011/10/21/浅谈javascript-与-flash通信.html</id>
     <published>2011-10-21T01:51:46.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -705,8 +740,8 @@ aaa/bbb/dd.js
   
   <entry>
     <title>ZBLOG代码高亮插件 DsLighter</title>
-    <link href="http://www.laoshu133.com/2011/09/08/ZBLOG%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%8F%92%E4%BB%B6-DsLighter/"/>
-    <id>http://www.laoshu133.com/2011/09/08/ZBLOG代码高亮插件-DsLighter/</id>
+    <link href="http://www.laoshu133.com/2011/09/08/ZBLOG%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%8F%92%E4%BB%B6-DsLighter.html"/>
+    <id>http://www.laoshu133.com/2011/09/08/ZBLOG代码高亮插件-DsLighter.html</id>
     <published>2011-09-08T02:38:49.000Z</published>
     <updated>2016-06-20T15:48:17.000Z</updated>
     
@@ -724,40 +759,6 @@ aaa/bbb/dd.js
     
     
       <category term="其他" scheme="http://www.laoshu133.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈谈浏览器检测 BOM</title>
-    <link href="http://www.laoshu133.com/2011/09/02/%E8%B0%88%E8%B0%88%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A3%80%E6%B5%8B-BOM/"/>
-    <id>http://www.laoshu133.com/2011/09/02/谈谈浏览器检测-BOM/</id>
-    <published>2011-09-02T10:46:21.000Z</published>
-    <updated>2016-06-20T15:48:17.000Z</updated>
-    
-    <content type="html">&lt;p&gt;在谈到浏览器检测的时候，相信很多同学都会说这是一个很老的话题了，而且首先想到的肯定就是检测 navigator.userAgent，然后再想到的肯定就是对于IE这个庞大的体系的HACK。&lt;/p&gt;
-&lt;p&gt;简单展示一下几个浏览器的userAgent:&lt;/p&gt;
-&lt;p&gt;IE7 - Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;IE9 - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;Chrome12 - Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;FF6 - Mozilla/5.0 (Windows NT 6.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1&lt;/p&gt;
-&lt;p&gt;很明显，其中的规律不是难发现，浏览器的版本MSIE 7.0，&amp;nbsp;Chrome/12.0.742.122，要么是跟在&amp;quot;/&amp;quot;后面，要么是跟在空格后面，所以下面给出我的实现方案：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;names&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; rword = &lt;span class=&quot;regexp&quot;&gt;/[^, \|]+/g&lt;/span&gt;, brows = &amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	names.replace(rword, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name&lt;/span&gt;)&lt;/span&gt;&amp;#123; brows[name] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;(&#39;&lt;/span&gt; + names + &lt;span class=&quot;string&quot;&gt;&#39;)[ \\/](\\d+)\\.&#39;&lt;/span&gt;).test(navigator.userAgent))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		brows[&lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;built_in&quot;&gt;parseInt&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		browser : brows,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		ieVer : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;ver&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _ver = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.browser.IE;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;isNaN&lt;/span&gt;(ver) ? _ver : _ver == ver;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(&lt;span class=&quot;string&quot;&gt;&#39;Chrome|Firefox|IE|Opera|Safari&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;不过对于IE系列一些HACK已知没有停止过，类似一些比较常用的：&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;是否为：IE - !+[1,] (在IE9下已经失效)，!+’\v1’  (lt IE9不支持垂直制表符，同样IE9已经失效)&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;另外给出 司徒正美总结的&lt;a href=&quot;http://www.cnblogs.com/rubylouvre/archive/2009/10/14/1583362.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一些检测方案&lt;/a&gt; ，&lt;/p&gt;
-&lt;p&gt;从上面不难看出，HACK检测方案都是不安全的，随着浏览器的的升级很可能HACK就处问题了。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;对于基础的检测，我给出的方案应该能胜任了，希望能看到更好的解决方案，等有时间再给出JQ的browser模块。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在谈到浏览器检测的时候，相信很多同学都会说这是一个很老的话题了，而且首先想到的肯定就是检测 navigator.userAgent，然后再想到的肯定就是对于IE这个庞大的体系的HACK。&lt;/p&gt;
-&lt;p&gt;简单展示一下几个浏览器的userAgent:&lt;/p&gt;
-&lt;p&gt;IE7 - 
-    
-    </summary>
-    
-    
-      <category term="Javascript" scheme="http://www.laoshu133.com/tags/Javascript/"/>
     
   </entry>
   

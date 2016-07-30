@@ -256,7 +256,119 @@
             
               
                 
-                <a class="post-title-link" href="/2011/03/01/浅谈三列等高自适应布局/" itemprop="url">
+                <a class="post-title-link" href="/2011/09/02/谈谈浏览器检测-BOM.html" itemprop="url">
+                  谈谈浏览器检测 BOM
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-09-02T18:46:21+08:00" content="2011-09-02">
+              2011-09-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/09/02/谈谈浏览器检测-BOM.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2011/09/02/谈谈浏览器检测-BOM.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在谈到浏览器检测的时候，相信很多同学都会说这是一个很老的话题了，而且首先想到的肯定就是检测 navigator.userAgent，然后再想到的肯定就是对于IE这个庞大的体系的HACK。</p>
+<p>简单展示一下几个浏览器的userAgent:</p>
+<p>IE7 - Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)</p>
+<p></p><p>IE9 - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)</p>
+<p></p><p>Chrome12 - Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30</p>
+<p></p><p>FF6 - Mozilla/5.0 (Windows NT 6.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1</p>
+<p>很明显，其中的规律不是难发现，浏览器的版本MSIE 7.0，&nbsp;Chrome/12.0.742.122，要么是跟在&quot;/&quot;后面，要么是跟在空格后面，所以下面给出我的实现方案：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">names</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> rword = <span class="regexp">/[^, \|]+/g</span>, brows = &#123;&#125;;</span><br><span class="line">	names.replace(rword, <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123; brows[name] = <span class="number">0</span>;&#125;);</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'('</span> + names + <span class="string">')[ \\/](\\d+)\\.'</span>).test(navigator.userAgent))&#123;</span><br><span class="line">		brows[<span class="built_in">RegExp</span>.$<span class="number">1</span>] = <span class="built_in">parseInt</span>(<span class="built_in">RegExp</span>.$<span class="number">2</span>, <span class="number">10</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		browser : brows,</span><br><span class="line">		ieVer : <span class="function"><span class="keyword">function</span>(<span class="params">ver</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> _ver = <span class="keyword">this</span>.browser.IE;</span><br><span class="line">			<span class="keyword">return</span> <span class="built_in">isNaN</span>(ver) ? _ver : _ver == ver;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;)(<span class="string">'Chrome|Firefox|IE|Opera|Safari'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>不过对于IE系列一些HACK已知没有停止过，类似一些比较常用的：</p>
+<p></p><p>是否为：IE - !+[1,] (在IE9下已经失效)，!+’\v1’  (lt IE9不支持垂直制表符，同样IE9已经失效)</p>
+<p></p><p>另外给出 司徒正美总结的<a href="http://www.cnblogs.com/rubylouvre/archive/2009/10/14/1583362.html" target="_blank" rel="external">一些检测方案</a> ，</p>
+<p>从上面不难看出，HACK检测方案都是不安全的，随着浏览器的的升级很可能HACK就处问题了。</p>
+<p></p><p>对于基础的检测，我给出的方案应该能胜任了，希望能看到更好的解决方案，等有时间再给出JQ的browser模块。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/03/01/浅谈三列等高自适应布局.html" itemprop="url">
                   浅谈三列等高自适应布局
                 </a>
               
@@ -281,8 +393,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2011/03/01/浅谈三列等高自适应布局/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2011/03/01/浅谈三列等高自适应布局/" itemprop="commentsCount"></span>
+                <a href="/2011/03/01/浅谈三列等高自适应布局.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2011/03/01/浅谈三列等高自适应布局.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -360,7 +472,7 @@
             
               
                 
-                <a class="post-title-link" href="/2011/02/17/浅谈CSS两列自适应布局/" itemprop="url">
+                <a class="post-title-link" href="/2011/02/17/浅谈CSS两列自适应布局.html" itemprop="url">
                   浅谈CSS两列自适应布局
                 </a>
               
@@ -385,8 +497,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2011/02/17/浅谈CSS两列自适应布局/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2011/02/17/浅谈CSS两列自适应布局/" itemprop="commentsCount"></span>
+                <a href="/2011/02/17/浅谈CSS两列自适应布局.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2011/02/17/浅谈CSS两列自适应布局.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -494,7 +606,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -504,7 +616,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
