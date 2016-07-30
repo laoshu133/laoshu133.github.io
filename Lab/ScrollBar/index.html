@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery.ScrollBar.base - laoshu133.com</title>
+	<style type="text/css">
+	*{ margin:0; padding:0;}
+	h2{ margin:60px auto 20px; width:60%;}
+	.panel{ border:1px solid #ddd; margin:0 auto; height:320px; width:600px; position:relative;}
+	.panel_inner{ height:100%; width:100%; overflow:hidden;}
+	.content{ width:1920px;}
+	.content img{ display:block;}
+	.content p{ background:#eee; line-height:120px; word-spacing:120px;}
+
+	.bar_x_panel{ background:#fff; font-size:0; margin-top:10px; width:100%; position:absolute;}
+	.bar_x{ border:1px solid #ddd; border-width:1px 0; margin:0 20px; height:20px; position:relative;}
+	.bar_x a, .bar_y a{ background:#eee; border:1px solid #ddd; font-size:12px; line-height:20px; margin-top:-1px; height:20px; width:20px; position:absolute; text-align:center; text-decoration:none;}
+	.bar_x a:hover, .bar_y a:hover{ background:#ddd; text-decoration:none;}
+	.bar_x .btn_l{ left:-24px;}
+	.bar_x .btn_r{ right:-24px;}
+	.bar_x .bar{ background:#aaa; margin-top:1px; height:18px; width:50%; position:absolute; left:0;}
+
+	.bar_y_panel{ margin-right:-32px; height:100%; position:absolute; right:0; top:0;}
+	.bar_y{ border:1px solid #ddd; border-width:0 1px; margin:20px 0 0; height:280px; width:20px; position:relative;}
+	.bar_y .bar{ background:#aaa; margin-left:1px; height:50%; width:18px; position:absolute; left:0; top:0;}
+	.bar_y a{ margin:0 0 0 -1px;}
+	.bar_y .btn_t{ top:-24px;}
+	.bar_y .btn_b{ bottom:-24px;}
+	</style>
+</head>
+<body>
+	<h2>双滚动条</h2>
+	<div class="panel">
+		<div id="shell" class="panel_inner">
+			<div id="content" class="content">
+				<img src="bg.jpg" height="1200" width="1920" alt="" />
+				<!-- <p>1</p>
+				<p>1 2</p>
+				<p>1 2 3</p>
+				<p>1 2 3 4</p>
+				<p>1 2 3 4</p>
+				<p>1 2 3 4 5</p>
+				<p>1 2 3 4 5</p>
+				<p>1 2 3 4 5 6</p>
+				<p>1 2 3 4 5 6 7</p>
+				<p>1 2 3 4 5 6 7 8</p>
+				<p>1 2 3 4 5 6 7 8 9</p>
+				<p>1 2 3 4 5 6 7 8 9 10</p> -->
+			</div>
+		</div>
+		<div class="bar_x_panel">
+			<div id="bar_x" class="bar_x">
+				<a href="#" class="btn_l">←</a>
+				<div class="bar"></div>
+				<a href="#" class="btn_r">→</a>
+			</div>
+		</div>
+
+		<div class="bar_y_panel">
+			<div id="bar_y" class="bar_y">
+				<a href="#" class="btn_t">↑</a>
+				<div class="bar"></div>
+				<a href="#" class="btn_b">↓</a>
+			</div>
+		</div>
+	</div>
+
+	<h2>支持窗口自适应大小</h2>
+	<div class="panel" style="margin:0 auto 0; height:400px; width:60%;">
+		<div id="shell_auto" class="panel_inner">
+			<div id="content_auto" class="content">
+				<img src="bg.jpg" height="1200" width="1920" alt="" />
+			</div>
+		</div>
+		<div class="bar_x_panel">
+			<div id="bar_x_auto" class="bar_x">
+				<a href="#" class="btn_l">←</a>
+				<div class="bar"></div>
+				<a href="#" class="btn_r">→</a>
+			</div>
+		</div>
+	</div>
+
+	<h2>完整配置参数</h2>
+	<p><textarea cols="60" rows="20">
+{
+	bar : null,
+	shell : null,
+	content : null,
+	barShell : null,
+	backBtn : null,
+	forwardBtn : null,
+	step : 60,
+	scroll : 0,
+	minSize : 36,
+	duration : 320,
+	wheel : true,
+	animate : true,
+	refresh : false,
+	onscroll : _noop,
+	onbof : _noop,
+	oneof : _noop
+}
+	</textarea></p>
+
+	<script src="//cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.ScrollBar.base.js"></script>
+	<script type="text/javascript" src="jquery.mousewheel.js"></script>
+	<script type="text/javascript">
+	var
+	shell = $('#shell'),
+	content = $('#content'),
+	xShell = $('#bar_x'),
+	xBar = xShell.find('div').eq(0),
+	xOps = {
+		bar : xBar,
+		shell : shell,
+		content : content,
+		barShell : xShell,
+		backBtn : xShell.find('a').eq(0),
+		forwardBtn : xShell.find('a').eq(1),
+		step : 200,
+		scroll : 0,
+		minSize : 36,
+		duration : 320,
+		wheel : true,
+		animate : true,
+		onscroll : function(offset){
+			//console.log(this, offset);
+		}
+	},
+	yShell = $('#bar_y'),
+	yBar = yShell.find('div').eq(0),
+	y = new ScrollBarY({
+		bar : yBar,
+		shell : shell,
+		content : content,
+		barShell : yShell,
+		backBtn : yShell.find('a').eq(0),
+		forwardBtn : yShell.find('a').eq(1),
+		step : 100,
+		scroll : 0,
+		minSize : 36,
+		duration : 320,
+		wheel : true,
+		animate : true,
+		onscroll : function(offset){
+			xOps.wheel = false;
+		},
+		onbof : function(){
+			//console.log('bof');
+			xOps.wheel = true;
+		},
+		oneof : function(){
+			//console.log('eof');
+			xOps.wheel = true;
+		}
+	}),
+	x = new ScrollBarX(xOps),
+
+	//auto resize
+	autoBarShell = $('#bar_x_auto'),
+	auto = new ScrollBarX({
+		bar : autoBarShell.find('div').eq(0),
+		shell : $('#shell_auto'),
+		content : $('#content_auto'),
+		barShell : autoBarShell,
+		backBtn : autoBarShell.find('a').eq(0),
+		forwardBtn : autoBarShell.find('a').eq(1),
+		step : 200,
+		scroll : 0,
+		minSize : 36,
+		duration : 320,
+		wheel : true,
+		animate : true,
+		refresh : true,
+		onscroll : function(offset){
+			//console.log(this, offset);
+		}
+	});
+	</script>
+	<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
+</body>
+</html>

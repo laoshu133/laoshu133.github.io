@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>折角动画</title>
+<script type="text/javascript" src="js/bend.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var $D = function(name, context){ return (context || document).getElementsByTagName(name);};
+	
+	var panel = document.getElementById('bends'), links = $D('a', panel), bends = [];
+	for(var i=0, len = links.length; i<len; i++){
+		bends[i] = new Bend({
+			id : links[i],
+			curl : 'images/curl.png',
+			maxWidth : 62
+		});
+	} 
+}
+</script>
+<style type="text/css">
+*{ padding:0; margin:0;}
+ul{ list-style:none;}
+
+.bends{}
+.bends li{ float:left;}
+.bends li a{ display:block; height:100px; margin:0 5px; width:100px; position:relative;}
+.bends img{ border:0;}
+.bend_curl{ position:absolute; right:0; top:0; height:auto; width:62px;}
+
+/*额外样式*/
+.bends{ margin:30px;}
+</style>
+</head>
+
+<body>
+<!--
+//-------------------使用说明-------------------
+//autohor:米
+//update:2011.04.27
+//测试兼容浏览器 IE6+ ,FF3+, CHROME10
+//直接应用脚本&样式，HTML结构可以不变，可以添加删除li
+-->
+<div id="bends" class="bends">
+	<ul>
+    	<li><a href="#"><img alt="" src="images/b1.jpg" /></a></li>
+        <li><a href="#"><img alt="" src="images/b2.jpg" /></a></li>
+        <li><a href="#"><img alt="" src="images/b3.jpg" /></a></li>
+        <li><a href="#"><img alt="" src="images/b4.jpg" /></a></li>
+        <li><a href="#"><img alt="" src="images/b5.jpg" /></a></li>
+    </ul>
+</div>
+</body>
+</html>

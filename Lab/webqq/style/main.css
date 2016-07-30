@@ -1,0 +1,55 @@
+﻿#main{ width:400px; margin:30px;}
+#main #list h3{ padding-left:20px; background:url(../images/list_right_bg.png) no-repeat left center; cursor:pointer;}
+#main #list dl{ padding-left:30px; display:none;}
+#main #list dl dd{ margin:1px auto; cursor:pointer;}
+
+/*显示聊天窗口部分*/
+.room{
+	width:520px;
+	height:400px;
+	background:#55B820 url(../images/room_bg.jpg) repeat-y left top;
+	border:1px solid #006600;
+	padding:0 6px;
+	position:absolute;
+	overflow:hidden;
+}
+.room .header{ height:36px;}
+	.room .header h2{ padding:3px 2px; font-size:16px;}
+.room .content{ height:190px; background:#fff;}
+.room .tool{ height:26px; }
+	.room .tool a{ display:block; height:20px; margin:6px; width:54px;}
+.room .edit{ height:100px; background:#fff;}
+.room .footer{ height:36px; text-align:right;}
+	.room .footer a{
+		display:block;
+		width:70px;
+		height:30px;
+		float:right;
+		text-align:center;
+		line-height:30px;
+		margin:4px 3px;
+		background:url(../images/bt_bg_1.jpg) no-repeat -216px -60px;
+	}
+
+
+/*min _ rooms部分*/
+.min_room{
+	display:block;
+	float:left;
+	width:42px;
+	height:42px;
+	margin:5px;
+	border:1px solid #060;
+	background:#55B820;
+	cursor:pointer;
+	
+}
+#min_rooms{
+
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:55px;
+	border-top:4px solid #006600;
+}

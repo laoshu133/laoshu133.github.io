@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>层叠效果</title>
+<script type="text/javascript">
+//-------------------infos-------------------
+//autohor:laoshu133
+//update:2011.04.22
+//测试兼容浏览器 IE6+ ,FF3+, CHROME10
+(function(win, doc){
+	var 
+	//私有方法
+	$d = function(id){ return document.getElementById(id);},
+	$D = function(tag, context){ return (context || doc).getElementsByTagName(tag);},
+	addE = function(el, type, fn){
+		if(el.addEventListener){
+			el.addEventListener(type, fn, false);
+		}
+		else if(el.attachEvent){
+			var pri = type + '_' + fn;
+			fn[pri] = function(){
+				fn.call(el, window.event);
+			}
+			el.attachEvent('on' + type, fn[pri]);
+		}
+	},
+	attr = function(el, name, val){
+		var others = {
+			'for' : 'htmlFor',
+			'css' : 'cssText'
+		};
+		if(typeof val !== 'undefined'){
+			el.setAttribute(!others[name]?name:others[name], val);
+		}
+		else{
+			el.getAttribute(name);
+		}
+	},
+	css = function(el, name, val){
+		if(typeof name === 'object'){
+			for(var k in name){
+				css(el, k, name[k]);
+			}
+		}
+		else if(typeof val === 'string'){
+			el.style[name] = val;
+		}
+		else{
+			return el.currentStyle ? el.currentStyle[name] : doc.defaultView.getComputedStyle(el, null)[name];
+		}
+		return el;
+	},
+	preventDefault = function(e){
+		if(e.preventDefault){
+			e.preventDefault();
+		}
+		else{
+			e.returnValue = false;
+		}
+	},
+	
+	stack = win.Stack = function(ops){
+		for(var k in ops){
+			this.ops[k] = ops[k];
+		}
+		this[0] = typeof ops.shell === 'string' ? $d(ops.shell) : ops.shell;
+		//初始化
+		this.init();
+		//首次动画
+		this.run();
+	};
+	stack.prototype = {
+		constructor : stack,
+		ops : {
+			shell : doc.body,
+			minWidth : 30,
+			auto : true,
+			autoDelay : 3200
+		},
+		init : function(){
+			var ops = this.ops, links = $D('a', this[0]), imgs = $D('img', this[0]),
+			len = links.length, maxWidth = parseInt(css(this[0], 'width'), 10), width = maxWidth - (len-1) * ops.minWidth;
+			this.links = links;
+			this.maxWidth = maxWidth;
+			this.minWidth = ops.minWidth;
+			this.width = width;
+			//替换背景
+			for(var i = 0; i<len; i++){
+				//背景, FF中会闪屏
+				css(imgs[i], 'display', 'none');
+				css(links[i], {backgroundImage:'url(' + imgs[i].src + ')', width:ops.minWidth + 'px'});
+				//overflow, 闪屏更严重 -_-|||
+				//css(imgs[i], 'width', maxWidth);
+				//css(links[i], {overflow:'hidden', width:ops.minWidth + 'px'});
+			}
+			css(links[i-1], 'width', width + 'px');
+			//绑定事件
+			this.bind(links);
+			//首次动画准备
+			this.prevInx = i-1;
+		},
+		bind : function(links){
+			var self = this, panel = this[0], srcEl, _t = null, link_timer,
+			checkParent = function(el, parent){
+				while(el){
+					if(el === parent){
+						return true;
+					}
+					el = el.parentNode;
+				}
+				return false;
+			};
+			addE(doc, 'mousemove', function(e){
+				var el = e.target || e.srcElement;
+				srcEl = el;
+			});
+			addE(panel, 'mouseover', function(e){
+				var tar = e.target || e.fromElement;
+				clearTimeout(_t);
+				self.stopAutoPlay();
+			});
+			addE(panel, 'mouseout', function(e){
+				var tar, delay = 240;
+				self.stopAutoPlay();
+				_t = setTimeout(function(){
+					tar = srcEl;
+					if(!checkParent(tar, panel)){
+						self.autoPlay(self.ops.autoDelay/2);
+					}
+				}, delay);
+			});
+			for(var i=0,len =links.length; i<len; i++){
+				addE(links[i], 'mouseover', (function(i){
+					return function(){
+						var tar, delay = 240;
+						self.stopAutoPlay();
+						link_timer = setTimeout(function(){
+							if(!self.isActive && self.prevInx !== i){
+								self.run(i);
+							}
+						}, delay);
+					}
+				})(i));
+				addE(links[i], 'mouseout', function(){
+					clearTimeout(link_timer);
+				})
+			}
+		},
+		run : function(inx){
+			var self = this, links = self.links, len = links.length,
+			el, prevInx = self.prevInx, prevEl = links[prevInx],
+			setWidth = function(el, val){
+				css(el, 'width', val + 'px');
+			},
+			fx = function(callback){
+				var maxWidth = self.width, minWidth = self.minWidth,
+				timeOut = 1200, delay = 40 /*每秒25帧*/, speed = 6 /*加速度*/,
+				w = minWidth, _w = maxWidth, _t = null,
+				wSpeed = maxWidth/timeOut/2, tMark = new Date(),
+				fn = function(){
+					if(w>=maxWidth || (new Date())-tMark > timeOut){
+						clearInterval(_t);
+						setWidth(el, maxWidth);
+						setWidth(prevEl, minWidth);
+						callback && callback();
+						return;
+					}
+					wSpeed += maxWidth/timeOut * speed;
+					w += wSpeed;
+					_w -= wSpeed;
+					//delay -= speed;
+					setWidth(el, w);
+					setWidth(prevEl, _w);
+				};
+				_t = setInterval(fn, delay);
+			};
+			inx = isNaN(inx) ? (++prevInx%len) : inx;
+			el = links[inx];
+			self.isActive = true;
+			fx(function(){ self.isActive = false; self.ops.auto && self.autoPlay.call(self);});
+			self.prevInx = inx;
+		},
+		autoPlay : function(delay){
+			var self = this;
+			self.ops.auto = true;
+			if(self.ops.auto){
+				self.timer = setTimeout(function(){ self.run();}, (delay || self.ops.autoDelay));
+			}
+		},
+		autoPlayxx : function(){
+			this.ops.auto = true;
+		},
+		stopAutoPlay : function(){
+			clearTimeout(this.timer);
+			this.ops.auto = false;
+		}
+	}
+})(window, document);
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var s = new Stack({shell:'stack_slider', auto : true, autoDelay:4200, minWidth:30});
+}
+</script>
+<style type="text/css">
+*{ padding:0; margin:0;}
+
+#stack_slider{ border:1px solid #666; height:181px; width:650px; overflow:hidden; margin:30px;}
+#stack_slider a{ float:left; height:100%; width:100%;}
+</style>
+</head>
+
+<body>
+<div id="stack_slider">
+	<a href="#" title="b1"><img alt="" src="images/b1.jpg" /></a>
+    <a href="#" title="b2"><img alt="" src="images/b2.jpg" /></a>
+    <a href="#" title="b3"><img alt="" src="images/b3.jpg" /></a>
+    <a href="#" title="b4"><img alt="" src="images/b4.jpg" /></a>
+    <a href="#" title="b5"><img alt="" src="images/b5.jpg" /></a>
+</div>
+</body>
+</html>

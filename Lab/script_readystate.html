@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Script readyState Test</title>
+</head>
+<body>
+	<div id="info" style="border:1px dashed #f90; padding:10px;" title="双击清除Log"></div>
+	<div id="btns" style=" padding:10px;">
+		<button id="btn" style="padding:5px;">加载测试Script</button>
+		<input type="checkbox" id="cacheSwitch" /><label for="cacheSwitch">关掉缓存</label>
+		<p>当IE对JS有缓存时候，大部分时候readyState的值不会出现 loaded</p>
+	</div>
+	<script type="text/javascript">
+	function $(id){ return document.getElementById(id)}
+
+	var _uuid = 1, cacheAct = true;
+	$('btn').onclick = function(){
+		var id = _uuid++;
+		log('<br />---------------- Init, id = ' + id + ' -------------------');
+		
+		var script = document.createElement('script');
+		script.id = 'script_' + id;
+		script.type = 'text/javascript';
+		log('Create script, id = ' + id);
+		
+		if('onreadystatechange' in script){
+			script.onreadystatechange = function(){
+				log('script readyState changed, id = ' + id + ', readyState = <strong>' + script.readyState + '</strong>');
+			}
+			log('Bind script readystate, id = ' + id);
+		}
+		else{
+			log('<span style="color:#f60;">Your Browser Not support readystatechange</span>');
+		}
+		
+		script.onload = function(){
+			log('script onload fired, id = ' + id);
+		}
+		log('Bind script onload, id = ' + id);
+		
+		var src = 'http://www.laoshu133.com/ds/ds.js';
+		script.src = src + (cacheAct ? '' : (src.indexOf('?') > 0 ? '&' : '?') + '_t=' + id);
+		log('Set script src, id = ' + id + ', src = ' + script.src);
+		
+		document.body.appendChild(script);
+		log('Append script to body');
+	}
+	
+	//Cache
+	$('cacheSwitch').onchange = function(){
+		cacheAct = !this.checked;
+	}
+	//Log
+	function log(str){
+		$('info').innerHTML += '<p style="border-bottom:1px dashed #AAA; line-height:1.5; margin:0; padding:3px 0;">' + str + '</p>';
+	}
+	$('info').ondblclick = function(){ this.innerHTML = '';}
+	</script>
+</body>
+</html>

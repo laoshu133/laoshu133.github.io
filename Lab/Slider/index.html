@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Slider demo</title>
+<script type="text/javascript" src="/ds/ds.js"></script>
+<script type="text/javascript" src="js/Slider.js"></script>
+<link href="style/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.focus_nav2{ position:absolute; bottom:10px; right:10px;}
+.focus_nav2 a{ background:#fff; border:1px solid #FF7300; color:#FF7300; display:block; float:left; line-height:16px; height:16px; width:16px; margin-right:6px; display:inline; text-align:center;}
+.focus_nav2 :hover, .focus_nav2 .hover{ background:#FF7300; color:#fff; font-size:15px; font-weight:bold;}
+</style>
+<script type="text/javascript">
+(function(window, doc){
+	var $d = ds.$d;
+
+	ds.ready(function(){
+		var 
+		slider, slider2,
+		el = $d('focus_ad'),
+		ops = {
+			shell : el,
+			direction : 'left',
+			trigger : 'mouseenter',
+			navEl : 'focus_nav',
+			animateEl : ds.$D('ul', el)[0],
+			unitSize : 530,
+			duration : 480,
+			delay : 5000,
+			auto : true,
+			isAnimate : true
+		};
+		//focus_ad --左右
+		slider = new Slider(ops);
+		
+		//focus_ad2 --上下
+		var ops2 = ds.mix({
+			shell : 'focus_ad2',
+			unitSize : 181,
+			duration : 320,
+			direction : 'top',
+			navEl : 'focus_nav2',
+			animateEl : ds.$D('ul', ds.$d('focus_ad2'))[0],
+			auto : false
+		}, ops);
+		slider2 = new Slider(ops2);
+		
+		//goodsoft --自带navEl, trigger
+		var 
+		slider3 = new Slider({
+			shell : 'soft_panel',
+			navEl : $d('goodsoft_nav'),
+			animateEl : 'soft_panel',
+			itemNodeName : 'div',
+			trigger : 'click',
+			unitSize : 552,
+			auto : false
+		});
+	});
+})(window, window.document);
+</script>
+</head>
+<body>
+<h2>自动播放 + mouseenter触发</h2>
+<div id="focus_ad" class="focus_ad">
+	<ul>
+		<li><a href="#"><img alt="" src="../images/b1.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b2.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b3.jpg" /></a></li>
+	</ul>
+</div>
+<h2>click 触发, 上下滑动</h2>
+<div id="focus_ad2" class="focus_ad">
+	<ul>
+		<li><a href="#"><img alt="" src="../images/b1.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b2.jpg" /></a></li>
+		<li><a href="#"><img alt="" src="../images/b3.jpg" /></a></li>
+	</ul>
+</div>
+
+<h2>click 触发, 自定义 navEl</h2>
+<div id="goodsoft" class="goodsoft">
+	<h3>精品推荐</h3>
+	<div id="goodsoft_nav" class="goodsoft_nav">
+		<ul>
+			<li class="goodsoft_all"><a href="#" class="hover">ALL</a></li>
+			<li class="goodsoft_ios"><a href="#">IOS</a></li>
+			<li class="goodsoft_android"><a href="#">ANDROID</a></li>
+			<li class="goodsoft_symbian"><a href="#">SYMBIAN</a></li>
+			<li class="goodsoft_mtk"><a href="#">MTK</a></li>
+		</ul>
+	</div>
+	<div class="goodsoft_main">
+		<div id="soft_panel" class="ico_panel">
+			<div class="ico_item_panel">
+				<div id="soft_all">
+					<ul class="ico_list">
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">ALL - 1 小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ico_item_panel">
+				<div id="soft_ios">
+					<ul class="ico_list">
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">IOS小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ico_item_panel">
+				<div id="soft_android">
+					<ul class="ico_list">
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">AND小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ico_item_panel">
+				<div id="soft_symbian">
+					<ul class="ico_list">
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">SYM小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ico_item_panel">
+				<div id="soft_mtk">
+					<ul class="ico_list">
+						<li>
+							<a href="#"><img alt="" src="images/163_ico.png" /></a>
+							<a href="#" class="ico_info">MTK小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/baidu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+						<li>
+							<a href="#"><img alt="" src="images/qiu_ico.png" /></a>
+							<a href="#" class="ico_info">愤怒的小鸟</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一些写过的作品 - Laoshu133.com</title>
+<style type="text/css">
+*{ padding:0; margin:0;}
+html{ overflow:hidden;}
+a{ color:#333; text-decoration:none;}
+a:hover{ color:#ccc;}
+.header{ border-bottom:2px solid #666; height:60px;}
+.container{ width:100%; overflow:hidden;}
+#list, #main{ float:left; height:100%; overflow:auto;}
+#list{ border-right:2px solid #666; width:230px; min-height:300px;}
+#main iframe{ height:100%; width:100%; border:0;}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<h1><a href="/">一些写过的作品</a></h1>
+</div>
+<div class="container">
+	<div id="list">
+    </div>
+    <div id="main">
+    	<iframe id="main_ifa" frameborder="0" scrolling="auto" src="about:blank" height="100%" width="100%"></iframe>
+    </div>
+</div>
+<script type="text/javascript" src="/ds/ds.js"></script>
+<script type="text/javascript">
+//autohor:米
+//create:2011.04.18
+//update:2011.08.29
+ds.ready(function(){
+	var
+	//页面参数
+	treeUrl = 'tree/js/tree.js',
+	urls = 'js/urls.js',
+	//页面布局
+	main = ds.$d('main'),
+	restoreWH = function(){
+		var WH = ds.getWindowSize(),
+		w = WH.width - 232, h = WH.height - 62;
+		ds.css(main, 'width', w).css(main.parentNode, 'height', h);
+	};
+	ds.bind(window, 'resize', restoreWH);
+	//.trigger(window, 'resize');
+	restoreWH();
+	//初始化列表
+	var tree,
+	ifra = ds.$d('main_ifa'),
+	list = ds.$d('list');
+	ds.html(list, '<img alt="" src="images/loading.gif" />');
+	ds.loadScript(treeUrl, function(){
+		ds.loadScript(urls, function(){
+			ds.html(list, '');
+			tree = new Tree({
+				//--不完整参数
+				caption : 'Root',
+				url : 'tree/images/',
+				itemIco : 'ie.gif',
+				items : dsUrls,
+				shell : 'list',
+				itemClick : function(e){
+					ifra.src = this.url;
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+				}
+			});
+		});
+	});
+});
+</script>
+
+<script src="//s11.cnzz.com/z_stat.php?async=1&amp;id=4571571&amp;web_id=4571571" async></script>
+</body>
+</html>
