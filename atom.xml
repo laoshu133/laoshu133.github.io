@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.laoshu133.com/"/>
-  <updated>2016-06-27T18:15:36.000Z</updated>
+  <updated>2016-07-30T03:02:12.000Z</updated>
   <id>http://www.laoshu133.com/</id>
   
   <author>
@@ -20,26 +20,17 @@
     <link href="http://www.laoshu133.com/2016/06/27/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E6%89%93%E9%80%A0%E4%B8%80%E6%AC%BE%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%88%E4%B8%80%EF%BC%89.html"/>
     <id>http://www.laoshu133.com/2016/06/27/自己动手打造一款路由器（一）.html</id>
     <published>2016-06-27T15:59:39.000Z</published>
-    <updated>2016-06-27T18:15:36.000Z</updated>
+    <updated>2016-07-30T03:02:12.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面的路由器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广告劫持；同时自己动手还能解决一些你懂的需求&lt;/p&gt;
-&lt;h2 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h2&gt;&lt;p&gt;先上几张效果图，&lt;br&gt;截至目前路由器已稳定运营 18 天&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/wrt/p1.jpg&quot; alt=&quot;摆拍&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面上大部分的浏览器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广告劫持；同时自己动手还能解决一些你懂的需求&lt;/p&gt;
+&lt;h2 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/assets/wrt/p1.jpg&quot; alt=&quot;摆拍&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/wrt/p2.jpg&quot; alt=&quot;摆拍2&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/wrt/p3.jpg&quot; alt=&quot;管理界面&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;技术选型&quot;&gt;&lt;a href=&quot;#技术选型&quot; class=&quot;headerlink&quot; title=&quot;技术选型&quot;&gt;&lt;/a&gt;技术选型&lt;/h2&gt;&lt;p&gt;我的目标是 “3 年之内不换路由器”；&lt;br&gt;当目标确定后就需要技术选型，&lt;br&gt;首先确定用哪个平台的路由控制，目前可选的一般有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tomato&lt;/li&gt;
-&lt;li&gt;DD-WRT&lt;/li&gt;
-&lt;li&gt;OpenWrt&lt;/li&gt;
-&lt;li&gt;RouterOS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;基于爱折腾的原则，我选择了 &lt;code&gt;OpenWrt&lt;/code&gt; 😄&lt;br&gt;平台确定后就需要选硬件了，这个比较麻烦，&lt;br&gt;得益于一个做外贸的好友 HYSTOU 赞助一台 Mini PC，&lt;br&gt;x86 架构，具体配置见前面截图，总的来说这个配置已经很高了&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面的路由器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广告劫持；
+      &lt;h2 id=&quot;原由&quot;&gt;&lt;a href=&quot;#原由&quot; class=&quot;headerlink&quot; title=&quot;原由&quot;&gt;&lt;/a&gt;原由&lt;/h2&gt;&lt;p&gt;之所以想自己动手打造一款路由器，很大一部分原因是因为市面上大部分的浏览器大多不靠谱，大品牌要么配置太弱要么价格太贵，国产要么不稳定要么各种广
     
     </summary>
     
@@ -426,7 +417,7 @@
 &lt;li&gt;重现条件：CSS部分缺一不可，HTML结构随意，input一定要是file&lt;/li&gt;
 &lt;li&gt;具体原因未知&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;css&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.clearfix&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:after&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;content&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;; &lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:block;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.clearfix&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;li&lt;/span&gt;&amp;#123; &lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;:left;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;file&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/css&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix:after&amp;#123; content:&quot;&quot;; display:block;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.clearfix li&amp;#123; float:left;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;file&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;废话不多，给出&lt;a href=&quot;/Lab/crash_chrome/&quot;&gt;DEMO地址&lt;/a&gt;，欢迎拍砖。&lt;/p&gt;
 </content>
     
