@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JPG渐进 & PNG/PNG24 交错</title>
+</head>
+<body>
+	<h1>JPG渐进 & PNG/PNG24 交错测试</h1>
+	<div id="link_panel">
+		<p><a href="1.jpg" target="_blank">JPG 无渐进</a>&emsp;<a href="2.jpg" target="_blank">JPG 有渐进</a></p>
+		<p><a href="1.png" target="_blank">PNG8 无交错</a>&emsp;<a href="2.png" target="_blank">PNG8 交错</a></p>
+		<p><a href="1_png24.png" target="_blank">PNG24 无交错</a>&emsp;<a href="2_png24.png" target="_blank">PNG24 交错</a></p>
+		<p><br />需要再看一次？点击<button onclick="clearCache();">清除缓存</button></p>
+	</div>
+	<div id="img_panel"></div>
+	<span style="display:inline-block; border:1px dashed #0085FF; padding:10px; line-height:1.6;">
+	今天由同事说起，PS导出PNG时，有个选项”交错“是干啥的，所以特意搞了个测试页面：<br />引用网上”交错-就是类似旧式电视的隔行扫描，让图片只花50%的时间就可以看到图片全貌“，<br />另外JPG的”渐进“也有类似效果，可惜支持的浏览器不多</span>
+	
+	<p style="padding:20px 10px;">&copy;<a href="http://www.laoshu133.com">Laoshu133.com</a></p>
+	<script type="text/javascript">
+	var links = [], urls = [];
+	(function(){
+		var _links = document.getElementById('link_panel').getElementsByTagName('a');
+		var panel = document.getElementById('img_panel');
+		for(var i=_links.length-1; i>=0; i--){
+			links[i] = _links[i];
+			urls[i] = _links[i].href;
+			links[i].onclick = function(e){
+				e = e || window.event;
+				e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+				panel.innerHTML = '';
+				var self = this;
+				setTimeout(function(){
+					panel.innerHTML = '<img alt="Loading..." width="100%" src="' + self.href + '" />';
+				}, 100);
+			}
+		}
+	})();
+	function clearCache(){
+		for(var i=links.length-1; i>=0; i--){
+			links[i].href = urls[i] + '?_t=' + (+new Date());
+		}
+		document.getElementById('img_panel').innerHTML = '';
+	}
+	</script>
+	
+	<!-- 统计 -->
+	<script type="text/javascript" src="/51_min.js"></script>
+</body>
+</html>

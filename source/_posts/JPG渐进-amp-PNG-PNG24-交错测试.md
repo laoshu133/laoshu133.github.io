@@ -22,7 +22,7 @@ date: 2012-08-03 16:20:35
 
 5.  IE9对“渐进”和“交错”都不支持
 
-测试地址：[Interlace_test](http://www.laoshu133.cn/Interlace_test/)
+测试地址：[Interlace_test](/Lab/Interlace_test/)
 
 从测试的加载情况可以很容易看出，在对于需要加载大图片的情况下，在导出图片时选择“交错”（PS里JPG选择“连续”），对于用户体验上有很大的改善
 
